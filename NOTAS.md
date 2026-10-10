@@ -2,10 +2,10 @@
 
 - **Creada:** 10-oct-2026. **Parche:** 10.2.0 Mid-Chapter (6-oct-2026).
 - **Archivos:** `index.html` (página), `datos.js` (ventajas y builds), `icons/perks/` (223 iconos del juego hasta jul-2025), `fuentes/` (JSON de la API dbd.tricky.lol en español e inglés, versión 10.1.2, y las notas 9.4.0).
-- **Nombres en español:** los del cliente (`fuentes/perks-es-10.1.2.json`), no los de la wiki ES, que difieren (Extraoficial, Hasta otra, Lucha intensa, Reafirmación…).
+- **Nombres en español de México (es-MX):** el usuario juega en es-MX. La API dbd.tricky.lol solo tiene `es` = España, así que los nombres salen de la localización es-MX del juego (volcado github.com/jesterret/DBDPakTrack), la tienda de Steam latam y la wiki ES (que usa es-MX). Diferencias con España: Sobreviviremos (We'll Make It), Nos vemos (Flip-Flop), Extraoficialmente (Off the Record), Consuelo (Reassurance), Lucha de poderes (Power Struggle). Términos es-MX: sobreviviente, tarima, Agotado, Red Sanguínea.
 - **Valores:** los de los archivos del juego 10.1.2, excepto las ventajas que cambiaron en 10.2.0, que salen de las notas oficiales: Oportunidades, Familia, Resiliencia, Sobreviviremos, Bajo vigilancia, ¡Despierta!, Instinto de saqueador y otras.
-- **Ganas de vivir (Will to Live):** desde el parche 9.4.0, Golpe decisivo es una ventaja general. La API sigue mostrándola como "DecisiveStrike / Golpe decisivo". El nombre «Ganas de vivir» sale de la wiki ES y no está confirmado. No hay icono nuevo: se usa el antiguo.
-- **Extraoficial:** marcada como dudosa (las fuentes no coinciden en si se desactiva con las puertas ni en si oculta las marcas).
+- **Ganas de vivir (Will to Live):** general desde 9.4.0. Quien tiene el capítulo de Halloween la conserva como «Golpe decisivo», ventaja única de Laurie. Se desactiva con acciones llamativas, al completarse los generadores o tras usarla. El icono nuevo no está publicado en ninguna fuente: se usa el antiguo.
+- **Extraoficialmente (Off the Record):** vigente el estado 9.2.2 (el cambio del PTB 9.3.0 se revirtió). Se usa el texto del cliente: hasta completar los generadores, 30/35/40 s, Resistencia, gruñidos un 100 % más silenciosos y el asesino no ve tu aura.
 - **Uso:** nightlight.gg, últimos 28 días (11-sep a 9-oct-2026). El rango de 14 días solo es para supporters (la API devuelve ERR_NOT_SUPPORTER).
 - **Bloqueos:** wiki.gg, Fandom y nightlight bloquean curl (403). La API dbd.tricky.lol sí funciona: `/api/perks?role=survivor&locale=es`, `/api/versions`.
 - **PTB:** se ignora; solo cuentan las notas y valores del juego en vivo.
