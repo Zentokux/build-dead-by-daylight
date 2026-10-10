@@ -32,7 +32,7 @@ for m in re.finditer(r'^  (\w+): \{\n(.*?)^  \},', datos, re.M | re.S):
 # Clasificación usada por las reglas de sinergia
 def deja_agotado(k): return 'Agotado' in perks[k].get('coste', '') and re.search(r'Agotado \d', perks[k]['coste'])
 # Ventajas que te dan Resistencia a TI tras el descuelgue (se solapan entre sí)
-RESISTENCIA_PROPIA = {'deadhard', 'offrecord'}
+RESISTENCIA_PROPIA = {'deadhard', 'offrecord', 'soulguard'}
 # Ventajas que necesitan PURIFICAR tótems frente a las que necesitan BENDECIRLOS
 PURIFICAN = {'innerstrength', 'counterforce'}
 def bendice(k): return k.startswith('boon')
@@ -44,7 +44,7 @@ ANULAN = [
 ]
 
 # Ventajas que te salvan a TI (persecución, antitúnel o autocuración): la híbrida debe meter una
-PROPIA = {'unbreakable', 'tenacity', 'lithe', 'deadhard', 'wtl', 'fma', 'resurgence', 'selfcare', 'plottwist', 'innerstrength', 'adrenaline', 'boonshadow'}
+PROPIA = {'wideopen', 'soulguard', 'sprint', 'unbreakable', 'tenacity', 'lithe', 'deadhard', 'wtl', 'fma', 'resurgence', 'selfcare', 'plottwist', 'innerstrength', 'adrenaline', 'boonshadow'}
 def reglas(nombre, ks):
     ag = [k for k in ks if deja_agotado(k)]
     if len(ag) > 1: err(f'«{nombre}»: {len(ag)} ventajas que dejan Agotado {ag} (máx. 1)')
@@ -67,7 +67,8 @@ TIPO = {
     'purificar': {'counterforce', 'flowstate', 'resilience'},
     'bendecir': {'flowstate', 'resilience'},
     'descolgar': {'flowstate', 'resilience'},
-    'Celeridad': {'adrenaline', 'hope', 'lithe'},
+    'Celeridad': {'adrenaline', 'hope', 'lithe', 'sprint', 'wideopen'},
+    'perder Agotado': {'vigil', 'ghostnotes'},
     'abrir puertas': {'wakeup', 'resilience'},
 }
 def decrecientes(nombre, ks, texto):

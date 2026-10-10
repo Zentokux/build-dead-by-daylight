@@ -157,6 +157,45 @@ window.PERKS = {
     efecto: "Bendice un tótem. En su radio de 24 m, los sobrevivientes derribados se recuperan un <b>90/95/100 % más rápido</b> y pueden <b>levantarse solos</b>.",
     coste: "Necesita un tótem", cambio: "Sin cambios recientes", estado: "ok",
   },
+  sprint: {
+    es: "Esprint", en: "Sprint Burst", icon: "iconPerks_sprintBurst.png", dueno: "Meg Thomas",
+    efecto: "Al empezar a correr: <b>+50 % de Celeridad durante 2 s</b>.",
+    coste: "Agotado 60/50/40 s", cambio: "10.1.0 (3 → 2 s)", estado: "ok",
+  },
+  vigil: {
+    es: "Vigilia", en: "Vigil", icon: "iconPerks_vigil.png", dueno: "Quentin Smith",
+    efecto: "Tú y los sobrevivientes a <b>16 m</b> pierden Agotado un <b>20/25/30 % más rápido</b>. El efecto sigue 15 s después de salir del alcance.",
+    coste: "—", cambio: "10.1.x (antes 30/35/40 % y otros estados; ahora solo Agotado)", estado: "ok",
+    info: "Nombre de la wiki oficial en español (es-MX).",
+  },
+  ghostnotes: {
+    es: "Notas fantasma", en: "Ghost Notes", icon: "iconPerks_GhostNotes.png", dueno: "Vee Boonyasak",
+    efecto: "Mientras estás Agotado, tus marcas de arañazos desaparecen un <b>50 % más rápido</b> y pierdes Agotado un <b>5/7,5/10 % más rápido</b>.",
+    coste: "—", cambio: "Sin cambios recientes", estado: "ok",
+    info: "Nombre de la wiki oficial en español (es-MX); en los textos de España aparece como «Notas fantasmales».",
+  },
+  fixated: {
+    es: "Fijación", en: "Fixated", icon: "iconPerks_fixated.png", dueno: "Nancy Wheeler",
+    efecto: "Al caminar ganas <b>10/15/20 % de Celeridad</b>. Ves tus propias marcas de arañazos.",
+    coste: "—", cambio: "Sin cambios recientes", estado: "ok",
+  },
+  wideopen: {
+    es: "Máxima velocidad", en: "Wide Open Throttle", icon: "iconPerks_WideOpenThrottle.png", dueno: "Shane Wiigwaas",
+    efecto: "Al saltar rápido una tarima tirada: ganas <b>10/12,5/15 % de Celeridad durante 3 s</b>, la tarima <b>vuelve a quedar en pie</b> y se bloquea 60 s, y todos los sobrevivientes ven su aura mientras tanto.",
+    coste: "Enfriamiento 60 s", cambio: "Ventaja nueva (capítulo 10.1)", estado: "ok",
+    info: "Nombre de la wiki oficial en español (es-MX); en los textos de España aparece como «Acelerador a fondo».",
+  },
+  soulguard: {
+    es: "Defensa del alma", en: "Soul Guard", icon: "iconPerks_soulGuard.png", dueno: "Cheryl Mason",
+    efecto: "Si sufres un maleficio, puedes levantarte solo. Cada vez que te levantas solo del todo, ganas <b>Resistencia durante 4/6/8 s</b>.",
+    coste: "Enfriamiento 30 s", cambio: "Sin cambios recientes", estado: "ok",
+    info: "Nombre de la wiki oficial en español (es-MX); en los textos de España aparece como «Salvaguarda de alma».",
+  },
+  wglf: {
+    es: "Vamos a vivir para siempre", en: "We're Gonna Live Forever", icon: "iconPerks_WereGonnaLiveForever.png", dueno: "David King",
+    efecto: "Levantas a los sobrevivientes derribados un <b>100 % más rápido</b>. Al terminar de levantar a uno, gana <b>Resistencia durante 6/8/10 s</b>.",
+    coste: "Enfriamiento 30 s (de la Resistencia)", cambio: "Sin cambios recientes", estado: "ok",
+  },
 };
 
 // modo: "solo" = solitario (sin voz), "coop" = con amigos en llamada.
@@ -232,6 +271,34 @@ window.BUILDS = [
       "Si te persiguen, quédate cerca: con <b>Paso de las sombras</b> el asesino pierde tu rastro al romper la línea de visión.",
       "Si te tumba en la zona y se va, levántate solo con <b>Exponencial</b>.",
       "Si apaga el tótem, bendice otro: con cada generador hecho, <b>Estado de flujo</b> lo hace más rápido.",
+    ],
+  },
+  {
+    nombre: "Solitario: Esprint con recarga rápida", tag: "Sigilo y Esprint", modo: "solo", color: "#0ea5e9",
+    contra: ["Rastreo por marcas de arañazos"],
+    perks: ["sprint", "vigil", "ghostnotes", "fixated"],
+    hibrida: { sale: "fixated", entra: "wtl", porque: "Si el asesino te tunelea, cambia Fijación por <b>Ganas de vivir</b>: mantienes el Esprint que se recarga rápido y además tienes escape tras el gancho." },
+    para: "Gira en torno a <b>Esprint</b>: tenerlo listo más veces y que, después de usarlo, al asesino le cueste seguirte. Todo es para ti.",
+    sinergia: "<b>Esprint</b> (única que deja Agotado) te da 2 s de Celeridad al empezar a correr. Para no gastarlo sin querer, camina: <b>Fijación</b> te hace caminar más rápido y te enseña tus propias marcas. Tras usarlo, <b>Notas fantasma</b> hace que tus marcas de arañazos desaparezcan un 50 % más rápido mientras estás Agotado, para que el asesino pierda tu rastro. <b>Vigilia</b> y <b>Notas fantasma</b> te quitan el Agotado antes; se combinan (la menor cuenta a la mitad): unos 30 s en vez de 40 s a nivel III. Vigilia también ayuda a los compañeros a 16 m.",
+    como: [
+      "Camina siempre que no te persigan: <b>Fijación</b> te acelera y así guardas <b>Esprint</b>.",
+      "Cuando el asesino te vea, empieza a correr: <b>Esprint</b> te separa de él.",
+      "Tras el Esprint, rompe la línea de visión: <b>Notas fantasma</b> borra tus marcas y el asesino pierde tu rastro.",
+      "Con <b>Vigilia</b> el Esprint vuelve antes; no corras sin necesidad mientras se recarga.",
+    ],
+  },
+  {
+    nombre: "Solitario: bucle de tarimas", tag: "Tarimas", modo: "solo", color: "#f97316",
+    contra: ["Asesino que te persigue sin soltarte"],
+    perks: ["fma", "lithe", "wideopen", "resilience"],
+    hibrida: { sale: "resilience", entra: "wtl", porque: "Si el asesino te tunelea tras el gancho, cambia Resiliencia por <b>Ganas de vivir</b>: mantienes el bucle de tarimas y tienes escape tras el gancho." },
+    para: "Basada en una build tuya: todo gira en torno a las tarimas para alargar la persecución. Se cambió Fortaleza en las sombras por Resiliencia, porque Fortaleza solo funciona dentro del sótano.",
+    sinergia: "<b>Cinco movimientos adelante</b> te marca las 5 tarimas más cercanas y te deja correr antes tras tirarlas. Cuando el asesino rodea la tarima tirada, sáltala rápido: se activan a la vez <b>Agilidad</b> (única que deja Agotado) y <b>Máxima velocidad</b>, que además vuelve a levantar la tarima (bloqueada 60 s: ni tú la puedes tirar ni el asesino romperla, y él puede pasar por ella). Su Celeridad funciona aunque estés Agotado. Las dos Celeridades se combinan (la menor cuenta a la mitad). Herido, <b>Resiliencia</b> acelera tus saltos.",
+    como: [
+      "En persecución, ve a las tarimas que te marca <b>Cinco movimientos adelante</b> y tírala a tiempo.",
+      "Si el asesino rodea la tarima, sáltala rápido: <b>Agilidad</b> y <b>Máxima velocidad</b> te dan distancia.",
+      "<b>Máxima velocidad</b> vuelve a levantar la tarima: tras su bloqueo y enfriamiento (60 s), puedes repetir el bucle.",
+      "Herido, sigue con el bucle: <b>Resiliencia</b> acelera tus saltos.",
     ],
   },
   {
@@ -326,6 +393,19 @@ window.BUILDS = [
       "Los heridos vienen a curarse: <b>Círculo de curación</b> acelera la cura sin botiquín.",
       "Persigue cerca: con <b>Paso de las sombras</b> el asesino te pierde, y <b>Determinación</b> protege los generadores de la zona.",
       "Si lo apagan, bendice otro: <b>Estado de flujo</b> lo hace cada vez más rápido.",
+    ],
+  },
+  {
+    nombre: "Coop: anti-slug con Bendición", tag: "Anti-slug", modo: "coop", color: "#475569",
+    contra: ["Slug (deja a todos en el suelo)"],
+    perks: ["boonexpo", "soulguard", "wglf", "boonshadow"],
+    para: "Basada en una build tuya: el grupo no se queda tirado en el suelo. Un tótem bendecido te levanta solo, te protege al levantarte y esconde a todos en su zona.",
+    sinergia: "Las 2 Bendiciones comparten tótem. En la zona de <b>Exponencial</b> te levantas solo, y al hacerlo <b>Defensa del alma</b> te da Resistencia 8 s para que no te vuelvan a tumbar de un golpe (no hagas acciones destacadas mientras dure). Si cae un compañero, <b>Vamos a vivir para siempre</b> lo levanta el doble de rápido y también le da Resistencia. Con <b>Paso de las sombras</b>, nadie en la zona deja marcas de arañazos y el asesino no ve su aura. Ninguna deja Agotado. Ojo con Shattered Hope (asesino): destruye el tótem bendecido.",
+    como: [
+      "Bendice un tótem entre generadores y avisa por voz dónde está.",
+      "Si te tumban, arrástrate a la zona y levántate solo con <b>Exponencial</b>: <b>Defensa del alma</b> te da Resistencia.",
+      "Si cae un compañero, levántalo con <b>Vamos a vivir para siempre</b>: el doble de rápido y con Resistencia.",
+      "Persigue cerca de la zona: con <b>Paso de las sombras</b> el asesino pierde tu rastro.",
     ],
   },
   {

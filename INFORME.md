@@ -8,7 +8,7 @@
 - **Validación:** independiente, hecha por un agente contra el texto del cliente 10.1.2, las notas oficiales 10.2.0 en vivo (Steam) y la localización es-MX. Se corrigieron todos los errores que encontró.
 - **Validador automático:** `python validar.py` da 0 errores.
 
-## Builds (versión 3, 10-oct-2026: 8 de solitario y 5 de coop)
+## Builds (versión 3, 10-oct-2026: 10 de solitario y 6 de coop)
 
 Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino frena). `perks` es la versión **Enfocada**; `hibrida` cambia UNA ventaja por otra propia (lista `PROPIA` en `validar.py`). Pensadas para jugar contra un asesino competente que juega el meta. Sin estadísticas de uso ni escape (decisión del usuario).
 
@@ -19,6 +19,8 @@ Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino fr
 | Solo: rescate y curación | Campeo | Familia, Consuelo, Tiempo prestado, Sobreviviremos | Consuelo → Agilidad |
 | Solo: tótems con Estado de flujo | Maleficios | Fuerza interior, Contramedida, Estado de flujo, Demasiado entusiasta | Demasiado entusiasta → Agilidad |
 | Solo: Bendición con Estado de flujo | Regresión, slug | Paso de las sombras, Exponencial, Determinación, Estado de flujo | Determinación → Agilidad |
+| Solo: Esprint con recarga rápida (build del usuario) | Rastreo por arañazos | Esprint, Vigilia, Notas fantasma, Fijación | Fijación → Ganas de vivir |
+| Solo: bucle de tarimas (build del usuario, Fortaleza en las sombras → Resiliencia) | Persecución | Cinco movimientos adelante, Agilidad, Máxima velocidad, Resiliencia | Resiliencia → Ganas de vivir |
 | Solo: autocuración | Desgaste | Resurgimiento, Autocuración, Botánica, Giro argumental | — |
 | Solo sin DLC | Tuneleo | Ganas de vivir, Resiliencia, Déjà vu, Familia | — |
 | Solo: anti-slug | Slug | Exponencial, Tenacidad, Agilidad, Resiliencia | — |
@@ -26,6 +28,7 @@ Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino fr
 | Coop: generadores en equipo | 3-gen | Demuestra lo que vales, Déjà vu, Hiperconcentración, Resiliencia | Demuestra → Fajador |
 | Coop: rescate y curación | Campeo | Tiempo prestado, Sobreviviremos, Botánica, Consuelo | Consuelo → Agilidad |
 | Coop: Bendiciones con Estado de flujo | Regresión, desgaste | Círculo de curación, Paso de las sombras, Determinación, Estado de flujo | Determinación → Agilidad |
+| Coop: anti-slug con Bendición (build del usuario) | Slug | Exponencial, Defensa del alma, Vamos a vivir para siempre, Paso de las sombras | — |
 | Coop: final de partida | Presión en las puertas | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado | — |
 
 **Inquebrantable + Exponencial:** no se combinan; levantarte en la zona de Exponencial gasta el uso de Inquebrantable (comprobado por el usuario en su juego, 10-oct-2026; regla en `ANULAN`). Nombres es-MX de Cinco movimientos adelante y Demasiado entusiasta: solo de la wiki ES (en España: Cinco pasos por delante, Pasión).
