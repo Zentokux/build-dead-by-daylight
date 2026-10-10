@@ -221,6 +221,20 @@ window.BUILDS = [
     ],
   },
   {
+    nombre: "Solitario: Bendición con Estado de flujo", tag: "Bendición", modo: "solo", color: "#8b5cf6",
+    contra: ["Regresión de generadores", "Slug"],
+    perks: ["boonshadow", "boonexpo", "boonsteadfast", "flowstate"],
+    hibrida: { sale: "boonsteadfast", entra: "lithe", porque: "Si el asesino te persigue a ti más que a los demás, cambia Determinación por <b>Agilidad</b>: sigues teniendo tu zona de sigilo y de levantarte solo, y además ganas distancia al saltar rápido." },
+    para: "Tu propia zona segura sin depender de nadie: un solo tótem bendecido te esconde, te levanta si caes y protege los generadores de alrededor. Es la versión de bendecir de la build de tótems.",
+    sinergia: "Las 3 Bendiciones comparten tótem: bendices una vez y funcionan todas. Dentro de la zona (24 m), <b>Paso de las sombras</b> borra tus marcas de arañazos y oculta tu aura al asesino, <b>Exponencial</b> te deja levantarte solo si te tumban y <b>Determinación</b> frena la regresión de los generadores. <b>Estado de flujo</b> gana un distintivo por cada generador hecho: cada vez que el asesino apaga tu tótem, bendices el siguiente más rápido. Empieza en 0, así que la primera bendición va a velocidad normal. Ninguna deja Agotado. No la combines con Fuerza interior ni Contramedida: purifican los tótems que necesitas para volver a bendecir. Ojo con dos ventajas del asesino: Shattered Hope destruye el tótem bendecido, deja ver los tótems bendecidos y bloquea los demás unos segundos; Dominance bloquea el primer tótem que bendices, te hace gritar y revela tu aura.",
+    como: [
+      "Al empezar, bendice un tótem escondido entre dos generadores y repara dentro de la zona de <b>Determinación</b>.",
+      "Si te persiguen, quédate cerca: con <b>Paso de las sombras</b> el asesino pierde tu rastro al romper la línea de visión.",
+      "Si te tumba en la zona y se va, levántate solo con <b>Exponencial</b>.",
+      "Si apaga el tótem, bendice otro: con cada generador hecho, <b>Estado de flujo</b> lo hace más rápido.",
+    ],
+  },
+  {
     nombre: "Solitario: autocuración", tag: "Curación", modo: "solo", color: "#10b981",
     contra: ["Desgaste (te hiere y se va)"],
     perks: ["resurgence", "selfcare", "botany", "plottwist"],

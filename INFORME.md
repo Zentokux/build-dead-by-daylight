@@ -8,7 +8,7 @@
 - **Validación:** independiente, hecha por un agente contra el texto del cliente 10.1.2, las notas oficiales 10.2.0 en vivo (Steam) y la localización es-MX. Se corrigieron todos los errores que encontró.
 - **Validador automático:** `python validar.py` da 0 errores.
 
-## Builds (versión 3, 10-oct-2026: 7 de solitario y 5 de coop)
+## Builds (versión 3, 10-oct-2026: 8 de solitario y 5 de coop)
 
 Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino frena). `perks` es la versión **Enfocada**; `hibrida` cambia UNA ventaja por otra propia (lista `PROPIA` en `validar.py`). Pensadas para jugar contra un asesino competente que juega el meta. Sin estadísticas de uso ni escape (decisión del usuario).
 
@@ -18,6 +18,7 @@ Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino fr
 | Solo: generadores | Regresión | Déjà vu, Hiperconcentración, Resiliencia, Determinación | Determinación → Fajador |
 | Solo: rescate y curación | Campeo | Familia, Consuelo, Tiempo prestado, Sobreviviremos | Consuelo → Agilidad |
 | Solo: tótems con Estado de flujo | Maleficios | Fuerza interior, Contramedida, Estado de flujo, Demasiado entusiasta | Demasiado entusiasta → Agilidad |
+| Solo: Bendición con Estado de flujo | Regresión, slug | Paso de las sombras, Exponencial, Determinación, Estado de flujo | Determinación → Agilidad |
 | Solo: autocuración | Desgaste | Resurgimiento, Autocuración, Botánica, Giro argumental | — |
 | Solo sin DLC | Tuneleo | Ganas de vivir, Resiliencia, Déjà vu, Familia | — |
 | Solo: anti-slug | Slug | Exponencial, Tenacidad, Agilidad, Resiliencia | — |
