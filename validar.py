@@ -43,7 +43,9 @@ ANULAN = [
 ]
 
 # --- 2. Builds ---------------------------------------------------------------
-MODOS = {'solo', 'coop', 'ambos'}
+MODOS = {'solo', 'coop'}  # desde el 10-oct-2026 cada build es de un modo
+# Ventajas que necesitan compañeros coordinados: en una build de solitario son un aviso
+NECESITAN_EQUIPO = {'prove': 'necesita compañeros a 4 m', 'boonhealing': 'el grupo debe saber dónde está la bendición'}
 nombres = set()
 bloques = re.split(r'\n  \{\n    nombre: ', datos.split('window.BUILDS = [', 1)[1])[1:]
 if not bloques: err('No se encontró ninguna build')
@@ -52,7 +54,7 @@ for b in bloques:
     if nombre in nombres: err(f'Build duplicada: {nombre}')
     nombres.add(nombre)
     modo = re.search(r'modo: "(\w+)"', b)
-    if not modo or modo.group(1) not in MODOS: err(f'«{nombre}»: modo inválido (solo/coop/ambos)')
+    if not modo or modo.group(1) not in MODOS: err(f'«{nombre}»: modo inválido (solo/coop)')
     if not re.search(r'color: "#[0-9a-fA-F]{6}"', b): err(f'«{nombre}»: color inválido')
     for c in ('tag', 'para', 'sinergia'):
         if not re.search(c + r': "[^"]+"', b): err(f'«{nombre}»: falta «{c}»')
@@ -69,6 +71,9 @@ for b in bloques:
         err(f'«{nombre}»: mezcla ventajas que purifican y que bendicen tótems')
     for par, motivo in ANULAN:
         if par <= set(ks): err(f'«{nombre}»: {sorted(par)} se anulan: {motivo}')
+    if modo and modo.group(1) == 'solo':
+        for k in ks:
+            if k in NECESITAN_EQUIPO: avi(f'«{nombre}»: {perks[k]["es"]} en solitario: {NECESITAN_EQUIPO[k]}')
     como = re.search(r'como: \[(.*?)\n    \]', b, re.S)
     n = len(re.findall(r'^      "', como.group(1), re.M)) if como else 0
     if not 3 <= n <= 4: err(f'«{nombre}»: «como» debe tener 3-4 pasos (tiene {n})')
@@ -95,6 +100,11 @@ for nombre_arch, txt in (('datos.js', datos), ('index.html', index)):
     for pat, bien in PROHIBIDO.items():
         for m in re.finditer(pat, sin_coment):
             err(f'{nombre_arch}: «{m.group(0)}» → usa {bien}')
+
+# Rendimientos decrecientes (9.6.0): los bonus iguales NO se suman completos
+for nombre_arch, txt in (('datos.js', datos), ('index.html', index)):
+    for m in re.finditer(r'(?<!no )se suman', txt):
+        err(f'{nombre_arch}: «se suman» → usa «se combinan» (rendimientos decrecientes desde 9.6.0)')
 
 # --- 4. JS sintácticamente cargable (comillas y llaves equilibradas) ------------
 if datos.count('{') != datos.count('}'): err('datos.js: llaves { } desequilibradas')

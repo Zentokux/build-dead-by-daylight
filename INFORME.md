@@ -8,21 +8,27 @@
 - **Validación:** independiente, hecha por un agente contra el texto del cliente 10.1.2, las notas oficiales 10.2.0 en vivo (Steam) y la localización es-MX. Se corrigieron todos los errores que encontró.
 - **Validador automático:** `python validar.py` da 0 errores.
 
-## Builds
+## Builds (reorganizadas el 10-oct-2026: 7 de solitario y 5 de coop)
+
+Lógica: en solitario **Familia** sustituye a la voz; en coop ese hueco va a una ventaja del papel que cumples en el grupo. Ya no hay builds «ambos».
 
 | Build | Modo | Ventajas |
 |---|---|---|
-| Meta: persecución y antitúnel | Ambos | Agilidad, Oportunidades, Resiliencia, Ganas de vivir |
-| Solitario: información | Solitario | Familia, Vínculo, Déjà vu, Esprint |
-| Solitario: antitúnel | Solitario | Ganas de vivir, Extraoficialmente, Agilidad, Inquebrantable |
-| Solitario sin DLC | Solitario | Ganas de vivir, Resiliencia, Déjà vu, Familia |
-| Coop: generadores en equipo | Coop | Demuestra lo que vales, Déjà vu, Resiliencia, Hiperconcentración |
-| Coop: rescate y curación | Coop | Tiempo prestado, Sobreviviremos, Conocimientos de botánica, Consuelo |
-| Coop: final de partida | Coop | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado |
-| Anti-slug | Ambos | Inquebrantable, Tenacidad, Nos vemos, Lucha de poderes |
-| Tótems: purificar para curarte | Solitario | Fuerza interior, Contramedida, Espíritu calmado, Estado de flujo |
+| Base todoterreno | Solitario | Familia, Agilidad, Resiliencia, Ganas de vivir |
+| Rescatista | Solitario | Familia, Consuelo, Tiempo prestado, Sobreviviremos |
+| Antitúnel | Solitario | Ganas de vivir, Extraoficialmente, Agilidad, Inquebrantable |
+| Sin DLC | Solitario | Ganas de vivir, Resiliencia, Déjà vu, Familia |
+| Tótems para curarte | Solitario | Fuerza interior, Contramedida, Espíritu calmado, Estado de flujo |
 | Autocuración | Solitario | Resurgimiento, Autocuración, Conocimientos de botánica, Giro argumental |
-| Coop: Bendiciones de equipo | Coop | Bendición: Círculo de curación, Paso de las sombras, Exponencial, Determinación |
+| Anti-slug | Solitario | Inquebrantable, Tenacidad, Nos vemos, Lucha de poderes |
+| Perseguidor | Coop | Agilidad, Oportunidades, Resiliencia, Ganas de vivir |
+| Generadores en equipo | Coop | Demuestra lo que vales, Déjà vu, Resiliencia, Hiperconcentración |
+| Rescate y curación | Coop | Tiempo prestado, Sobreviviremos, Conocimientos de botánica, Consuelo |
+| Bendiciones de equipo | Coop | Círculo de curación, Paso de las sombras, Exponencial, Determinación |
+| Final de partida | Coop | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado |
+
+**Rendimientos decrecientes (9.6.0):** los bonus iguales no se suman completos (100 % / 50 % / 25 % / 12,5 %). `validar.py` da error si el texto dice «se suman».
+**Fuerza interior:** el cliente no dice que acumule cargas; la guía ya no lo afirma.
 
 ## Reglas de las builds (las comprueba `validar.py`)
 

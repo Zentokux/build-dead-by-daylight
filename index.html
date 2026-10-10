@@ -48,6 +48,10 @@ h2 { color: #e11d48; font-size: 1.5rem; margin: 2.5rem 0 1rem; text-align: cente
 .glosario div { background: #1d1517; border-radius: 8px; padding: .6rem .8rem; font-size: .9rem; }
 .glosario b { color: #fca5a5; }
 
+.grupo { margin-bottom: 2.2rem; }
+.grupo-t { font-size: 1.5rem; color: #fff; border-bottom: 2px solid #e11d48; padding-bottom: .3rem; margin-bottom: .5rem; }
+.grupo-t span { font-size: .8rem; color: #a8999c; font-weight: 400; margin-left: .5rem; }
+.grupo-txt { color: #c9bcbf; margin-bottom: 1rem; }
 .build {
   background: linear-gradient(135deg, #171113 0%, #0e0a0b 100%);
   border: 2px solid #3a2a2e; border-left: 6px solid var(--c);
@@ -156,6 +160,7 @@ footer a { color: #fca5a5; }
       <div><b>Coop:</b> partida con amigos en llamada. La voz sustituye a las auras y rinden las ventajas de equipo.</div>
       <div><b>Tótem:</b> hueso con velas del mapa. Puedes <b>purificarlo</b> (romperlo) o <b>bendecirlo</b> para activar una Bendición.</div>
       <div><b>Regla:</b> lleva solo <b>una</b> ventaja que deje Agotado; dos no se activan a la vez.</div>
+      <div><b>Bonus iguales:</b> desde 9.6.0 no se suman completos: el mayor cuenta entero, el segundo a la mitad y el tercero a un cuarto.</div>
     </div>
   </div>
 
@@ -191,11 +196,14 @@ document.getElementById('badges').innerHTML = `
   <span class="badge ok">Parche ${M.parche} (${M.fechaParche})</span>
   <span class="badge ok">Validado ${M.validado}</span>
   <span class="badge">${window.BUILDS.length} builds · ${Object.keys(P).length} ventajas</span>`;
-const MODOS = { solo: 'Solitario', coop: 'Coop', ambos: 'Solitario y coop' };
 
-document.getElementById('builds-list').innerHTML = window.BUILDS.map((b, i) => `
+const GRUPOS = [
+  { modo: 'solo', titulo: 'Solitario', txt: 'Sin voz, <b>Familia</b> hace el trabajo de la llamada: te dice si el asesino está en el gancho y quién va a rescatar. Por eso las builds de solitario la llevan o no dependen de los compañeros.' },
+  { modo: 'coop', titulo: 'Coop', txt: 'Con voz no hace falta Familia: ese hueco va a una ventaja del <b>papel</b> que cumples en el grupo (perseguir, reparar, rescatar, bendecir o cerrar la partida). Repártanse las builds.' },
+];
+const tarjeta = (b, i) => `
   <section class="build" style="--c:${b.color}" data-modo="${b.modo}">
-    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span>${b.tag !== MODOS[b.modo] ? `<span class="modo">${MODOS[b.modo]}</span>` : ""}</div>
+    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span></div>
     <p class="para">${b.para}</p>
     <div class="perk-row">
       ${b.perks.map(k => { const p = P[k]; return `
@@ -210,13 +218,19 @@ document.getElementById('builds-list').innerHTML = window.BUILDS.map((b, i) => `
     <div class="detail" id="det-${i}"></div>
     <div class="sinergia"><span class="t">Sinergia:</span>${b.sinergia}</div>
     <ol class="como">${b.como.map(c => `<li>${c}</li>`).join('')}</ol>
-  </section>`).join('');
+  </section>`;
+document.getElementById('builds-list').innerHTML = GRUPOS.map(g => `
+  <div class="grupo" data-modo="${g.modo}">
+    <h3 class="grupo-t">${g.titulo} <span>${window.BUILDS.filter(b => b.modo === g.modo).length} builds</span></h3>
+    <p class="grupo-txt">${g.txt}</p>
+    ${window.BUILDS.map((b, i) => b.modo === g.modo ? tarjeta(b, i) : '').join('')}
+  </div>`).join('');
 
 document.querySelectorAll('#filtros button').forEach(btn => btn.addEventListener('click', () => {
   document.querySelectorAll('#filtros button').forEach(x => x.classList.toggle('on', x === btn));
   const m = btn.dataset.m;
-  document.querySelectorAll('.build').forEach(s => {
-    s.style.display = (m === 'todas' || s.dataset.modo === m || s.dataset.modo === 'ambos') ? '' : 'none';
+  document.querySelectorAll('.grupo').forEach(s => {
+    s.style.display = (m === 'todas' || s.dataset.modo === m) ? '' : 'none';
   });
 }));
 

@@ -34,7 +34,7 @@ window.PERKS = {
   },
   deadhard: {
     es: "Fajador", en: "Dead Hard", icon: "iconPerks_DeadHard.png", dueno: "David King",
-    efecto: "Tras ser descolgado, herido y corriendo, presiona el botón de habilidad activa: <b>Resistencia durante 0,5 s</b> (aguantas un golpe sin caer).",
+    efecto: "Tras ser descolgado (o descolgarte tú), herido y corriendo, presiona el botón de habilidad activa: <b>Resistencia durante 0,5 s</b> (aguantas un golpe sin caer). Queda lista hasta que la usas y se reactiva en el siguiente descuelgue.",
     coste: "Agotado 60/50/40 s", uso: "5º · 19,08 %", cambio: "6.7.0", estado: "ok",
   },
   wtl: {
@@ -130,8 +130,8 @@ window.PERKS = {
   },
   innerstrength: {
     es: "Fuerza interior", en: "Inner Strength", icon: "iconPerks_innerStrength.png", dueno: "Nancy Wheeler",
-    efecto: "Cada tótem que purificas te da una carga. Herido y sin sufrir Desesperanza, escóndete <b>10/9/8 s</b> en un casillero para gastarla y <b>curarte un estado de salud al instante</b>.",
-    coste: "Una curación por tótem purificado", uso: "38º · 2,44 %", cambio: "7.4.0 (recupera el nombre)", estado: "ok",
+    efecto: "Al purificar un tótem, si estás herido y no sufres Desesperanza, escóndete <b>10/9/8 s</b> en un casillero para <b>curarte un estado de salud al instante</b>.",
+    coste: "Se activa al purificar un tótem", uso: "38º · 2,44 %", cambio: "7.4.0 (recupera el nombre)", estado: "ok",
   },
   counterforce: {
     es: "Contramedida", en: "Counterforce", icon: "iconPerks_Counterforce.png", dueno: "Jill Valentine",
@@ -188,37 +188,42 @@ window.PERKS = {
   },
 };
 
-// modo: "solo" = solitario (sin voz), "coop" = con amigos en llamada, "ambos"
+// modo: "solo" = solitario (sin voz), "coop" = con amigos en llamada.
+// Lógica de la reorganización: en solitario, Familia hace el trabajo de la voz (dónde está el asesino y quién va al gancho).
+// En coop la voz ya da esa información, así que ese hueco va a una ventaja del rol que cumples en el grupo.
+// Reglas (las comprueba validar.py): máx. 1 ventaja que deje Agotado, sin Resistencias solapadas,
+// no mezclar purificar con bendecir y ninguna pareja que se anule.
 window.BUILDS = [
+  // ---------------------------------------------------------------- SOLITARIO
   {
-    nombre: "Meta: persecución y antitúnel", tag: "Meta", modo: "ambos", color: "#e11d48",
-    perks: ["lithe", "woo", "resilience", "wtl"],
-    para: "Las 3 ventajas de sobreviviente más usadas (Agilidad, Resiliencia y Oportunidades) más Ganas de vivir, la mejor antitúnel. Alarga las persecuciones y te protege si te tunelean tras el gancho. Funciona igual en solitario que en coop porque no depende de los compañeros.",
-    sinergia: "<b>Oportunidades</b> te marca las ventanas a 24 m para que llegues corriendo y hagas el salto rápido que activa <b>Agilidad</b>; además el primer salto es un 10 % más rápido (luego entra en enfriamiento). Herido, <b>Resiliencia</b> acelera todos tus saltos. Solo lleva una ventaja que deja Agotado (Agilidad).",
+    nombre: "Solitario: base todoterreno", tag: "Base", modo: "solo", color: "#e11d48",
+    perks: ["kindred", "lithe", "resilience", "wtl"],
+    para: "La build para empezar en solitario. Cubre lo que más falla sin voz: saber qué pasa en el gancho, aguantar la persecución y sobrevivir al tuneleo.",
+    sinergia: "<b>Familia</b> te da la información que en coop daría la llamada. <b>Agilidad</b> (única que deja Agotado) alarga la persecución y <b>Resiliencia</b> te deja jugar herido sin parar a curarte, así que puedes seguir reparando. <b>Ganas de vivir</b> te protege tras el descuelgue. Ninguna depende de los compañeros.",
     como: [
-      "<b>Oportunidades</b> te marca las ventanas cercanas: corre hacia ellas.",
-      "Al saltar rápido, <b>Agilidad</b> te da 3 s de Celeridad para ganar distancia.",
-      "Herido, <b>Resiliencia</b> acelera tus saltos y reparaciones: no hace falta curarse.",
-      "Si el asesino te tunela tras descolgarte, <b>Ganas de vivir</b> lo aturde y te libera. No repares ni cures mientras esté activa o la pierdes.",
+      "Cuando cuelguen a alguien, mira con <b>Familia</b> si el asesino está cerca del gancho y si otro ya va a rescatar.",
+      "En persecución, salta rápido una ventana o una tarima para activar <b>Agilidad</b>.",
+      "Herido, <b>Resiliencia</b> acelera reparaciones y saltos: no pierdas tiempo buscando quien te cure.",
+      "Si te tunelean tras descolgarte, <b>Ganas de vivir</b> aturde al asesino. No repares ni cures mientras esté activa o la pierdes.",
     ],
   },
   {
-    nombre: "Solitario: información", tag: "Solitario", modo: "solo", color: "#0ea5e9",
-    perks: ["kindred", "bond", "dejavu", "sprint"],
-    para: "Para jugar sin hablar con tus compañeros. Las auras sustituyen a la llamada: sabes dónde están todos, qué generadores hacer y si el asesino campea el gancho.",
-    sinergia: "<b>Familia</b> y <b>Vínculo</b> te enseñan a tus compañeros, así no van dos al mismo rescate ni llevas al asesino hacia ellos. <b>Déjà vu</b> coordina los generadores sin hablar. <b>Esprint</b> es la única que deja Agotado.",
+    nombre: "Solitario: rescatista", tag: "Rescate", modo: "solo", color: "#22c55e",
+    perks: ["kindred", "reassurance", "borrowed", "wellmake"],
+    para: "Para ser quien saca a los compañeros del gancho en partidas sin voz. Cubre las tres fases del rescate: decidir si es seguro, descolgar y curar.",
+    sinergia: "<b>Familia</b> te dice si el asesino campea el gancho (a 16 m) y si otro compañero ya va. Si está cerca, <b>Consuelo</b> pausa el sacrificio hasta 30 s para esperar el momento. Al descolgar, <b>Tiempo prestado</b> protege al rescatado y, justo después, <b>Sobreviviremos</b> te deja curarlo el doble de rápido durante 90 s. Ninguna deja Agotado.",
     como: [
-      "<b>Familia</b>: cuando alguien está colgado, mira si el asesino está cerca y si otro compañero ya va a rescatar.",
-      "<b>Vínculo</b>: no lleves al asesino hacia tus compañeros y busca a alguien que te cure.",
-      "<b>Déjà vu</b>: repara los 3 generadores marcados para no dejar un trío pegado al final.",
-      "<b>Esprint</b>: camina normalmente y corre solo cuando te vean, para separarte al empezar la persecución.",
+      "Cuando cuelguen a alguien, mira con <b>Familia</b> dónde está el asesino y si ya va otro compañero.",
+      "Si el asesino está cerca del gancho, acércate a 6 m y pausa el sacrificio con <b>Consuelo</b>.",
+      "Descuelga cuando se aleje: <b>Tiempo prestado</b> da Resistencia y Celeridad al rescatado.",
+      "Llévalo a un sitio seguro y cúralo con <b>Sobreviviremos</b> activo.",
     ],
   },
   {
-    nombre: "Solitario: antitúnel", tag: "Solitario", modo: "solo", color: "#a855f7",
+    nombre: "Solitario: antitúnel", tag: "Antitúnel", modo: "solo", color: "#a855f7",
     perks: ["wtl", "offrecord", "lithe", "unbreakable"],
     para: "En solitario nadie te avisa ni te cubre tras el gancho. Esta build te deja escapar del tuneleo y levantarte si te dejan en el suelo, sin depender de los compañeros.",
-    sinergia: "Tras el descuelgue, <b>Extraoficialmente</b> te oculta y te da Resistencia, y <b>Ganas de vivir</b> te suelta si aun así te carga: dos capas que no se pisan. No lleva Fajador porque su Resistencia se solaparía con la de Extraoficialmente. <b>Agilidad</b> (única que deja Agotado) te da distancia, e <b>Inquebrantable</b> cubre el slug, que en solitario es frecuente.",
+    sinergia: "Tras el descuelgue, <b>Extraoficialmente</b> te oculta y te da Resistencia, y <b>Ganas de vivir</b> te suelta si aun así te carga: dos capas que no se pisan. No lleva Fajador porque también deja Agotado, como Agilidad, y su Resistencia se pisaría con la de Extraoficialmente al bajar del gancho. <b>Agilidad</b> (única que deja Agotado) te da distancia, e <b>Inquebrantable</b> cubre el slug, que en solitario es frecuente.",
     como: [
       "Al bajar del gancho, aléjate: <b>Extraoficialmente</b> oculta tu aura y aguanta un golpe.",
       "Corre a una ventana y salta rápido para activar <b>Agilidad</b>.",
@@ -230,74 +235,28 @@ window.BUILDS = [
     nombre: "Solitario sin DLC: solo ventajas generales", tag: "Gratis", modo: "solo", color: "#14b8a6",
     perks: ["wtl", "resilience", "dejavu", "kindred"],
     para: "Las 4 son ventajas generales: cualquier personaje las saca en la Red Sanguínea sin comprar nada. Es la mejor base para empezar en solitario.",
-    sinergia: "Información (<b>Déjà vu</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). No hay ninguna que deje Agotado, así que puedes cambiar una por Esprint o Agilidad cuando las tengas.",
+    sinergia: "Información (<b>Déjà vu</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). <b>Déjà vu</b> y <b>Resiliencia</b> se combinan al reparar herido (el bonus menor cuenta a la mitad). No hay ninguna que deje Agotado, así que puedes cambiar una por Esprint o Agilidad cuando las tengas.",
     como: [
-      "<b>Déjà vu</b> y <b>Familia</b> te dan información.",
-      "<b>Resiliencia</b> te acelera estando herido.",
+      "Repara los generadores que marca <b>Déjà vu</b> para no dejar un trío pegado al final.",
+      "<b>Familia</b> te dice si conviene ir al gancho.",
+      "Herido, <b>Resiliencia</b> te acelera: sigue reparando.",
       "<b>Ganas de vivir</b> es la mejor defensa contra el tuneleo, y es gratis.",
     ],
   },
   {
-    nombre: "Coop: generadores en equipo", tag: "Coop", modo: "coop", color: "#f59e0b",
-    perks: ["prove", "dejavu", "resilience", "hyperfocus"],
-    para: "Para el grupo que se reparte los papeles por voz: uno se lleva la persecución y los demás hacen generadores juntos. Va mejor con una caja de herramientas.",
-    sinergia: "<b>Demuestra lo que vales</b> necesita compañeros a 4 m y también los acelera a ellos: en coop pueden quedar en el mismo generador. <b>Déjà vu</b> marca los generadores que conviene hacer, <b>Hiperconcentración</b> premia las pruebas Excelentes y <b>Resiliencia</b> te deja reparar herido sin perder tiempo curándote.",
-    como: [
-      "Avisa por voz en qué generador de los que marca <b>Déjà vu</b> estás.",
-      "Reparen de dos en dos para activar <b>Demuestra lo que vales</b>.",
-      "Encadena pruebas Excelentes para acumular distintivos de <b>Hiperconcentración</b>.",
-      "Herido, <b>Resiliencia</b> te da velocidad extra: sigue reparando.",
-    ],
-  },
-  {
-    nombre: "Coop: rescate y curación", tag: "Coop", modo: "coop", color: "#22c55e",
-    perks: ["borrowed", "wellmake", "botany", "reassurance"],
-    para: "Para el apoyo del grupo. Con voz, el compañero colgado te dice dónde está el asesino, así que no necesitas Familia y puedes llevar más ventajas de rescate.",
-    sinergia: "<b>Consuelo</b> te da tiempo para esperar el momento seguro, <b>Tiempo prestado</b> protege al rescatado y, tras el descuelgue, <b>Sobreviviremos</b> (+100 %) y <b>Conocimientos de botánica</b> se suman y dejan la curación en segundos.",
-    como: [
-      "Si el asesino está cerca del gancho, pausa el sacrificio con <b>Consuelo</b> y espera.",
-      "Al descolgar, <b>Tiempo prestado</b> da Resistencia y Celeridad al rescatado.",
-      "Después cúralo: <b>Sobreviviremos</b> y <b>Conocimientos de botánica</b> se suman.",
-    ],
-  },
-  {
-    nombre: "Coop: final de partida", tag: "Coop", modo: "coop", color: "#eab308",
-    perks: ["adrenaline", "hope", "wakeup", "borrowed"],
-    para: "Para cuando el grupo llega vivo al último generador: curarse, abrir las puertas rápido y sacar a quien esté colgado.",
-    sinergia: "<b>¡Despierta!</b> abre un 20 % más rápido por cada compañero vivo y les enseña tu aura mientras abres: rinde mucho más en coop. <b>Adrenalina</b> (única que deja Agotado) te cura y <b>Esperanza</b> te da Celeridad, y <b>Tiempo prestado</b> asegura el último rescate.",
-    como: [
-      "Al hacerse el último generador, <b>Adrenalina</b> te cura y te da velocidad.",
-      "<b>¡Despierta!</b> te enseña los interruptores: abre la puerta mientras los demás rescatan.",
-      "<b>Esperanza</b> te da Celeridad hasta salir.",
-      "Si hay alguien colgado, rescátalo con <b>Tiempo prestado</b> para que llegue a la salida.",
-    ],
-  },
-  {
-    nombre: "Anti-slug (contra dejarte en el suelo)", tag: "Defensa", modo: "ambos", color: "#64748b",
-    perks: ["unbreakable", "tenacity", "flipflop", "powerstruggle"],
-    para: "Contra asesinos que dejan a todos en el suelo sin colgarlos. Sirve en los dos modos: en solitario te salvas solo y en coop ganas tiempo hasta que llegue un compañero.",
-    sinergia: "<b>Tenacidad</b> te deja recuperarte mientras te arrastras, y esa recuperación llena la barra de <b>Nos vemos</b>: si te recuperaste lo suficiente, al cargarte ya pasas el 15–25 % de forcejeo que pide <b>Lucha de poderes</b>. Si te levantas con <b>Inquebrantable</b> no hay forcejeo, así que elige: levántate o espera a que te cargue junto a una tarima.",
-    como: [
-      "En el suelo, <b>Tenacidad</b> te deja arrastrarte rápido mientras te recuperas.",
-      "Si el asesino está lejos, levántate con <b>Inquebrantable</b>.",
-      "Si viene por ti, quédate junto a una tarima: <b>Nos vemos</b> te da forcejeo inicial…",
-      "…y <b>Lucha de poderes</b> tira la tarima para soltarte.",
-    ],
-  },
-  {
-    nombre: "Tótems: purificar para curarte", tag: "Tótems", modo: "solo", color: "#d946ef",
+    nombre: "Solitario: tótems para curarte", tag: "Tótems", modo: "solo", color: "#d946ef",
     perks: ["innerstrength", "counterforce", "calmspirit", "flowstate"],
-    para: "Recorre el mapa purificando tótems: cada uno es una curación guardada para cuando te hieran, y de paso quitas los maleficios del asesino. Ideal en solitario, donde nadie te cura.",
-    sinergia: "Las velocidades se suman: <b>Contramedida</b> +25 % por distintivo, <b>Espíritu calmado</b> +10 % desde el principio y <b>Estado de flujo</b> +15 % por cada generador hecho (hasta +75 %). Al final de la partida borras en segundos un maleficio tardío. Contramedida también te enseña el tótem más lejano, y cada tótem carga <b>Fuerza interior</b>. Estado de flujo empieza en 0: no ayuda en la primera ronda de tótems, pero sí al curar, descolgar y en el final. Ninguna deja Agotado. Si un compañero bendice tótems, compiten por ellos: purifica los que no tengan su bendición.",
+    para: "Recorre el mapa purificando tótems: cada purificación activa una curación de <b>Fuerza interior</b> para cuando te hieran, y de paso quitas los maleficios del asesino. Ideal en solitario, donde nadie te cura.",
+    sinergia: "Las velocidades se combinan: <b>Contramedida</b> +25 % por distintivo, <b>Espíritu calmado</b> +10 % desde el principio y <b>Estado de flujo</b> +15 % por cada generador hecho (hasta +75 %). Desde 9.6.0 los bonus iguales no se suman completos (el mayor cuenta entero, el siguiente a la mitad), pero el total sigue subiendo. Al final de la partida borras en segundos un maleficio tardío. Contramedida también te enseña el tótem más lejano, y cada tótem purificado activa <b>Fuerza interior</b>: si estás herido, úsala antes de purificar el siguiente. Estado de flujo empieza en 0: no ayuda en la primera ronda de tótems, pero sí al curar, descolgar y en el final. Ninguna deja Agotado. Si un compañero bendice tótems, compiten por ellos: purifica los que no tengan su bendición.",
     como: [
-      "Al empezar, purifica el primer tótem que encuentres (los sitios habituales): ya vas un 35 % más rápido y en silencio.",
+      "Al empezar, purifica el primer tótem que encuentres (los sitios habituales): ya vas en torno a un 30 % más rápido y en silencio.",
       "Sigue el aura del tótem lejano que te enseña <b>Contramedida</b> y encadena purificaciones.",
       "Cuando te hieran, rompe la línea de visión y métete en un casillero 8 s: <b>Fuerza interior</b> te cura (no funciona si sufres Desesperanza).",
       "Luego repara: cada generador sube <b>Estado de flujo</b>, que acelera curas, rescates y cualquier maleficio que se encienda tarde.",
     ],
   },
   {
-    nombre: "Autocuración: curarte sin depender de nadie", tag: "Curación", modo: "solo", color: "#10b981",
+    nombre: "Solitario: autocuración", tag: "Curación", modo: "solo", color: "#10b981",
     perks: ["resurgence", "selfcare", "botany", "plottwist"],
     para: "Para volver a estar sano una y otra vez sin esperar a un compañero. No existe ninguna ventaja que te cure corriendo en plena persecución; lo más cercano es <b>Giro argumental</b>, que te levanta sano en medio de ella.",
     sinergia: "<b>Resurgimiento</b> te deja al 70 % al bajar del gancho y <b>Autocuración</b> remata el resto, acelerada por <b>Conocimientos de botánica</b>. <b>Giro argumental</b> es tu curación de emergencia en persecución. Ninguna deja Agotado ni comparten recurso.",
@@ -309,15 +268,75 @@ window.BUILDS = [
     ],
   },
   {
-    nombre: "Coop: Bendiciones de equipo", tag: "Coop", modo: "coop", color: "#6366f1",
+    nombre: "Solitario: anti-slug", tag: "Anti-slug", modo: "solo", color: "#64748b",
+    perks: ["unbreakable", "tenacity", "flipflop", "powerstruggle"],
+    para: "Contra asesinos que dejan a todos en el suelo sin colgarlos. En solitario nadie garantiza que vengan a levantarte, así que esta build te salva sin ayuda.",
+    sinergia: "<b>Tenacidad</b> te deja recuperarte mientras te arrastras, y esa recuperación llena la barra de <b>Nos vemos</b>: si te recuperaste lo suficiente, al cargarte ya pasas el 15–25 % de forcejeo que pide <b>Lucha de poderes</b>. Si te levantas con <b>Inquebrantable</b> no hay forcejeo, así que elige: levántate o espera a que te cargue junto a una tarima.",
+    como: [
+      "En el suelo, <b>Tenacidad</b> te deja arrastrarte rápido mientras te recuperas.",
+      "Si el asesino está lejos, levántate con <b>Inquebrantable</b>.",
+      "Si viene por ti, quédate junto a una tarima: <b>Nos vemos</b> te da forcejeo inicial…",
+      "…y <b>Lucha de poderes</b> tira la tarima para soltarte.",
+    ],
+  },
+  // ---------------------------------------------------------------- COOP
+  {
+    nombre: "Coop: perseguidor", tag: "Persecución", modo: "coop", color: "#f43f5e",
+    perks: ["lithe", "woo", "resilience", "wtl"],
+    para: "Para quien se lleva al asesino mientras el grupo repara. Es la base de solitario cambiando Familia por Oportunidades: la llamada ya te dice qué pasa en el gancho. Incluye las 3 ventajas de sobreviviente más usadas (Agilidad, Resiliencia y Oportunidades).",
+    sinergia: "<b>Oportunidades</b> te marca las ventanas a 24 m para que llegues corriendo y hagas el salto rápido que activa <b>Agilidad</b>; además el primer salto es un 10 % más rápido (luego entra en enfriamiento). Herido, <b>Resiliencia</b> acelera todos tus saltos. <b>Ganas de vivir</b> cubre el tuneleo. Solo lleva una ventaja que deja Agotado (Agilidad).",
+    como: [
+      "Avisa por voz cuando el asesino vaya por ti y llévalo lejos de los generadores del grupo.",
+      "<b>Oportunidades</b> te marca las ventanas cercanas: al saltar rápido, <b>Agilidad</b> te da 3 s de Celeridad.",
+      "Herido, <b>Resiliencia</b> acelera tus saltos: no hace falta curarse para seguir la persecución.",
+      "Si te tunelean tras descolgarte, <b>Ganas de vivir</b> lo aturde. No repares ni cures mientras esté activa.",
+    ],
+  },
+  {
+    nombre: "Coop: generadores en equipo", tag: "Generadores", modo: "coop", color: "#f59e0b",
+    perks: ["prove", "dejavu", "resilience", "hyperfocus"],
+    para: "Para el grupo que se reparte los papeles por voz: uno se lleva la persecución y los demás hacen generadores juntos. Va mejor con una caja de herramientas.",
+    sinergia: "<b>Demuestra lo que vales</b> necesita compañeros a 4 m y también los acelera a ellos: en coop pueden quedar en el mismo generador. <b>Déjà vu</b> marca los generadores que conviene hacer, <b>Hiperconcentración</b> premia las pruebas Excelentes y <b>Resiliencia</b> te deja reparar herido sin perder tiempo curándote.",
+    como: [
+      "Avisa por voz en qué generador de los que marca <b>Déjà vu</b> estás.",
+      "Reparen de dos en dos para activar <b>Demuestra lo que vales</b>.",
+      "Encadena pruebas Excelentes para acumular distintivos de <b>Hiperconcentración</b>.",
+      "Herido, <b>Resiliencia</b> te da velocidad extra: sigue reparando.",
+    ],
+  },
+  {
+    nombre: "Coop: rescate y curación", tag: "Rescate", modo: "coop", color: "#16a34a",
+    perks: ["borrowed", "wellmake", "botany", "reassurance"],
+    para: "Para el apoyo del grupo. Es el rescatista de solitario cambiando Familia por Conocimientos de botánica: con voz, el compañero colgado te dice dónde está el asesino.",
+    sinergia: "<b>Consuelo</b> te da tiempo para esperar el momento seguro, <b>Tiempo prestado</b> protege al rescatado y, tras el descuelgue, <b>Sobreviviremos</b> (+100 %) y <b>Conocimientos de botánica</b> se combinan (Botánica cuenta a la mitad: unos +125 %) y dejan la curación en unos 7 s.",
+    como: [
+      "Si el asesino está cerca del gancho, pausa el sacrificio con <b>Consuelo</b> y espera.",
+      "Al descolgar, <b>Tiempo prestado</b> da Resistencia y Celeridad al rescatado.",
+      "Después cúralo: <b>Sobreviviremos</b> y <b>Conocimientos de botánica</b> se combinan.",
+    ],
+  },
+  {
+    nombre: "Coop: Bendiciones de equipo", tag: "Bendiciones", modo: "coop", color: "#6366f1",
     perks: ["boonhealing", "boonshadow", "boonexpo", "boonsteadfast"],
-    para: "Un solo tótem bendecido convierte su zona (24 m) en refugio para todo el grupo: curación rápida, sigilo, levantarse solo y generadores que no retroceden. Es una de las 5 builds de sobreviviente más usadas en nightlight.gg.",
-    sinergia: "Las 4 comparten el mismo tótem: bendices una vez y todas funcionan. Mientras el grupo se cura y persigue en la zona, <b>Determinación</b> hace que los generadores cercanos retrocedan más lento y se reparen más rápido. En coop avisa por voz dónde está la bendición para que el grupo se cure y persiga cerca. <b>No</b> la combines con un compañero que lleve Fuerza interior o Contramedida: purifican los tótems que necesitas.",
+    para: "Un solo tótem bendecido convierte su zona (24 m) en refugio para todo el grupo: curación rápida, sigilo, levantarse solo y generadores que no retroceden. Rinde en coop porque el grupo sabe por voz dónde está la bendición.",
+    sinergia: "Las 4 comparten el mismo tótem: bendices una vez y todas funcionan. Mientras el grupo se cura y persigue en la zona, <b>Determinación</b> hace que los generadores cercanos retrocedan más lento y se reparen más rápido. <b>Exponencial</b> sustituye al anti-slug: en su zona cualquiera se levanta solo. <b>No</b> la combines con un compañero que lleve Fuerza interior o Contramedida: purifican los tótems que necesitas.",
     como: [
       "Bendice un tótem escondido, cerca del centro del mapa o entre dos generadores.",
       "Avisa por voz: los heridos se curan en la zona con <b>Círculo de curación</b> (no te cura a ti mismo).",
       "Persigue cerca de la zona: con <b>Paso de las sombras</b> el asesino te pierde y con <b>Exponencial</b> te levantas solo.",
-      "Si el asesino apaga el tótem, bendice otro en cuanto puedas.",
+      "Si el asesino apaga o destruye el tótem (algunas de sus ventajas lo hacen), bendice otro en cuanto puedas.",
+    ],
+  },
+  {
+    nombre: "Coop: final de partida", tag: "Final", modo: "coop", color: "#eab308",
+    perks: ["adrenaline", "hope", "wakeup", "borrowed"],
+    para: "Para cuando el grupo llega vivo al último generador: curarse, abrir las puertas rápido y sacar a quien esté colgado.",
+    sinergia: "<b>¡Despierta!</b> abre un 20 % más rápido por cada compañero vivo y les enseña tu aura mientras abres: rinde mucho más en coop. <b>Adrenalina</b> (única que deja Agotado) te cura y <b>Esperanza</b> te da Celeridad, y <b>Tiempo prestado</b> asegura el último rescate.",
+    como: [
+      "Al hacerse el último generador, <b>Adrenalina</b> te cura y te da velocidad.",
+      "<b>¡Despierta!</b> te enseña los interruptores: abre la puerta mientras los demás rescatan.",
+      "<b>Esperanza</b> te da Celeridad hasta salir.",
+      "Si hay alguien colgado, rescátalo con <b>Tiempo prestado</b> para que llegue a la salida.",
     ],
   },
 ];
