@@ -41,7 +41,7 @@ window.PERKS = {
     es: "Ganas de vivir", en: "Will to Live", icon: "iconPerks_decisiveStrike.png", dueno: "General (con el capítulo de Halloween: Golpe decisivo, de Laurie)",
     efecto: "Durante <b>40/50/60 s</b> tras ser descolgado, si el asesino te agarra o te carga, supera una prueba de habilidad para <b>aturdirlo 4 s</b> y escapar. Te conviertes en la Obsesión. Una vez por partida.",
     coste: "Se desactiva con acciones llamativas, al completarse todos los generadores o tras usarla", uso: "6º · 16,8 %", cambio: "9.4.0 (pasa a ser general y cambia de nombre)", estado: "ok",
-    info: "Si tienes el capítulo de Halloween, en tu juego aparece como <b>Golpe decisivo</b>, ventaja única de Laurie, con el mismo efecto. Sin el capítulo es la ventaja general <b>Ganas de vivir</b> (Will to Live).",
+    info: "Si tienes el capítulo de Halloween, en tu juego aparece como <b>Golpe decisivo</b>, ventaja única de Laurie, con el mismo efecto. Sin el capítulo es la ventaja general <b>Ganas de vivir</b> (Will to Live), nombre comprobado en el cliente en español de México.",
   },
   adrenaline: {
     es: "Adrenalina", en: "Adrenaline", icon: "iconPerks_adrenaline.png", dueno: "Meg Thomas",
