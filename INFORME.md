@@ -20,14 +20,14 @@ Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino fr
 | Solo: tótems con Estado de flujo | Maleficios | Fuerza interior, Contramedida, Estado de flujo, Demasiado entusiasta | Demasiado entusiasta → Agilidad |
 | Solo: autocuración | Desgaste | Resurgimiento, Autocuración, Botánica, Giro argumental | — |
 | Solo sin DLC | Tuneleo | Ganas de vivir, Resiliencia, Déjà vu, Familia | — |
-| Solo: anti-slug | Slug | Exponencial, Tenacidad, Inquebrantable, Agilidad | — |
+| Solo: anti-slug | Slug | Exponencial, Tenacidad, Agilidad, Resiliencia | — |
 | Coop: perseguidor | Tuneleo | Agilidad, Resiliencia, Ganas de vivir, Cinco movimientos adelante | — |
 | Coop: generadores en equipo | 3-gen | Demuestra lo que vales, Déjà vu, Hiperconcentración, Resiliencia | Demuestra → Fajador |
 | Coop: rescate y curación | Campeo | Tiempo prestado, Sobreviviremos, Botánica, Consuelo | Consuelo → Agilidad |
 | Coop: Bendiciones con Estado de flujo | Regresión, desgaste | Círculo de curación, Paso de las sombras, Determinación, Estado de flujo | Determinación → Agilidad |
 | Coop: final de partida | Presión en las puertas | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado | — |
 
-**Sin confirmar:** si levantarte en la zona de Exponencial gasta también el uso de Inquebrantable. Nombres es-MX de Cinco movimientos adelante y Demasiado entusiasta: solo de la wiki ES (en España: Cinco pasos por delante, Pasión).
+**Inquebrantable + Exponencial:** no se combinan; levantarte en la zona de Exponencial gasta el uso de Inquebrantable (comprobado por el usuario en su juego, 10-oct-2026; regla en `ANULAN`). Nombres es-MX de Cinco movimientos adelante y Demasiado entusiasta: solo de la wiki ES (en España: Cinco pasos por delante, Pasión).
 
 ## Reglas de las builds (las comprueba `validar.py`)
 

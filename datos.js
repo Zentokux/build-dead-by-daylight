@@ -147,11 +147,6 @@ window.PERKS = {
     coste: "Se pierde al recibir daño", cambio: "6.7.0", estado: "ok",
     info: "Nombre de la wiki oficial en español (es-MX); en los textos de España aparece como «Pasión».",
   },
-  unbreakable: {
-    es: "Inquebrantable", en: "Unbreakable", icon: "iconPerks_unbreakable.png", dueno: "Bill Overbeck",
-    efecto: "Si <b>el asesino</b> te deja derribado: te recuperas un <b>25/30/35 %</b> más rápido y puedes <b>levantarte solo una vez</b> por partida.",
-    coste: "Un uso por partida", cambio: "9.5.0 (solo si te derriba el asesino)", estado: "ok",
-  },
   tenacity: {
     es: "Tenacidad", en: "Tenacity", icon: "iconPerks_tenacity.png", dueno: "David Tapp",
     efecto: "Derribado: puedes <b>arrastrarte y recuperarte a la vez</b>, te arrastras con <b>+30/40/50 % de Celeridad</b>, tus gruñidos son un 75 % más bajos y el asesino no ve tu aura.",
@@ -254,14 +249,14 @@ window.BUILDS = [
   {
     nombre: "Solitario: anti-slug", tag: "Anti-slug", modo: "solo", color: "#64748b",
     contra: ["Slug (te deja en el suelo)"],
-    perks: ["boonexpo", "tenacity", "unbreakable", "lithe"],
-    para: "Contra el asesino que derriba a todos y no los cuelga. En solitario nadie garantiza que vengan a levantarte: esta build te levanta sola. Todo es para ti.",
-    sinergia: "<b>Exponencial</b> convierte la zona del tótem en un sitio donde cualquiera se levanta solo. Si te tumban lejos, <b>Tenacidad</b> te deja arrastrarte rápido y sin aura mientras te recuperas, para llegar a la zona. Si no llegas, <b>Inquebrantable</b> te levanta una vez en cualquier sitio. <b>Agilidad</b> (única que deja Agotado) es para que no te tumben tan pronto. Los bonus de recuperación se combinan (el menor cuenta a la mitad).",
+    perks: ["boonexpo", "tenacity", "lithe", "resilience"],
+    para: "Contra el asesino que derriba a todos y no los cuelga. En solitario nadie garantiza que vengan a levantarte: esta build te levanta sola, las veces que haga falta, y de paso levanta a los compañeros que caigan en tu zona.",
+    sinergia: "<b>Exponencial</b> convierte la zona del tótem en un sitio donde cualquiera se levanta solo, sin límite de usos. Si te tumban lejos, <b>Tenacidad</b> te deja arrastrarte rápido y sin aura mientras te recuperas, hasta llegar a la zona. <b>Agilidad</b> (única que deja Agotado) es para que no te tumben tan pronto, y al levantarte sigues herido: <b>Resiliencia</b> te deja reparar y saltar más rápido sin pararte a curar. No lleva Inquebrantable: levantarte en la zona de Exponencial también gasta su único uso. Ojo con Shattered Hope (asesino): destruye el tótem bendecido.",
     como: [
       "Bendice un tótem cerca de los generadores donde vas a estar y persigue cerca de su zona.",
       "En persecución, salta rápido para activar <b>Agilidad</b> y gana distancia.",
       "Si te deja en el suelo lejos, arrástrate hacia la zona con <b>Tenacidad</b>: el asesino no ve tu aura.",
-      "En la zona te levantas solo con <b>Exponencial</b>; guarda <b>Inquebrantable</b> para cuando te tumben lejos.",
+      "En la zona te levantas solo con <b>Exponencial</b> y sigues herido con <b>Resiliencia</b>; si apagan el tótem, bendice otro.",
     ],
   },
   // ---------------------------------------------------------------- COOP

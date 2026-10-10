@@ -40,6 +40,7 @@ def bendice(k): return k.startswith('boon')
 ANULAN = [
     ({'secondwind', 'resurgence'}, 'Segundo aliento te deja Quebrantado y anula Resurgimiento'),
     ({'secondwind', 'momentofglory'}, 'las dos usan Quebrantado'),
+    ({'unbreakable', 'boonexpo'}, 'levantarte en la zona de Exponencial gasta el único uso de Inquebrantable (comprobado por el usuario en su juego, 10-oct-2026)'),
 ]
 
 # Ventajas que te salvan a TI (persecución, antitúnel o autocuración): la híbrida debe meter una
