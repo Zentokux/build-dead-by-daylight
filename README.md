@@ -7,3 +7,5 @@ Guía en español con 11 builds de 4 ventajas para Superviviente, para jugar en 
 - **Fuentes:** notas oficiales de Behaviour (KB), archivos del juego vía dbd.tricky.lol (nombres del cliente en español de México) y estadísticas de uso de nightlight.gg (últimos 28 días).
 
 Dead by Daylight y sus iconos son propiedad de Behaviour Interactive. Esta es una guía de fans sin ánimo de lucro.
+
+- **Antes de subir cambios:** `python validar.py` (reglas de builds, iconos y términos en español de México). Informe de cierre: `INFORME.md`.

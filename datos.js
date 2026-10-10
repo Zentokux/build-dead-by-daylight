@@ -19,7 +19,7 @@ window.PERKS = {
   },
   resilience: {
     es: "Resiliencia", en: "Resilience", icon: "iconPerks_resilience.png", dueno: "General",
-    efecto: "Estando herido: <b>+7/8/9 %</b> de velocidad al reparar, curar, saltar ventanas, descolgar, sabotear, purificar/bendecir y abrir puertas y cofres.",
+    efecto: "Estando herido: <b>+7/8/9 %</b> de velocidad al reparar, curar, saltar, descolgar, sabotear, purificar/bendecir y abrir puertas y cofres.",
     coste: "—", uso: "2º · 23,35 %", cambio: "10.2.0 (antes 3/6/9 %)", estado: "ok",
   },
   woo: {
@@ -34,13 +34,13 @@ window.PERKS = {
   },
   deadhard: {
     es: "Fajador", en: "Dead Hard", icon: "iconPerks_DeadHard.png", dueno: "David King",
-    efecto: "Tras ser descolgado, herido y corriendo, pulsa el botón de habilidad: <b>Resistencia durante 0,5 s</b> (aguantas un golpe sin caer).",
+    efecto: "Tras ser descolgado, herido y corriendo, presiona el botón de habilidad activa: <b>Resistencia durante 0,5 s</b> (aguantas un golpe sin caer).",
     coste: "Agotado 60/50/40 s", uso: "5º · 19,08 %", cambio: "6.7.0", estado: "ok",
   },
   wtl: {
     es: "Ganas de vivir", en: "Will to Live", icon: "iconPerks_decisiveStrike.png", dueno: "General (con el capítulo de Halloween: Golpe decisivo, de Laurie)",
-    efecto: "Durante <b>40/50/60 s</b> tras ser descolgado, si el asesino te agarra o te carga, supera una prueba de habilidad para <b>aturdirlo 4 s</b> y escapar. Te conviertes en la Obsesión. Una vez por partida.",
-    coste: "Se desactiva con acciones llamativas, al completarse todos los generadores o tras usarla", uso: "6º · 16,8 %", cambio: "9.4.0 (pasa a ser general y cambia de nombre)", estado: "ok",
+    efecto: "Durante <b>40/50/60 s</b> tras ser descolgado, si el asesino te carga, supera una prueba de habilidad para <b>aturdirlo 4 s</b> y escapar. Te conviertes en la Obsesión. Una vez por partida.",
+    coste: "Se desactiva con acciones destacadas, al completarse todos los generadores o tras usarla", uso: "6º · 16,80 %", cambio: "9.4.0 (pasa a ser general y cambia de nombre)", estado: "ok",
     info: "Si tienes el capítulo de Halloween, en tu juego aparece como <b>Golpe decisivo</b>, ventaja única de Laurie, con el mismo efecto. Sin el capítulo es la ventaja general <b>Ganas de vivir</b> (Will to Live), nombre comprobado en el cliente en español de México.",
   },
   adrenaline: {
@@ -61,7 +61,7 @@ window.PERKS = {
   sprint: {
     es: "Esprint", en: "Sprint Burst", icon: "iconPerks_sprintBurst.png", dueno: "Meg Thomas",
     efecto: "Al empezar a correr: <b>+50 % de Celeridad durante 2 s</b>.",
-    coste: "Agotado 60/50/40 s", uso: "13º · 6,70 %", cambio: "10.1.0 (3 → 2 s)", estado: "ok",
+    coste: "Agotado 60/50/40 s", uso: "14º · 6,70 %", cambio: "10.1.0 (3 → 2 s)", estado: "ok",
   },
   wellmake: {
     es: "Sobreviviremos", en: "We'll Make It", icon: "iconPerks_wellMakeIt.png", dueno: "General",
@@ -80,7 +80,7 @@ window.PERKS = {
   },
   hyperfocus: {
     es: "Hiperconcentración", en: "Hyperfocus", icon: "iconPerks_Hyperfocus.png", dueno: "Rebecca Chambers",
-    efecto: "Cada prueba de habilidad <b>Excelente</b> al reparar o curar da 1 ficha (máx. 6). Por ficha: +4 % de probabilidad y velocidad de la aguja y <b>+10/20/30 %</b> al bonus de la prueba. Pierdes las fichas con una prueba Buena, un fallo o si paras.",
+    efecto: "Cada prueba de habilidad <b>Excelente</b> al reparar o curar da 1 distintivo (máx. 6). Por distintivo: +4 % de probabilidad y velocidad de la aguja y <b>+10/20/30 %</b> al bonus de la prueba. Pierdes los distintivos con una prueba Buena, un fallo o si paras.",
     coste: "—", uso: "19º · 5,01 %", cambio: "Sin cambios recientes", estado: "ok",
   },
   prove: {
@@ -105,12 +105,12 @@ window.PERKS = {
   },
   tenacity: {
     es: "Tenacidad", en: "Tenacity", icon: "iconPerks_tenacity.png", dueno: "David Tapp",
-    efecto: "Derribado: puedes <b>arrastrarte y recuperarte a la vez</b>, te arrastras con <b>+30/40/50 % de Celeridad</b>, tus gruñidos son un 75 % más bajos y no se puede revelar tu aura.",
+    efecto: "Derribado: puedes <b>arrastrarte y recuperarte a la vez</b>, te arrastras con <b>+30/40/50 % de Celeridad</b>, tus gruñidos son un 75 % más bajos y el asesino no ve tu aura.",
     coste: "—", uso: "79º · 1,08 %", cambio: "9.3.0", estado: "ok",
   },
   reassurance: {
     es: "Consuelo", en: "Reassurance", icon: "iconPerks_Reassurance.png", dueno: "Rebecca Chambers",
-    efecto: "A 6 m de un sobreviviente colgado, pulsa el botón de habilidad para <b>pausar su sacrificio 20/25/30 s</b>.",
+    efecto: "A 6 m de un sobreviviente colgado, presiona el botón de habilidad activa para <b>pausar su sacrificio 20/25/30 s</b>.",
     coste: "Una vez por sobreviviente y gancho", uso: "95º · 0,87 %", cambio: "6.2.0", estado: "ok",
   },
   powerstruggle: {
@@ -130,23 +130,24 @@ window.PERKS = {
   },
   innerstrength: {
     es: "Fuerza interior", en: "Inner Strength", icon: "iconPerks_innerStrength.png", dueno: "Nancy Wheeler",
-    efecto: "Cada tótem que purificas te da una carga. Herido, escóndete <b>10/9/8 s</b> en un casillero para gastarla y <b>curarte un estado de salud al instante</b>.",
-    coste: "Una curación por tótem purificado", uso: "37º · 2,44 %", cambio: "7.4.0 (recupera el nombre)", estado: "ok",
+    efecto: "Cada tótem que purificas te da una carga. Herido y sin sufrir Desesperanza, escóndete <b>10/9/8 s</b> en un casillero para gastarla y <b>curarte un estado de salud al instante</b>.",
+    coste: "Una curación por tótem purificado", uso: "38º · 2,44 %", cambio: "7.4.0 (recupera el nombre)", estado: "ok",
   },
   counterforce: {
     es: "Contramedida", en: "Counterforce", icon: "iconPerks_Counterforce.png", dueno: "Jill Valentine",
-    efecto: "Empiezas con 1 ficha y ganas 1 por cada tótem purificado: purificas un <b>25 % más rápido por ficha</b>. Tras purificar, ves el aura del <b>tótem más lejano</b> durante 10/12/14 s.",
+    efecto: "Empiezas con 1 distintivo y ganas 1 por cada tótem purificado: purificas un <b>25 % más rápido por distintivo</b>. Tras purificar, ves el aura del <b>tótem más lejano</b> durante 10/12/14 s.",
     coste: "—", uso: "87º · 0,99 %", cambio: "9.0.0", estado: "ok",
-  },
-  smallgame: {
-    es: "Caza menor", en: "Small Game", icon: "iconPerks_smallGame.png", dueno: "General",
-    efecto: "Ves el aura de los <b>tótems a 10/11/12 m</b>.",
-    coste: "—", uso: "110º · 0,59 %", cambio: "10.2.0 (rediseño: ahora muestra el aura de los tótems)", estado: "ok",
   },
   calmspirit: {
     es: "Espíritu calmado", en: "Calm Spirit", icon: "iconPerks_calmSpirit.png", dueno: "Jake Park",
     efecto: "No espantas a los cuervos ni gritas de dolor. Bendices, purificas y abres cofres <b>en silencio</b> y un <b>8/9/10 % más rápido</b>.",
     coste: "—", uso: "100º · 0,76 %", cambio: "10.2.0 (antes un 40/35/30 % más lento)", estado: "ok",
+  },
+  flowstate: {
+    es: "Estado de flujo", en: "Flow State", icon: "iconPerks_FlowState.png", dueno: "Kwon Tae-young",
+    efecto: "Ganas 1 distintivo por cada generador completado (máx. 5). Por distintivo, <b>bendices y purificas tótems, curas y descuelgas un 13/14/15 % más rápido</b>.",
+    coste: "—", uso: "60º · 1,52 %", cambio: "10.2.0 (antes 8/9/10 % por distintivo)", estado: "ok",
+    info: "Kwon Tae-young es surcoreano (capítulo de 9.5.0). Nombre tomado de la wiki oficial en español; no se encontró en los textos del juego.",
   },
   resurgence: {
     es: "Resurgimiento", en: "Resurgence", icon: "iconPerks_Resurgence.png", dueno: "Jill Valentine",
@@ -160,7 +161,7 @@ window.PERKS = {
   },
   plottwist: {
     es: "Giro argumental", en: "Plot Twist", icon: "iconPerks_PlotTwist.png", dueno: "Nicolas Cage",
-    efecto: "Herido, agachado y quieto: pulsa el botón de habilidad para <b>derribarte en silencio</b>. Te recuperas solo un 25 % más rápido y, al levantarte, quedas <b>sano</b> con <b>+50 % de Celeridad durante 2/3/4 s</b>.",
+    efecto: "Herido, agachado y quieto: presiona el botón de habilidad activa para <b>derribarte en silencio</b>. Te recuperas solo un 25 % más rápido y, al levantarte, quedas <b>sano</b> con <b>+50 % de Celeridad durante 2/3/4 s</b>.",
     coste: "Un uso; se recarga al completarse los generadores", uso: "26º · 3,98 %", cambio: "9.2.0", estado: "ok",
     info: "Nombre tomado de la wiki oficial en español; no se encontró en los textos del juego.",
   },
@@ -193,8 +194,8 @@ window.BUILDS = [
   {
     nombre: "Meta: persecución y antitúnel", tag: "Meta", modo: "ambos", color: "#e11d48",
     perks: ["lithe", "woo", "resilience", "wtl"],
-    para: "Las 4 ventajas de sobreviviente más usadas ahora mismo. Alarga las persecuciones y te protege si te tunelean tras el gancho. Funciona igual en solitario que en coop porque no depende de los compañeros.",
-    sinergia: "Oportunidades te lleva a las ventanas y las salta un 10 % más rápido, lo que facilita el salto rápido que activa <b>Agilidad</b>. Herido, <b>Resiliencia</b> acelera aún más esos saltos. Solo lleva una ventaja que deja Agotado (Agilidad).",
+    para: "Las 3 ventajas de sobreviviente más usadas (Agilidad, Resiliencia y Oportunidades) más Ganas de vivir, la mejor antitúnel. Alarga las persecuciones y te protege si te tunelean tras el gancho. Funciona igual en solitario que en coop porque no depende de los compañeros.",
+    sinergia: "<b>Oportunidades</b> te marca las ventanas a 24 m para que llegues corriendo y hagas el salto rápido que activa <b>Agilidad</b>; además el primer salto es un 10 % más rápido (luego entra en enfriamiento). Herido, <b>Resiliencia</b> acelera todos tus saltos. Solo lleva una ventaja que deja Agotado (Agilidad).",
     como: [
       "<b>Oportunidades</b> te marca las ventanas cercanas: corre hacia ellas.",
       "Al saltar rápido, <b>Agilidad</b> te da 3 s de Celeridad para ganar distancia.",
@@ -245,7 +246,7 @@ window.BUILDS = [
     como: [
       "Avisa por voz en qué generador de los que marca <b>Déjà vu</b> estás.",
       "Reparen de dos en dos para activar <b>Demuestra lo que vales</b>.",
-      "Encadena pruebas Excelentes para acumular fichas de <b>Hiperconcentración</b>.",
+      "Encadena pruebas Excelentes para acumular distintivos de <b>Hiperconcentración</b>.",
       "Herido, <b>Resiliencia</b> te da velocidad extra: sigue reparando.",
     ],
   },
@@ -276,7 +277,7 @@ window.BUILDS = [
     nombre: "Anti-slug (contra dejarte en el suelo)", tag: "Defensa", modo: "ambos", color: "#64748b",
     perks: ["unbreakable", "tenacity", "flipflop", "powerstruggle"],
     para: "Contra asesinos que dejan a todos en el suelo sin colgarlos. Sirve en los dos modos: en solitario te salvas solo y en coop ganas tiempo hasta que llegue un compañero.",
-    sinergia: "<b>Tenacidad</b> te deja recuperarte mientras te arrastras, y esa recuperación llena la barra de <b>Nos vemos</b>: al cargarte ya pasas el 15–25 % que pide <b>Lucha de poderes</b>. Si te levantas con <b>Inquebrantable</b> no hay forcejeo, así que elige: levántate o espera a que te cargue junto a una tarima.",
+    sinergia: "<b>Tenacidad</b> te deja recuperarte mientras te arrastras, y esa recuperación llena la barra de <b>Nos vemos</b>: si te recuperaste lo suficiente, al cargarte ya pasas el 15–25 % de forcejeo que pide <b>Lucha de poderes</b>. Si te levantas con <b>Inquebrantable</b> no hay forcejeo, así que elige: levántate o espera a que te cargue junto a una tarima.",
     como: [
       "En el suelo, <b>Tenacidad</b> te deja arrastrarte rápido mientras te recuperas.",
       "Si el asesino está lejos, levántate con <b>Inquebrantable</b>.",
@@ -286,14 +287,14 @@ window.BUILDS = [
   },
   {
     nombre: "Tótems: purificar para curarte", tag: "Tótems", modo: "solo", color: "#d946ef",
-    perks: ["innerstrength", "counterforce", "smallgame", "calmspirit"],
+    perks: ["innerstrength", "counterforce", "calmspirit", "flowstate"],
     para: "Recorre el mapa purificando tótems: cada uno es una curación guardada para cuando te hieran, y de paso quitas los maleficios del asesino. Ideal en solitario, donde nadie te cura.",
-    sinergia: "<b>Caza menor</b> te enseña los tótems cercanos y <b>Contramedida</b> el más lejano tras cada purificación, y acelera la siguiente un 25 % por ficha. <b>Espíritu calmado</b> suma otro 10 % y purificas en silencio. Cada tótem carga <b>Fuerza interior</b>. Ninguna deja Agotado. No la combines con un compañero que lleve Bendiciones: se quitan los tótems entre ustedes.",
+    sinergia: "Las velocidades se suman: <b>Contramedida</b> +25 % por distintivo, <b>Espíritu calmado</b> +10 % desde el principio y <b>Estado de flujo</b> +15 % por cada generador hecho (hasta +75 %). Al final de la partida borras en segundos un maleficio tardío. Contramedida también te enseña el tótem más lejano, y cada tótem carga <b>Fuerza interior</b>. Estado de flujo empieza en 0: no ayuda en la primera ronda de tótems, pero sí al curar, descolgar y en el final. Ninguna deja Agotado. Si un compañero bendice tótems, compiten por ellos: purifica los que no tengan su bendición.",
     como: [
-      "Al empezar, purifica el primer tótem que marque <b>Caza menor</b>: ya llevas 2 fichas de <b>Contramedida</b>.",
+      "Al empezar, purifica el primer tótem que encuentres (los sitios habituales): ya vas un 35 % más rápido y en silencio.",
       "Sigue el aura del tótem lejano que te enseña <b>Contramedida</b> y encadena purificaciones.",
-      "Cuando te hieran, rompe la línea de visión y métete en un casillero 8 s: <b>Fuerza interior</b> te cura.",
-      "Con los tótems limpios, ponte a reparar: hay como máximo 5 por partida.",
+      "Cuando te hieran, rompe la línea de visión y métete en un casillero 8 s: <b>Fuerza interior</b> te cura (no funciona si sufres Desesperanza).",
+      "Luego repara: cada generador sube <b>Estado de flujo</b>, que acelera curas, rescates y cualquier maleficio que se encienda tarde.",
     ],
   },
   {
@@ -305,14 +306,14 @@ window.BUILDS = [
       "Si te hieren y el asesino se va, escóndete y cúrate con <b>Autocuración</b>.",
       "Al ser descolgado, <b>Resurgimiento</b> te da el 70 %: termina de curarte en unos segundos.",
       "Si te persiguen herido, rompe la línea de visión, agáchate quieto y activa <b>Giro argumental</b>: te levantas sano y con Celeridad.",
-      "Guarda el segundo uso de <b>Giro argumental</b> para cuando se completen los generadores.",
+      "Al completarse los generadores recuperas un segundo uso de <b>Giro argumental</b>.",
     ],
   },
   {
     nombre: "Coop: Bendiciones de equipo", tag: "Coop", modo: "coop", color: "#6366f1",
     perks: ["boonhealing", "boonshadow", "boonexpo", "boonsteadfast"],
     para: "Un solo tótem bendecido convierte su zona (24 m) en refugio para todo el grupo: curación rápida, sigilo, levantarse solo y generadores que no retroceden. Es una de las 5 builds de sobreviviente más usadas en nightlight.gg.",
-    sinergia: "Las 4 comparten el mismo tótem: bendices una vez y todas funcionan. En coop avisa por voz dónde está la bendición para que el grupo se cure y persiga cerca. <b>No</b> la combines con un compañero que lleve Fuerza interior o Contramedida: purifican los tótems que necesitas.",
+    sinergia: "Las 4 comparten el mismo tótem: bendices una vez y todas funcionan. Mientras el grupo se cura y persigue en la zona, <b>Determinación</b> hace que los generadores cercanos retrocedan más lento y se reparen más rápido. En coop avisa por voz dónde está la bendición para que el grupo se cure y persiga cerca. <b>No</b> la combines con un compañero que lleve Fuerza interior o Contramedida: purifican los tótems que necesitas.",
     como: [
       "Bendice un tótem escondido, cerca del centro del mapa o entre dos generadores.",
       "Avisa por voz: los heridos se curan en la zona con <b>Círculo de curación</b> (no te cura a ti mismo).",
