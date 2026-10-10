@@ -128,6 +128,64 @@ window.PERKS = {
     efecto: "Con todos los generadores hechos: ves los <b>interruptores de las puertas</b>, los demás ven tu aura mientras abres y abres más rápido (<b>8/9/10 % + 20 %</b> por cada otro sobreviviente vivo).",
     coste: "—", uso: "116º · 0,53 %", cambio: "10.2.0", estado: "ok",
   },
+  innerstrength: {
+    es: "Fuerza interior", en: "Inner Strength", icon: "iconPerks_innerStrength.png", dueno: "Nancy Wheeler",
+    efecto: "Cada tótem que purificas te da una carga. Herido, escóndete <b>10/9/8 s</b> en un casillero para gastarla y <b>curarte un estado de salud al instante</b>.",
+    coste: "Una curación por tótem purificado", uso: "37º · 2,44 %", cambio: "7.4.0 (recupera el nombre)", estado: "ok",
+  },
+  counterforce: {
+    es: "Contramedida", en: "Counterforce", icon: "iconPerks_Counterforce.png", dueno: "Jill Valentine",
+    efecto: "Empiezas con 1 ficha y ganas 1 por cada tótem purificado: purificas un <b>25 % más rápido por ficha</b>. Tras purificar, ves el aura del <b>tótem más lejano</b> durante 10/12/14 s.",
+    coste: "—", uso: "87º · 0,99 %", cambio: "9.0.0", estado: "ok",
+  },
+  smallgame: {
+    es: "Caza menor", en: "Small Game", icon: "iconPerks_smallGame.png", dueno: "General",
+    efecto: "Ves el aura de los <b>tótems a 10/11/12 m</b>.",
+    coste: "—", uso: "110º · 0,59 %", cambio: "10.2.0 (rediseño: ahora muestra el aura de los tótems)", estado: "ok",
+  },
+  calmspirit: {
+    es: "Espíritu calmado", en: "Calm Spirit", icon: "iconPerks_calmSpirit.png", dueno: "Jake Park",
+    efecto: "No espantas a los cuervos ni gritas de dolor. Bendices, purificas y abres cofres <b>en silencio</b> y un <b>8/9/10 % más rápido</b>.",
+    coste: "—", uso: "100º · 0,76 %", cambio: "10.2.0 (antes un 40/35/30 % más lento)", estado: "ok",
+  },
+  resurgence: {
+    es: "Resurgimiento", en: "Resurgence", icon: "iconPerks_Resurgence.png", dueno: "Jill Valentine",
+    efecto: "Al ser descolgado, obtienes al instante un <b>50/60/70 % de progreso de curación</b>.",
+    coste: "Cada vez que te descuelgan", uso: "13º · 6,74 %", cambio: "8.1.0", estado: "ok",
+  },
+  selfcare: {
+    es: "Autocuración", en: "Self-Care", icon: "iconPerks_selfCare.png", dueno: "Claudette Morel",
+    efecto: "Puedes <b>curarte a ti mismo sin botiquín</b>, pero un 75/70/65 % más lento.",
+    coste: "Sin límite de usos", uso: "29º · 3,41 %", cambio: "6.1.0", estado: "ok",
+  },
+  plottwist: {
+    es: "Giro argumental", en: "Plot Twist", icon: "iconPerks_PlotTwist.png", dueno: "Nicolas Cage",
+    efecto: "Herido, agachado y quieto: pulsa el botón de habilidad para <b>derribarte en silencio</b>. Te recuperas solo un 25 % más rápido y, al levantarte, quedas <b>sano</b> con <b>+50 % de Celeridad durante 2/3/4 s</b>.",
+    coste: "Un uso; se recarga al completarse los generadores", uso: "26º · 3,98 %", cambio: "9.2.0", estado: "ok",
+    info: "Nombre tomado de la wiki oficial en español; no se encontró en los textos del juego.",
+  },
+  boonhealing: {
+    es: "Bendición: Círculo de curación", en: "Boon: Circle of Healing", icon: "iconPerks_BoonCircleOfHealing.png", dueno: "Mikaela Reid",
+    efecto: "Bendice un tótem. En su radio de 24 m: curas a otros un <b>50/75/100 % más rápido</b> sin botiquín y los heridos ven su aura entre sí. <b>No te permite curarte a ti mismo.</b>",
+    coste: "Necesita un tótem", uso: "33º · 2,60 %", cambio: "6.7.0", estado: "ok",
+  },
+  boonshadow: {
+    es: "Bendición: Paso de las sombras", en: "Boon: Shadow Step", icon: "iconPerks_BoonShadowStep.png", dueno: "Mikaela Reid",
+    efecto: "Bendice un tótem. En su radio de 24 m: <b>no dejas marcas de arañazos</b> y el asesino <b>no ve tu aura</b>. El efecto dura 2/3/4 s al salir.",
+    coste: "Necesita un tótem", uso: "36º · 2,50 %", cambio: "Sin cambios recientes", estado: "ok",
+    info: "Nombre de los textos del juego en español de México; la wiki en español la llama «Paso Sombrío».",
+  },
+  boonexpo: {
+    es: "Bendición: Exponencial", en: "Boon: Exponential", icon: "T_iconPerks_BoonExponential.png", dueno: "Jonah Vasquez",
+    efecto: "Bendice un tótem. En su radio de 24 m, los sobrevivientes derribados se recuperan un <b>90/95/100 % más rápido</b> y pueden <b>levantarse solos</b>.",
+    coste: "Necesita un tótem", uso: "52º · 1,82 %", cambio: "Sin cambios recientes", estado: "ok",
+  },
+  boonsteadfast: {
+    es: "Bendición: Determinación", en: "Boon: Steadfast", icon: "sin-icono.svg", dueno: "Aurora Stardotter",
+    efecto: "Bendice un tótem. En su radio de 24 m, los generadores <b>retroceden un 50 % más lento</b>, se reparan un <b>8/9/10 % más rápido</b> y ves su aura.",
+    coste: "Necesita un tótem", uso: "55º · 1,69 %", cambio: "10.1.0 (ventaja nueva)", estado: "ok",
+    info: "Ventaja de 10.1.0: su icono aún no está en ninguna fuente descargable.",
+  },
 };
 
 // modo: "solo" = solitario (sin voz), "coop" = con amigos en llamada, "ambos"
@@ -224,6 +282,42 @@ window.BUILDS = [
       "Si el asesino está lejos, levántate con <b>Inquebrantable</b>.",
       "Si viene por ti, quédate junto a una tarima: <b>Nos vemos</b> te da forcejeo inicial…",
       "…y <b>Lucha de poderes</b> tira la tarima para soltarte.",
+    ],
+  },
+  {
+    nombre: "Tótems: purificar para curarte", tag: "Tótems", modo: "solo", color: "#d946ef",
+    perks: ["innerstrength", "counterforce", "smallgame", "calmspirit"],
+    para: "Recorre el mapa purificando tótems: cada uno es una curación guardada para cuando te hieran, y de paso quitas los maleficios del asesino. Ideal en solitario, donde nadie te cura.",
+    sinergia: "<b>Caza menor</b> te enseña los tótems cercanos y <b>Contramedida</b> el más lejano tras cada purificación, y acelera la siguiente un 25 % por ficha. <b>Espíritu calmado</b> suma otro 10 % y purificas en silencio. Cada tótem carga <b>Fuerza interior</b>. Ninguna deja Agotado. No la combines con un compañero que lleve Bendiciones: se quitan los tótems entre ustedes.",
+    como: [
+      "Al empezar, purifica el primer tótem que marque <b>Caza menor</b>: ya llevas 2 fichas de <b>Contramedida</b>.",
+      "Sigue el aura del tótem lejano que te enseña <b>Contramedida</b> y encadena purificaciones.",
+      "Cuando te hieran, rompe la línea de visión y métete en un casillero 8 s: <b>Fuerza interior</b> te cura.",
+      "Con los tótems limpios, ponte a reparar: hay como máximo 5 por partida.",
+    ],
+  },
+  {
+    nombre: "Autocuración: curarte sin depender de nadie", tag: "Curación", modo: "solo", color: "#10b981",
+    perks: ["resurgence", "selfcare", "botany", "plottwist"],
+    para: "Para volver a estar sano una y otra vez sin esperar a un compañero. No existe ninguna ventaja que te cure corriendo en plena persecución; lo más cercano es <b>Giro argumental</b>, que te levanta sano en medio de ella.",
+    sinergia: "<b>Resurgimiento</b> te deja al 70 % al bajar del gancho y <b>Autocuración</b> remata el resto, acelerada por <b>Conocimientos de botánica</b>. <b>Giro argumental</b> es tu curación de emergencia en persecución. Ninguna deja Agotado ni comparten recurso.",
+    como: [
+      "Si te hieren y el asesino se va, escóndete y cúrate con <b>Autocuración</b>.",
+      "Al ser descolgado, <b>Resurgimiento</b> te da el 70 %: termina de curarte en unos segundos.",
+      "Si te persiguen herido, rompe la línea de visión, agáchate quieto y activa <b>Giro argumental</b>: te levantas sano y con Celeridad.",
+      "Guarda el segundo uso de <b>Giro argumental</b> para cuando se completen los generadores.",
+    ],
+  },
+  {
+    nombre: "Coop: Bendiciones de equipo", tag: "Coop", modo: "coop", color: "#6366f1",
+    perks: ["boonhealing", "boonshadow", "boonexpo", "boonsteadfast"],
+    para: "Un solo tótem bendecido convierte su zona (24 m) en refugio para todo el grupo: curación rápida, sigilo, levantarse solo y generadores que no retroceden. Es una de las 5 builds de sobreviviente más usadas en nightlight.gg.",
+    sinergia: "Las 4 comparten el mismo tótem: bendices una vez y todas funcionan. En coop avisa por voz dónde está la bendición para que el grupo se cure y persiga cerca. <b>No</b> la combines con un compañero que lleve Fuerza interior o Contramedida: purifican los tótems que necesitas.",
+    como: [
+      "Bendice un tótem escondido, cerca del centro del mapa o entre dos generadores.",
+      "Avisa por voz: los heridos se curan en la zona con <b>Círculo de curación</b> (no te cura a ti mismo).",
+      "Persigue cerca de la zona: con <b>Paso de las sombras</b> el asesino te pierde y con <b>Exponencial</b> te levantas solo.",
+      "Si el asesino apaga el tótem, bendice otro en cuanto puedas.",
     ],
   },
 ];

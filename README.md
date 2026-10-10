@@ -1,6 +1,6 @@
 # Build Dead by Daylight — Sobreviviente
 
-Guía en español con 8 builds de 4 ventajas para Superviviente, para jugar en solitario o en coop en Dead by Daylight: qué hace cada ventaja, para qué sirve la combinación y cómo usarla.
+Guía en español con 11 builds de 4 ventajas para Superviviente, para jugar en solitario o en coop en Dead by Daylight: qué hace cada ventaja, para qué sirve la combinación y cómo usarla.
 
 - **Web:** https://zentokux.github.io/build-dead-by-daylight/
 - **Parche:** 10.2.0 Mid-Chapter (6-oct-2026), validado el 10-oct-2026.
