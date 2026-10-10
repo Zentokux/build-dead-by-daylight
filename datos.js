@@ -182,10 +182,9 @@ window.PERKS = {
     coste: "Necesita un tótem", uso: "52º · 1,82 %", cambio: "Sin cambios recientes", estado: "ok",
   },
   boonsteadfast: {
-    es: "Bendición: Determinación", en: "Boon: Steadfast", icon: "sin-icono.svg", dueno: "Aurora Stardotter",
+    es: "Bendición: Determinación", en: "Boon: Steadfast", icon: "iconPerks_BoonSteadfast.png", dueno: "Aurora Stardotter",
     efecto: "Bendice un tótem. En su radio de 24 m, los generadores <b>retroceden un 50 % más lento</b>, se reparan un <b>8/9/10 % más rápido</b> y ves su aura.",
     coste: "Necesita un tótem", uso: "55º · 1,69 %", cambio: "10.1.0 (ventaja nueva)", estado: "ok",
-    info: "Ventaja de 10.1.0: su icono aún no está en ninguna fuente descargable.",
   },
 };
 

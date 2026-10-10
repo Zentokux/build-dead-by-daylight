@@ -73,7 +73,6 @@
 
 ## Pendiente o no verificable (no bloquea)
 
-- **Bendición: Determinación:** no hay icono descargable; usa `sin-icono.svg`.
 - **Nombres solo confirmados en la wiki ES** (no están en el volcado es-MX de 2022):
   - Hiperconcentración
   - Consuelo
