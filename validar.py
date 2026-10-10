@@ -58,6 +58,25 @@ def reglas(nombre, ks):
     if 'wtl' in ks and ('prove' in ks or 'boonsteadfast' in ks):
         avi(f'«{nombre}»: Ganas de vivir con una ventaja de reparar en grupo: se pierde al reparar tras el gancho')
 
+# Rendimientos decrecientes (9.6.0): bonus del mismo tipo -> el mayor 100 %, el 2.º 50 %, el 3.º 25 %, el 4.º 12,5 %.
+# Si una versión de build junta 2+ ventajas del mismo TIPO, su texto debe decir que «se combinan».
+TIPO = {
+    'reparar': {'dejavu', 'resilience', 'prove', 'boonsteadfast', 'overzealous'},
+    'curar a otros': {'wellmake', 'botany', 'boonhealing', 'flowstate', 'resilience'},
+    'curarte': {'botany', 'flowstate', 'resilience'},
+    'purificar': {'counterforce', 'flowstate', 'resilience'},
+    'bendecir': {'flowstate', 'resilience'},
+    'descolgar': {'flowstate', 'resilience'},
+    'Celeridad': {'adrenaline', 'hope', 'lithe'},
+    'abrir puertas': {'wakeup', 'resilience'},
+}
+def decrecientes(nombre, ks, texto):
+    for tipo, s in TIPO.items():
+        rep = sorted(set(ks) & s)
+        # Resiliencia solo cuenta herido: avisa solo si hay otra ventaja aparte de ella
+        if len(rep) > 1 and not re.search(r'se combinan|no se suman', texto):
+            err(f'«{nombre}»: {rep} dan bonus de «{tipo}» y el texto no explica que se combinan (rendimientos decrecientes)')
+
 # --- 2. Builds ---------------------------------------------------------------
 MODOS = {'solo', 'coop'}  # desde el 10-oct-2026 cada build es de un modo
 # Ventajas que necesitan compañeros coordinados: en una build de solitario son un aviso
@@ -94,6 +113,7 @@ for b in bloques:
         avi(f'«{nombre}»: no lleva ventaja propia de supervivencia ni versión híbrida')
     for etiqueta, vks in versiones:
         reglas(f'{nombre} ({etiqueta})', vks)
+        decrecientes(f'{nombre} ({etiqueta})', vks, b)
     if modo and modo.group(1) == 'solo':
         for k in ks:
             if k in NECESITAN_EQUIPO: avi(f'«{nombre}»: {perks[k]["es"]} en solitario: {NECESITAN_EQUIPO[k]}')

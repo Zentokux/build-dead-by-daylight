@@ -212,7 +212,7 @@ window.BUILDS = [
     perks: ["innerstrength", "counterforce", "flowstate", "overzealous"],
     hibrida: { sale: "overzealous", entra: "lithe", porque: "Si te persiguen mucho, cambia Demasiado entusiasta por <b>Agilidad</b>: sigues limpiando tótems y curándote con Fuerza interior, y además escapas mejor." },
     para: "Limpia el mapa de tótems (y de maleficios del asesino). Cada purificación activa una curación para ti y acelera tus reparaciones.",
-    sinergia: "<b>Contramedida</b> te enseña el tótem más lejano y purificas más rápido con cada uno. Cada tótem purificado activa <b>Fuerza interior</b> (curación propia en un casillero) y <b>Demasiado entusiasta</b> (reparas más rápido; el doble si era un maleficio). <b>Estado de flujo</b> crece con cada generador: al final purificas, curas y descuelgas mucho más rápido, ideal para maleficios tardíos. Ninguna deja Agotado. Contra Shattered Hope (asesino) los tótems quedan bloqueados unos segundos tras cada purificación: espera y sigue.",
+    sinergia: "<b>Contramedida</b> te enseña el tótem más lejano y purificas más rápido con cada uno. Cada tótem purificado activa <b>Fuerza interior</b> (curación propia en un casillero) y <b>Demasiado entusiasta</b> (reparas más rápido; el doble si era un maleficio). <b>Estado de flujo</b> crece con cada generador: al final purificas, curas y descuelgas mucho más rápido, ideal para maleficios tardíos. Ninguna deja Agotado. Contra Shattered Hope (asesino) los tótems quedan bloqueados unos segundos tras cada purificación: espera y sigue. Los bonus al purificar de Contramedida y Estado de flujo se combinan: el mayor cuenta entero y el otro a la mitad.",
     como: [
       "Al empezar, purifica el primer tótem y sigue el aura del siguiente que te enseña <b>Contramedida</b>.",
       "Tras cada tótem, ve a reparar: <b>Demasiado entusiasta</b> te acelera hasta que te hieran.",
@@ -238,7 +238,7 @@ window.BUILDS = [
     contra: ["Tuneleo"],
     perks: ["wtl", "resilience", "dejavu", "kindred"],
     para: "Las 4 son ventajas generales: cualquier personaje las saca en la Red Sanguínea sin comprar nada. Mezcla información (para el equipo) con antitúnel (para ti).",
-    sinergia: "Información (<b>Déjà vu</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). Ninguna deja Agotado: cuando tengas Agilidad o Fajador, añade una en lugar de Familia.",
+    sinergia: "Información (<b>Déjà vu</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). Ninguna deja Agotado: cuando tengas Agilidad o Fajador, añade una en lugar de Familia. Herido, Resiliencia y Déjà vu se combinan al reparar: la mayor cuenta entera y la otra a la mitad.",
     como: [
       "Repara los generadores que marca <b>Déjà vu</b>.",
       "<b>Familia</b> te dice si conviene ir al gancho.",
@@ -279,7 +279,7 @@ window.BUILDS = [
     perks: ["prove", "dejavu", "hyperfocus", "resilience"],
     hibrida: { sale: "prove", entra: "deadhard", porque: "Si el asesino va por ti, cambia Demuestra lo que vales por <b>Fajador</b>: reparas un poco menos en grupo, pero aguantas un golpe tras el gancho y no se pierde por volver a reparar." },
     para: "Para los que reparan mientras uno se lleva la persecución. Va mejor con caja de herramientas.",
-    sinergia: "<b>Demuestra lo que vales</b> acelera a todos los que reparan a 4 m: en coop pueden quedar en el mismo generador. <b>Déjà vu</b> marca cuáles hacer, <b>Hiperconcentración</b> premia las Excelentes y <b>Resiliencia</b> te deja reparar herido.",
+    sinergia: "<b>Demuestra lo que vales</b> acelera a todos los que reparan a 4 m: en coop pueden quedar en el mismo generador. <b>Déjà vu</b> marca cuáles hacer, <b>Hiperconcentración</b> premia las Excelentes y <b>Resiliencia</b> te deja reparar herido. Los tres bonus de reparación se combinan: el mayor cuenta entero, el segundo a la mitad y el tercero a un cuarto; Hiperconcentración no entra en la cuenta porque mejora las pruebas de habilidad, no la velocidad.",
     como: [
       "Avisa por voz en qué generador de <b>Déjà vu</b> estás.",
       "Reparen de dos en dos para activar <b>Demuestra lo que vales</b>.",
@@ -293,7 +293,7 @@ window.BUILDS = [
     perks: ["borrowed", "wellmake", "botany", "reassurance"],
     hibrida: { sale: "reassurance", entra: "lithe", porque: "Si el asesino se viene por ti tras el rescate, cambia Consuelo por <b>Agilidad</b> para poder escapar." },
     para: "Para el apoyo del grupo. Con voz no hace falta Familia: el colgado te dice dónde está el asesino.",
-    sinergia: "<b>Consuelo</b> te da tiempo para el momento seguro, <b>Tiempo prestado</b> protege al rescatado y <b>Sobreviviremos</b> (+100 %) con <b>Conocimientos de botánica</b> (cuenta a la mitad: unos +125 %) dejan la curación en unos 7 s.",
+    sinergia: "<b>Consuelo</b> te da tiempo para el momento seguro, <b>Tiempo prestado</b> protege al rescatado y <b>Sobreviviremos</b> (+100 %) y <b>Conocimientos de botánica</b> se combinan (Botánica cuenta a la mitad: unos +125 %) y dejan la curación en unos 7 s.",
     como: [
       "Si el asesino está cerca del gancho, pausa el sacrificio con <b>Consuelo</b>.",
       "Al descolgar, <b>Tiempo prestado</b> protege al rescatado.",
@@ -306,7 +306,7 @@ window.BUILDS = [
     perks: ["boonhealing", "boonshadow", "boonsteadfast", "flowstate"],
     hibrida: { sale: "boonsteadfast", entra: "lithe", porque: "Si eres el que más persiguen, cambia Determinación por <b>Agilidad</b>: con Paso de las sombras y Agilidad pierdes al asesino en la zona." },
     para: "Un tótem bendecido convierte su zona (24 m) en refugio del grupo: curación rápida, sigilo y generadores que no retroceden. Con voz, todos saben dónde está.",
-    sinergia: "Las 3 Bendiciones comparten tótem: bendices una vez y funcionan todas. <b>Estado de flujo</b> crece con cada generador: cuando el asesino apaga el tótem, vuelves a bendecir otro mucho más rápido, y además curas y descuelgas más rápido. <b>Círculo de curación</b> no te cura a ti mismo. No la combines con un compañero que purifique tótems. Ojo con Shattered Hope (asesino): desde 10.2.0 destruye el tótem bendecido.",
+    sinergia: "Las 3 Bendiciones comparten tótem: bendices una vez y funcionan todas. <b>Estado de flujo</b> crece con cada generador: cuando el asesino apaga el tótem, vuelves a bendecir otro mucho más rápido, y además curas y descuelgas más rápido. <b>Círculo de curación</b> no te cura a ti mismo. No la combines con un compañero que purifique tótems. Ojo con Shattered Hope (asesino): desde 10.2.0 destruye el tótem bendecido. Al curar a otros, Círculo de curación y Estado de flujo se combinan: el mayor cuenta entero y el otro a la mitad.",
     como: [
       "Bendice un tótem escondido entre dos generadores y avisa por voz.",
       "Los heridos vienen a curarse: <b>Círculo de curación</b> acelera la cura sin botiquín.",
