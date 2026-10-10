@@ -76,6 +76,19 @@ h2 { color: #e11d48; font-size: 1.5rem; margin: 2.5rem 0 1rem; text-align: cente
 .perk .en { color: #8f8285; font-size: .78rem; }
 .perk .own { color: #fca5a5; font-size: .78rem; margin-top: .2rem; }
 .perk .warn { color: #f59e0b; font-size: .75rem; margin-top: .2rem; }
+.filtros { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
+.filtros button {
+  background: #1d1517; color: #ece6e7; border: 1px solid #3a2a2e; border-radius: 999px;
+  padding: .45rem 1.1rem; font-size: .9rem; cursor: pointer;
+}
+.filtros button.on { background: #e11d48; border-color: #e11d48; color: #fff; font-weight: 700; }
+.modo { font-size: .75rem; color: #a8999c; border: 1px solid #3a2a2e; padding: .15rem .55rem; border-radius: 999px; }
+.sinergia {
+  background: #0b0809; border-left: 3px solid var(--c); border-radius: 6px;
+  padding: .7rem .9rem; margin-bottom: 1rem; color: #cfc4c7; line-height: 1.55; font-size: .92rem;
+}
+.sinergia b { color: #fff; }
+.sinergia .t { color: var(--c); font-weight: 700; margin-right: .3rem; }
 .como { list-style: none; counter-reset: p; }
 .como li {
   counter-increment: p; position: relative; padding: .35rem 0 .35rem 2.1rem; color: #ddd3d5; line-height: 1.5;
@@ -114,7 +127,7 @@ footer a { color: #fca5a5; }
 <body>
 <header>
   <h1>Builds de Superviviente</h1>
-  <p class="subtitle">Dead by Daylight · 8 builds de 4 ventajas, para qué sirve cada una y cómo usarlas</p>
+  <p class="subtitle">Dead by Daylight · builds de 4 ventajas para jugar en solitario o en coop, con sus sinergias y cómo usarlas</p>
   <div class="badges" id="badges"></div>
   <nav>
     <a href="#como-leer">Cómo leer</a>
@@ -138,10 +151,18 @@ footer a { color: #fca5a5; }
       <div><b>Acción llamativa:</b> reparar, curar, purificar, sabotear… desactiva algunas ventajas antitúnel.</div>
       <div><b>Tunelear:</b> que el asesino persiga al recién descolgado.</div>
       <div><b>Slug:</b> que el asesino deje a supervivientes derribados en el suelo sin colgarlos.</div>
+      <div><b>Solitario:</b> partida con desconocidos, sin hablar. Importan las ventajas de información.</div>
+      <div><b>Coop:</b> partida con amigos en llamada. La voz sustituye a las auras y rinden las ventajas de equipo.</div>
+      <div><b>Regla:</b> lleva solo <b>una</b> ventaja de Agotamiento; dos no se activan a la vez.</div>
     </div>
   </div>
 
   <h2 id="builds">Builds</h2>
+  <div class="filtros" id="filtros">
+    <button data-m="todas" class="on">Todas</button>
+    <button data-m="solo">Solitario</button>
+    <button data-m="coop">Coop</button>
+  </div>
   <div id="builds-list"></div>
 
   <h2 id="ventajas">Todas las ventajas de la guía</h2>
@@ -150,10 +171,10 @@ footer a { color: #fca5a5; }
 
 <footer id="fuentes">
   <b>Fuentes y validación (10-oct-2026):</b><br>
-  · Parche actual: <a href="https://forums.bhvr.com/dead-by-daylight/kb/articles/560-10-2-0-mid-chapter" target="_blank">notas oficiales 10.2.0 Mid-Chapter</a> (6-oct-2026), además de 10.1.0, 9.5.0, 9.4.0, 9.2.2, 9.2.0, 9.1.0 y 9.0.0 del KB de Behaviour.<br>
+  · Parche actual: notas oficiales 10.2.0 Mid-Chapter (6-oct-2026) en <a href="https://store.steampowered.com/news/app/381210" target="_blank">Steam</a> y en el <a href="https://forums.bhvr.com/dead-by-daylight/discussion/472827" target="_blank">foro de Behaviour</a>. No hay parche posterior a 10-oct-2026. También las notas 10.1.0, 9.5.0, 9.4.0, 9.2.2, 9.2.0, 9.1.0 y 9.0.0.<br>
   · Cambio de Golpe decisivo → Ganas de vivir (Will to Live): <a href="https://forums.bhvr.com/dead-by-daylight/kb/articles/534-9-4-0-stranger-things-chapter-2" target="_blank">notas 9.4.0</a>.<br>
   · Nombres en español y valores sin cambios: archivos del cliente vía <a href="https://dbd.tricky.lol/" target="_blank">dbd.tricky.lol</a> (10.1.2); los cambios de 10.2.0 se tomaron de las notas oficiales.<br>
-  · Porcentaje de uso: <a href="https://nightlight.gg/" target="_blank">nightlight.gg</a>, últimos 14 días (aprox. 26-sep a 10-oct-2026). Es una muestra de quienes usan ese rastreador.<br>
+  · Porcentaje de uso: <a href="https://nightlight.gg/" target="_blank">nightlight.gg</a>, últimos 28 días (11-sep a 9-oct-2026, casi todo antes del 10.2.0). Es una muestra de quienes usan ese rastreador.<br>
   · Iconos: archivos del juego (repositorio <a href="https://github.com/unknown-anna/deadbydaylight_three_language_parklist" target="_blank">deadbydaylight_three_language_parklist</a>).<br>
   · <span class="st-duda">⚠</span> = algún detalle no confirmado (ver la nota de esa ventaja).
 </footer>
@@ -167,10 +188,11 @@ document.getElementById('badges').innerHTML = `
   <span class="badge ok">Parche ${M.parche} (${M.fechaParche})</span>
   <span class="badge ok">Validado ${M.validado}</span>
   <span class="badge">${window.BUILDS.length} builds · ${Object.keys(P).length} ventajas</span>`;
+const MODOS = { solo: 'Solitario', coop: 'Coop', ambos: 'Solitario y coop' };
 
 document.getElementById('builds-list').innerHTML = window.BUILDS.map((b, i) => `
-  <section class="build" style="--c:${b.color}">
-    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span></div>
+  <section class="build" style="--c:${b.color}" data-modo="${b.modo}">
+    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span><span class="modo">${MODOS[b.modo]}</span></div>
     <p class="para">${b.para}</p>
     <div class="perk-row">
       ${b.perks.map(k => { const p = P[k]; return `
@@ -183,8 +205,17 @@ document.getElementById('builds-list').innerHTML = window.BUILDS.map((b, i) => `
         </div>`; }).join('')}
     </div>
     <div class="detail" id="det-${i}"></div>
+    <div class="sinergia"><span class="t">Sinergia:</span>${b.sinergia}</div>
     <ol class="como">${b.como.map(c => `<li>${c}</li>`).join('')}</ol>
   </section>`).join('');
+
+document.querySelectorAll('#filtros button').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('#filtros button').forEach(x => x.classList.toggle('on', x === btn));
+  const m = btn.dataset.m;
+  document.querySelectorAll('.build').forEach(s => {
+    s.style.display = (m === 'todas' || s.dataset.modo === m || s.dataset.modo === 'ambos') ? '' : 'none';
+  });
+}));
 
 document.querySelectorAll('.perk').forEach(el => el.addEventListener('click', () => {
   const i = el.dataset.b, p = P[el.dataset.k], det = document.getElementById('det-' + i);
