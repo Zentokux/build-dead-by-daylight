@@ -8,4 +8,5 @@
 - **Extraoficial:** marcada como dudosa (las fuentes no coinciden en si se desactiva con las puertas ni en si oculta las marcas).
 - **Uso:** nightlight.gg, últimos 14 días a 10-oct-2026.
 - **Bloqueos:** wiki.gg, Fandom y nightlight bloquean curl (403). La API dbd.tricky.lol sí funciona: `/api/perks?role=survivor&locale=es`, `/api/versions`.
+- **PTB:** se ignora; solo cuentan las notas y valores del juego en vivo.
 - **Al actualizar:** revisa `/api/versions` y las notas del KB oficial (forums.bhvr.com/dead-by-daylight/kb) en busca de un parche posterior a 10.2.0.

@@ -122,7 +122,7 @@ window.PERKS = {
   borrowed: {
     es: "Tiempo prestado", en: "Borrowed Time", icon: "iconPerks_borrowedTime.png", dueno: "Bill Overbeck",
     efecto: "El superviviente que descuelgas recibe <b>+6/8/10 s de Resistencia</b> y <b>+10 s de Celeridad</b> extra (se cancela con acciones llamativas).",
-    coste: "—", uso: "93º", cambio: "Sin cambios (el rediseño del PTB 10.2.0 se descartó)", estado: "ok",
+    coste: "—", uso: "93º", cambio: "Sin cambios en el juego", estado: "ok",
   },
   reassurance: {
     es: "Reafirmación", en: "Reassurance", icon: "iconPerks_Reassurance.png", dueno: "Rebecca Chambers",
