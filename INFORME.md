@@ -8,27 +8,26 @@
 - **Validación:** independiente, hecha por un agente contra el texto del cliente 10.1.2, las notas oficiales 10.2.0 en vivo (Steam) y la localización es-MX. Se corrigieron todos los errores que encontró.
 - **Validador automático:** `python validar.py` da 0 errores.
 
-## Builds (reorganizadas el 10-oct-2026: 7 de solitario y 5 de coop)
+## Builds (versión 3, 10-oct-2026: 7 de solitario y 5 de coop)
 
-Lógica: en solitario **Familia** sustituye a la voz; en coop ese hueco va a una ventaja del papel que cumples en el grupo. Ya no hay builds «ambos».
+Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino frena). `perks` es la versión **Enfocada**; `hibrida` cambia UNA ventaja por otra propia (lista `PROPIA` en `validar.py`). Pensadas para jugar contra un asesino competente que juega el meta. Sin estadísticas de uso ni escape (decisión del usuario).
 
-| Build | Modo | Ventajas |
-|---|---|---|
-| Base todoterreno | Solitario | Familia, Agilidad, Resiliencia, Ganas de vivir |
-| Rescatista | Solitario | Familia, Consuelo, Tiempo prestado, Sobreviviremos |
-| Antitúnel | Solitario | Ganas de vivir, Extraoficialmente, Agilidad, Inquebrantable |
-| Sin DLC | Solitario | Ganas de vivir, Resiliencia, Déjà vu, Familia |
-| Tótems para curarte | Solitario | Fuerza interior, Contramedida, Espíritu calmado, Estado de flujo |
-| Autocuración | Solitario | Resurgimiento, Autocuración, Conocimientos de botánica, Giro argumental |
-| Anti-slug | Solitario | Inquebrantable, Tenacidad, Nos vemos, Lucha de poderes |
-| Perseguidor | Coop | Agilidad, Oportunidades, Resiliencia, Ganas de vivir |
-| Generadores en equipo | Coop | Demuestra lo que vales, Déjà vu, Resiliencia, Hiperconcentración |
-| Rescate y curación | Coop | Tiempo prestado, Sobreviviremos, Conocimientos de botánica, Consuelo |
-| Bendiciones de equipo | Coop | Círculo de curación, Paso de las sombras, Exponencial, Determinación |
-| Final de partida | Coop | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado |
+| Build | Contra | Enfocada | Híbrida |
+|---|---|---|---|
+| Solo: meta antitúnel | Tuneleo | Resiliencia, Ganas de vivir, Fajador, Cinco movimientos adelante | — |
+| Solo: generadores | Regresión | Déjà vu, Hiperconcentración, Resiliencia, Determinación | Determinación → Fajador |
+| Solo: rescate y curación | Campeo | Familia, Consuelo, Tiempo prestado, Sobreviviremos | Consuelo → Agilidad |
+| Solo: tótems con Estado de flujo | Maleficios | Fuerza interior, Contramedida, Estado de flujo, Demasiado entusiasta | Demasiado entusiasta → Agilidad |
+| Solo: autocuración | Desgaste | Resurgimiento, Autocuración, Botánica, Giro argumental | — |
+| Solo sin DLC | Tuneleo | Ganas de vivir, Resiliencia, Déjà vu, Familia | — |
+| Solo: anti-slug | Slug | Exponencial, Tenacidad, Inquebrantable, Agilidad | — |
+| Coop: perseguidor | Tuneleo | Agilidad, Resiliencia, Ganas de vivir, Cinco movimientos adelante | — |
+| Coop: generadores en equipo | 3-gen | Demuestra lo que vales, Déjà vu, Hiperconcentración, Resiliencia | Demuestra → Fajador |
+| Coop: rescate y curación | Campeo | Tiempo prestado, Sobreviviremos, Botánica, Consuelo | Consuelo → Agilidad |
+| Coop: Bendiciones con Estado de flujo | Regresión, desgaste | Círculo de curación, Paso de las sombras, Determinación, Estado de flujo | Determinación → Agilidad |
+| Coop: final de partida | Presión en las puertas | Adrenalina, Esperanza, ¡Despierta!, Tiempo prestado | — |
 
-**Rendimientos decrecientes (9.6.0):** los bonus iguales no se suman completos (100 % / 50 % / 25 % / 12,5 %). `validar.py` da error si el texto dice «se suman».
-**Fuerza interior:** el cliente no dice que acumule cargas; la guía ya no lo afirma.
+**Sin confirmar:** si levantarte en la zona de Exponencial gasta también el uso de Inquebrantable. Nombres es-MX de Cinco movimientos adelante y Demasiado entusiasta: solo de la wiki ES (en España: Cinco pasos por delante, Pasión).
 
 ## Reglas de las builds (las comprueba `validar.py`)
 

@@ -87,6 +87,15 @@ h2 { color: #e11d48; font-size: 1.5rem; margin: 2.5rem 0 1rem; text-align: cente
 }
 .filtros button.on { background: #e11d48; border-color: #e11d48; color: #fff; font-weight: 700; }
 .modo { font-size: .75rem; color: #a8999c; border: 1px solid #3a2a2e; padding: .15rem .55rem; border-radius: 999px; }
+.ver { display: inline-flex; border: 1px solid #3a2a2e; border-radius: 999px; overflow: hidden; margin-left: auto; }
+.ver button { background: transparent; color: #c9bcbf; border: 0; padding: .3rem .8rem; cursor: pointer; font: inherit; font-size: .8rem; }
+.ver button.on { background: var(--c); color: #fff; font-weight: 700; }
+.perk.nueva { outline: 2px dashed var(--c); outline-offset: 2px; border-radius: 10px; }
+.hib { display: none; background: #120d0f; border: 1px dashed var(--c); border-radius: 10px; padding: .7rem .9rem; margin: .7rem 0; color: #d8cdd0; }
+.hib.show { display: block; }
+.hib b { color: #fff; } .hib .t { color: var(--c); font-weight: 700; margin-right: .3rem; }
+.contra { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-bottom: .5rem; font-size: .8rem; color: #a8999c; }
+.contra b { background: #2a1a1e; border: 1px solid var(--c); color: #fff; padding: .1rem .55rem; border-radius: 999px; font-weight: 600; }
 .sinergia {
   background: #0b0809; border-left: 3px solid var(--c); border-radius: 6px;
   padding: .7rem .9rem; margin-bottom: 1rem; color: #cfc4c7; line-height: 1.55; font-size: .92rem;
@@ -155,8 +164,10 @@ footer a { color: #fca5a5; }
       <div><b>Resistencia:</b> aguantas un golpe que te derribaría.</div>
       <div><b>Acción destacada:</b> reparar, curar, purificar, sabotear… desactiva algunas ventajas antitúnel.</div>
       <div><b>Tunelear:</b> que el asesino persiga al recién descolgado.</div>
+      <div><b>Contra:</b> qué juego del asesino frena esa build (tuneleo, slug, campeo, maleficios, regresión de generadores).</div>
       <div><b>Slug:</b> que el asesino deje a sobrevivientes derribados en el suelo sin colgarlos.</div>
       <div><b>Solitario:</b> partida con desconocidos, sin hablar. Importan las ventajas de información.</div>
+      <div><b>Enfocada / Híbrida:</b> la Enfocada lleva las 4 ventajas para su rol; la Híbrida cambia una por otra para salvarte tú (persecución o antitúnel).</div>
       <div><b>Coop:</b> partida con amigos en llamada. La voz sustituye a las auras y rinden las ventajas de equipo.</div>
       <div><b>Tótem:</b> hueso con velas del mapa. Puedes <b>purificarlo</b> (romperlo) o <b>bendecirlo</b> para activar una Bendición.</div>
       <div><b>Regla:</b> lleva solo <b>una</b> ventaja que deje Agotado; dos no se activan a la vez.</div>
@@ -182,7 +193,6 @@ footer a { color: #fca5a5; }
   · Golpe decisivo → Ganas de vivir (Will to Live): <a href="https://store.steampowered.com/news/app/381210/view/1822556746169341" target="_blank">notas 9.4.0</a> y <a href="https://deadbydaylight.wiki.gg/wiki/Will_to_Live" target="_blank">wiki oficial</a>.<br>
   · Nombres en <b>español de México</b>: localización es-MX del juego, tienda de Steam latam y <a href="https://deadbydaylight.wiki.gg/es/" target="_blank">wiki oficial en español</a>.<br>
   · Valores: texto del cliente vía <a href="https://dbd.tricky.lol/" target="_blank">dbd.tricky.lol</a> (10.1.2) y, para lo que cambió en 10.2.0, las notas oficiales. Solo datos del juego en vivo.<br>
-  · Porcentaje de uso: <a href="https://nightlight.gg/" target="_blank">nightlight.gg</a>, últimos 28 días (hasta el 10-oct-2026, casi todo antes del 10.2.0). Es una muestra de quienes usan ese rastreador.<br>
   · Iconos: archivos del juego (repositorio <a href="https://github.com/unknown-anna/deadbydaylight_three_language_parklist" target="_blank">deadbydaylight_three_language_parklist</a>).<br>
   · <span class="st-duda">⚠</span> = algún detalle no confirmado (ver la nota de esa ventaja). <span style="color:#7dd3fc">ℹ</span> = aclaración.
 </footer>
@@ -198,23 +208,30 @@ document.getElementById('badges').innerHTML = `
   <span class="badge">${window.BUILDS.length} builds · ${Object.keys(P).length} ventajas</span>`;
 
 const GRUPOS = [
-  { modo: 'solo', titulo: 'Solitario', txt: 'Sin voz, <b>Familia</b> hace el trabajo de la llamada: te dice si el asesino está en el gancho y quién va a rescatar. Por eso las builds de solitario la llevan o no dependen de los compañeros.' },
-  { modo: 'coop', titulo: 'Coop', txt: 'Con voz no hace falta Familia: ese hueco va a una ventaja del <b>papel</b> que cumples en el grupo (perseguir, reparar, rescatar, bendecir o cerrar la partida). Repártanse las builds.' },
+  { modo: 'solo', titulo: 'Solitario', txt: 'Partidas sin voz. Cada build tiene <b>un rol</b>. La versión <b>Enfocada</b> pone las 4 ventajas al servicio de ese rol; la <b>Híbrida</b> cambia una por otra propia para salvarte si la partida se complica contigo.' },
+  { modo: 'coop', titulo: 'Coop', txt: 'Con amigos en llamada. La voz da la información, así que cada uno lleva el rol que le toca en el grupo (perseguir, reparar, rescatar, bendecir o cerrar la partida). Repártanse las builds.' },
 ];
+const version = {};  // índice de build → 'enf' | 'hib'
+const perksDe = (b, v) => v === 'hib' && b.hibrida ? b.perks.map(k => k === b.hibrida.sale ? b.hibrida.entra : k) : b.perks;
+const filaPerks = (b, i) => {
+  const v = version[i] || 'enf';
+  return perksDe(b, v).map(k => { const p = P[k], nueva = v === 'hib' && k === b.hibrida.entra; return `
+    <div class="perk${nueva ? ' nueva' : ''}" data-b="${i}" data-k="${k}">
+      <div class="ico"><img src="${ico(p)}" alt="${p.es}" loading="lazy"></div>
+      <div class="nm">${p.es}</div>
+      <div class="en">${p.en}</div>
+      <div class="own">${nueva ? 'Híbrida: para ti' : p.dueno.split(' (')[0]}</div>
+      ${p.estado === 'duda' ? '<div class="warn">⚠ ver nota</div>' : ''}
+    </div>`; }).join('');
+};
 const tarjeta = (b, i) => `
   <section class="build" style="--c:${b.color}" data-modo="${b.modo}">
-    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span></div>
+    <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span>
+      ${b.hibrida ? `<span class="ver" data-b="${i}"><button data-v="enf" class="on">Enfocada</button><button data-v="hib">Híbrida</button></span>` : '<span class="modo">Sin híbrida: ya lleva algo para ti</span>'}</div>
+    ${b.contra ? `<div class="contra"><span>Contra:</span>${b.contra.map(c => `<b>${c}</b>`).join('')}</div>` : ''}
     <p class="para">${b.para}</p>
-    <div class="perk-row">
-      ${b.perks.map(k => { const p = P[k]; return `
-        <div class="perk" data-b="${i}" data-k="${k}">
-          <div class="ico"><img src="${ico(p)}" alt="${p.es}" loading="lazy"></div>
-          <div class="nm">${p.es}</div>
-          <div class="en">${p.en}</div>
-          <div class="own">${p.dueno.split(' (')[0]}</div>
-          ${p.estado === 'duda' ? '<div class="warn">⚠ ver nota</div>' : ''}
-        </div>`; }).join('')}
-    </div>
+    <div class="perk-row" id="row-${i}">${filaPerks(b, i)}</div>
+    ${b.hibrida ? `<div class="hib" id="hib-${i}"><span class="t">Híbrida:</span>sale <b>${P[b.hibrida.sale].es}</b>, entra <b>${P[b.hibrida.entra].es}</b>. ${b.hibrida.porque}</div>` : ''}
     <div class="detail" id="det-${i}"></div>
     <div class="sinergia"><span class="t">Sinergia:</span>${b.sinergia}</div>
     <ol class="como">${b.como.map(c => `<li>${c}</li>`).join('')}</ol>
@@ -234,28 +251,37 @@ document.querySelectorAll('#filtros button').forEach(btn => btn.addEventListener
   });
 }));
 
-document.querySelectorAll('.perk').forEach(el => el.addEventListener('click', () => {
+document.querySelectorAll('.ver button').forEach(btn => btn.addEventListener('click', () => {
+  const i = btn.parentElement.dataset.b, v = btn.dataset.v;
+  version[i] = v;
+  btn.parentElement.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === btn));
+  document.getElementById('row-' + i).innerHTML = filaPerks(window.BUILDS[i], i);
+  document.getElementById('hib-' + i).classList.toggle('show', v === 'hib');
+  document.getElementById('det-' + i).classList.remove('show');
+}));
+
+document.getElementById('builds-list').addEventListener('click', e => {
+  const el = e.target.closest('.perk'); if (!el) return;
   const i = el.dataset.b, p = P[el.dataset.k], det = document.getElementById('det-' + i);
   const wasOpen = el.classList.contains('open');
   el.parentElement.querySelectorAll('.perk').forEach(x => x.classList.remove('open'));
   if (wasOpen) { det.classList.remove('show'); return; }
   el.classList.add('open');
   det.innerHTML = `<b>${p.es}</b> (${p.en}) · ${p.dueno}<br>${p.efecto}
-    <div class="meta">Coste: ${p.coste} · Uso: ${p.uso} · Último cambio: ${p.cambio}</div>
+    <div class="meta">Coste: ${p.coste} · Último cambio: ${p.cambio}</div>
     ${p.info ? `<div class="info">ℹ ${p.info}</div>` : ''}
     ${p.nota ? `<div class="nota">⚠ ${p.nota}</div>` : ''}`;
   det.classList.add('show');
-}));
+});
 
 document.getElementById('perk-table').innerHTML = `
-  <tr><th></th><th>Ventaja</th><th>Efecto (I/II/III)</th><th class="hide-m">Coste</th><th class="hide-m">Uso</th><th class="hide-m">Último cambio</th></tr>` +
+  <tr><th></th><th>Ventaja</th><th>Efecto (I/II/III)</th><th class="hide-m">Coste</th><th class="hide-m">Último cambio</th></tr>` +
   Object.values(P).map(p => `
   <tr>
     <td><img src="${ico(p)}" alt=""></td>
     <td><b>${p.es}</b> <span class="st-${p.estado}">${p.estado === 'duda' ? '⚠' : '✓'}</span><br><span class="sub">${p.en} · ${p.dueno.split(' (')[0]}</span></td>
     <td>${p.efecto}${p.info ? `<br><span class="sub info">ℹ ${p.info}</span>` : ''}${p.nota ? `<br><span class="sub st-duda">${p.nota}</span>` : ''}</td>
     <td class="hide-m">${p.coste}</td>
-    <td class="hide-m">${p.uso}</td>
     <td class="hide-m">${p.cambio}</td>
   </tr>`).join('');
 </script>

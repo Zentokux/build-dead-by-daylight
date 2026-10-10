@@ -13,7 +13,7 @@ def err(m): errores.append(m)
 def avi(m): avisos.append(m)
 
 # --- 1. Ventajas -------------------------------------------------------------
-CAMPOS = ['es', 'en', 'icon', 'dueno', 'efecto', 'coste', 'uso', 'cambio', 'estado']
+CAMPOS = ['es', 'en', 'icon', 'dueno', 'efecto', 'coste', 'cambio', 'estado']
 perks = {}
 for m in re.finditer(r'^  (\w+): \{\n(.*?)^  \},', datos, re.M | re.S):
     k, cuerpo = m.group(1), m.group(2)
@@ -42,6 +42,21 @@ ANULAN = [
     ({'secondwind', 'momentofglory'}, 'las dos usan Quebrantado'),
 ]
 
+# Ventajas que te salvan a TI (persecución, antitúnel o autocuración): la híbrida debe meter una
+PROPIA = {'unbreakable', 'tenacity', 'lithe', 'deadhard', 'wtl', 'fma', 'resurgence', 'selfcare', 'plottwist', 'innerstrength', 'adrenaline', 'boonshadow'}
+def reglas(nombre, ks):
+    ag = [k for k in ks if deja_agotado(k)]
+    if len(ag) > 1: err(f'«{nombre}»: {len(ag)} ventajas que dejan Agotado {ag} (máx. 1)')
+    res = [k for k in ks if k in RESISTENCIA_PROPIA]
+    if len(res) > 1: err(f'«{nombre}»: Resistencia solapada {res}')
+    if any(k in PURIFICAN for k in ks) and any(bendice(k) for k in ks):
+        err(f'«{nombre}»: mezcla ventajas que purifican y que bendicen tótems')
+    for par, motivo in ANULAN:
+        if par <= set(ks): err(f'«{nombre}»: {sorted(par)} se anulan: {motivo}')
+    # Ganas de vivir se pierde con acciones destacadas: no en builds cuyo rol es reparar/curar sin parar
+    if 'wtl' in ks and ('prove' in ks or 'boonsteadfast' in ks):
+        avi(f'«{nombre}»: Ganas de vivir con una ventaja de reparar en grupo: se pierde al reparar tras el gancho')
+
 # --- 2. Builds ---------------------------------------------------------------
 MODOS = {'solo', 'coop'}  # desde el 10-oct-2026 cada build es de un modo
 # Ventajas que necesitan compañeros coordinados: en una build de solitario son un aviso
@@ -56,6 +71,7 @@ for b in bloques:
     modo = re.search(r'modo: "(\w+)"', b)
     if not modo or modo.group(1) not in MODOS: err(f'«{nombre}»: modo inválido (solo/coop)')
     if not re.search(r'color: "#[0-9a-fA-F]{6}"', b): err(f'«{nombre}»: color inválido')
+    if not re.search(r'contra: \["[^\]]+\]', b): err(f'«{nombre}»: falta «contra» (qué juego del asesino frena)')
     for c in ('tag', 'para', 'sinergia'):
         if not re.search(c + r': "[^"]+"', b): err(f'«{nombre}»: falta «{c}»')
     ks = re.findall(r'"(\w+)"', re.search(r'perks: \[([^\]]*)\]', b).group(1))
@@ -63,26 +79,31 @@ for b in bloques:
     if len(set(ks)) != len(ks): err(f'«{nombre}»: ventaja repetida')
     faltan = [k for k in ks if k not in perks]
     if faltan: err(f'«{nombre}»: ventajas inexistentes {faltan}'); continue
-    ag = [k for k in ks if deja_agotado(k)]
-    if len(ag) > 1: err(f'«{nombre}»: {len(ag)} ventajas que dejan Agotado {ag} (máx. 1)')
-    res = [k for k in ks if k in RESISTENCIA_PROPIA]
-    if len(res) > 1: err(f'«{nombre}»: Resistencia solapada {res}')
-    if any(k in PURIFICAN for k in ks) and any(bendice(k) for k in ks):
-        err(f'«{nombre}»: mezcla ventajas que purifican y que bendicen tótems')
-    for par, motivo in ANULAN:
-        if par <= set(ks): err(f'«{nombre}»: {sorted(par)} se anulan: {motivo}')
+    versiones = [('Enfocada', ks)]
+    hib = re.search(r'hibrida: \{ sale: "(\w+)", entra: "(\w+)", porque: "[^"]+" \}', b)
+    if 'hibrida:' in b and not hib: err(f'«{nombre}»: híbrida mal formada (sale, entra, porque)')
+    if hib:
+        sale, entra = hib.groups()
+        if sale not in ks: err(f'«{nombre}»: la híbrida quita «{sale}», que no está en la build')
+        if entra not in perks: err(f'«{nombre}»: la híbrida mete «{entra}», que no existe'); continue
+        if entra in ks: err(f'«{nombre}»: la híbrida mete «{entra}», que ya está en la build')
+        if entra not in PROPIA: err(f'«{nombre}»: la híbrida debe meter una ventaja propia de supervivencia ({sorted(PROPIA)})')
+        versiones.append(('Híbrida', [entra if k == sale else k for k in ks]))
+    elif not any(k in PROPIA for k in ks):
+        avi(f'«{nombre}»: no lleva ventaja propia de supervivencia ni versión híbrida')
+    for etiqueta, vks in versiones:
+        reglas(f'{nombre} ({etiqueta})', vks)
     if modo and modo.group(1) == 'solo':
         for k in ks:
             if k in NECESITAN_EQUIPO: avi(f'«{nombre}»: {perks[k]["es"]} en solitario: {NECESITAN_EQUIPO[k]}')
     como = re.search(r'como: \[(.*?)\n    \]', b, re.S)
     n = len(re.findall(r'^      "', como.group(1), re.M)) if como else 0
     if not 3 <= n <= 4: err(f'«{nombre}»: «como» debe tener 3-4 pasos (tiene {n})')
-    # Cada ventaja de la build debe nombrarse en el texto con su nombre es-MX
-    texto = b
-    for k in ks:
+    # Cada ventaja de la build (y la que mete la híbrida) debe nombrarse en el texto con su nombre es-MX
+    for k in set(ks) | ({hib.group(2)} if hib else set()):
         corto = perks[k]['es'].replace('Bendición: ', '')
-        if corto not in texto: avi(f'«{nombre}»: no menciona «{corto}» en el texto')
-usadas = set(re.findall(r'"(\w+)"', ' '.join(re.findall(r'perks: \[([^\]]*)\]', datos))))
+        if corto not in b: avi(f'«{nombre}»: no menciona «{corto}» en el texto')
+usadas = set(re.findall(r'"(\w+)"', ' '.join(re.findall(r'perks: \[([^\]]*)\]', datos)))) | set(re.findall(r'entra: "(\w+)"', datos))
 for k in perks:
     if k not in usadas: avi(f'{k}: no está en ninguna build (solo sale en la tabla)')
 
