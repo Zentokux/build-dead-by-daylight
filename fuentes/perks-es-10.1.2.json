@@ -1,0 +1,3800 @@
+{
+    "Ace_In_The_Hole": {
+        "categories": [
+            "support"
+        ],
+        "name": "As en la manga",
+        "description": "Cuando saquees un objeto de un cofre:<ul><li>Tendr\u00e1 un accesorio visceral o de rareza inferior.</li><li>Un {Tunable.S07P03.ModifyChestItemSecondAddonChance%}\u00a0% de probabilidad de que haya un accesorio poco com\u00fan o de rareza inferior.</li></ul><br><br>Cuando escapes, conservar\u00e1s tus accesorios.",
+        "role": "survivor",
+        "character": 6,
+        "tunables": {
+            "modifychestitemfirstaddonchance%": [
+                100
+            ],
+            "modifychestitemsecondaddonchance%": [
+                50,
+                75,
+                100
+            ],
+            "setchestitemfirstaddonmaxrarity": [
+                4
+            ],
+            "setchestitemsecondaddonmaxrarity": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC3/iconPerks_aceInTheHole"
+    },
+    "Adrenaline": {
+        "categories": [
+            "navigation",
+            "adaptation"
+        ],
+        "name": "Adrenalina",
+        "description": "Cuando se completen todos los generadores, si est\u00e1s herido o te han derribado, te curar\u00e1s al instante. A continuaci\u00f3n, ignorando {Keyword.Exhausted}:<ul><li>Obtendr\u00e1s un {Tunable.S02P03.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S02P03.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S02P03.ExhaustionDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 1,
+        "tunables": {
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                4
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_adrenaline"
+    },
+    "Aftercare": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Postratamiento",
+        "description": "Hasta {Tunable.S15P02.MaxSurvivors}\u00a0supervivientes y t\u00fa ver\u00e9is las auras de otros cada vez que:<ul><li>Los desenganches o te desenganchen.</li><li>Termines de curarles o terminen de curarte.</li></ul><br><br>Esto efecto dura hasta que te cuelguen.",
+        "role": "survivor",
+        "character": 14,
+        "tunables": {
+            "maxsurvivors": [
+                1,
+                2,
+                3
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kenya/iconPerks_aftercare"
+    },
+    "Alert": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Alerta",
+        "description": "Cada vez que el asesino da\u00f1e un generador o rompa un pal\u00e9 o muro destruible:<ul><li>Oir\u00e1s un sonido.</li><li>Ver\u00e1s su aura durante {Tunable.S09P03.AuraRevealDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 8,
+        "tunables": {
+            "aurarevealduration": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC4/iconPerks_alert"
+    },
+    "AnyMeansNecessary": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Cueste lo que cueste",
+        "description": "Cuando est\u00e9s cerca de un pal\u00e9 derribado, usa {Input.ActivatableButton1} durante {Tunable.S20P02.ActionTimeRequired}\u00a0segundos para reiniciarlo.<br><br>Ves las auras de los pal\u00e9s derribados.",
+        "role": "survivor",
+        "character": 19,
+        "tunables": {
+            "actiontimerequired": [
+                5,
+                4,
+                3
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sweden/iconPerks_anyMeansNecessary"
+    },
+    "Autodidact": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Autodidacta",
+        "description": "Empiezas la partida con {Tunable.S14P03.StartingTokens}\u00a0distintivos, hasta un m\u00e1ximo de {Tunable.S14P03.MaxToken}, y tus pruebas de habilidad curativas b\u00e1sicas superadas otorgan un {Tunable.S14P03.InitialProgressionPenalty%}\u00a0% menos de progreso.<br><br>Al curar sin un botiqu\u00edn:<ul><li>Cuando superes una prueba de habilidad b\u00e1sica, obtendr\u00e1s {Tunable.S14P03.TokensPerSkillCheck}\u00a0distintivo.</li><li>Cuando superes una prueba de habilidad b\u00e1sica, por cada distintivo, obtendr\u00e1s un {Tunable.S14P03.ProgressionBonusPerToken%}\u00a0% m\u00e1s de progreso.</li><li>No podr\u00e1s lograr pruebas de habilidad b\u00e1sicas excelentes.</li></ul>",
+        "role": "survivor",
+        "character": 13,
+        "tunables": {
+            "maxtoken": [
+                3,
+                4,
+                5
+            ],
+            "initialprogressionpenalty%": [
+                15
+            ],
+            "progressionbonuspertoken%": [
+                15
+            ],
+            "startingtokens": [
+                0
+            ],
+            "tokensperskillcheck": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Haiti/iconPerks_autodidact"
+    },
+    "Babysitter": {
+        "categories": [
+            "safeguard",
+            "concealment"
+        ],
+        "name": "Canguro",
+        "description": "Cada vez que desenganches a un superviviente, este:<ul><li>Obtendr\u00e1 un {Tunable.S18P01.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S18P01.HasteDuration}\u00a0segundos.</li><li>No dejar\u00e1 charcos de sangre durante {Tunable.S18P01.StealthDuration}\u00a0segundos.</li><li>No dejar\u00e1n marcas de ara\u00f1azos durante {Tunable.S18P01.StealthDuration}\u00a0segundos.</li><li>Ver\u00e1s el aura del asesino durante {Tunable.S18P01.AuraRevealDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 18,
+        "tunables": {
+            "aurarevealduration": [
+                8
+            ],
+            "haste%": [
+                10
+            ],
+            "hasteduration": [
+                20,
+                25,
+                30
+            ],
+            "stealthduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_babySitter"
+    },
+    "Balanced_Landing": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Ca\u00edda equilibrada",
+        "description": "Cuando saltes desde al menos {Tunable.S05P01.RequiredFallHeight}\u00a0metros:<ul><li>Obtendr\u00e1s un {Tunable.S05P01.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S05P01.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S05P01.ExhaustionDuration}\u00a0segundos.</li><li>Tu tambaleo durar\u00e1 un {Tunable.S05P01.FallStaggerReduction%}\u00a0% menos.</li><li>Tus gru\u00f1idos al caer ser\u00e1n un {Tunable.S05P01.FallGruntReduction%}\u00a0% m\u00e1s silenciosos.</li></ul>",
+        "role": "survivor",
+        "character": 4,
+        "tunables": {
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "fallgruntreduction%": [
+                100
+            ],
+            "fallstaggerreduction%": [
+                75
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                3
+            ],
+            "requiredfallheight": [
+                1.25
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_balancedLanding"
+    },
+    "BetterTogether": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Mejor juntos",
+        "description": "Mientras est\u00e1s reparando un generador:<ul><li>Otros supervivientes ver\u00e1n el aura de ese generador.</li><li>Cada vez que el asesino derribe a un superviviente, ver\u00e1s las auras de todos los supervivientes durante {Tunable.S19P01.AuraRevealDuration}\u00a0segundos.</li></ul><br>",
+        "role": "survivor",
+        "character": 17,
+        "tunables": {
+            "aurarevealduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_betterTogether"
+    },
+    "BloodPact": {
+        "categories": [
+            "perception",
+            "support"
+        ],
+        "name": "Pacto de sangre",
+        "description": "Cuando no seas la obsesi\u00f3n:<ul><li>Mientras la obsesi\u00f3n o t\u00fa est\u00e9is heridos, ver\u00e9is vuestras auras.</li><li>Cuando termines de curar a la obsesi\u00f3n o cuando esta termine de curarte a ti, si est\u00e1is en un radio de {Tunable.S22P02.RequiredDistance}\u00a0metros el uno del otro, obtendr\u00e9is un {Tunable.S22P02.Haste%}\u00a0% de {Keyword.Haste}.</li></ul><br><br>Cuando comienza la partida, es menos probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 21,
+        "tunables": {
+            "haste%": [
+                5,
+                6,
+                7
+            ],
+            "requireddistance": [
+                16
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wales/iconPerks_bloodPact"
+    },
+    "BoilOver": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Arrebato",
+        "description": "Mientras te cargue el asesino:<ul><li>Cuando el asesino caiga desde al menos {Tunable.S13P03.RequiredFallHeight}\u00a0metros, obtendr\u00e1s un {Tunable.S13P03.FallExtraWiggle%}\u00a0% de tu progreso de forcejeo actual.</li><li>Tu forcejeo ser\u00e1 un {Tunable.S13P03.WiggleIntensity%}\u00a0% m\u00e1s fuerte.</li><li>En un radio de {Tunable.S13P03.HookAuraBlockRange}\u00a0metros, el asesino no ver\u00e1 las auras de los ganchos.</li></ul>",
+        "role": "survivor",
+        "character": 10,
+        "tunables": {
+            "fallextrawiggle%": [
+                33
+            ],
+            "hookaurablockrange": [
+                16
+            ],
+            "wiggleintensity%": [
+                60,
+                70,
+                80
+            ],
+            "requiredfallheight": [
+                1.25
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kate/iconPerks_boilOver"
+    },
+    "Bond": {
+        "categories": [
+            "perception"
+        ],
+        "name": "V\u00ednculo",
+        "description": "En un radio de {Tunable.S01P01.AuraRevealDistance}\u00a0metros, ver\u00e1s las auras de otros supervivientes.",
+        "role": "survivor",
+        "character": 0,
+        "tunables": {
+            "aurarevealdistance": [
+                20,
+                28,
+                36
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_bond"
+    },
+    "BorrowedTime": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Tiempo prestado",
+        "description": "Cada vez que desenganches a un superviviente, este:<ul><li>Mantendr\u00e1 {Keyword.Endurance} por desenganche durante {Tunable.S08P02.EnduranceExtraDuration}\u00a0segundos m\u00e1s.</li><li>Mantendr\u00e1 {Keyword.Haste} por desenganche durante {Tunable.S08P02.HasteExtraDuration}\u00a0segundos m\u00e1s.</li></ul>",
+        "role": "survivor",
+        "character": 7,
+        "tunables": {
+            "elusiveextraduration": [
+                8,
+                12,
+                16
+            ],
+            "enduranceextraduration": [
+                6,
+                8,
+                10
+            ],
+            "hasteextraduration": [
+                10
+            ],
+            "nocollisionextraduration": [
+                8,
+                12,
+                16
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/L4D/iconPerks_borrowedTime"
+    },
+    "Botany_Knowledge": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Conocimientos de bot\u00e1nica",
+        "description": "Te curas un {Tunable.S03P02.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 2,
+        "tunables": {
+            "actionspeed%": [
+                30,
+                40,
+                50
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_botanyKnowledge"
+    },
+    "Breakdown": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Ruptura",
+        "description": "Cuando te desenganchen:<ul><li>El gancho se romper\u00e1 y volver\u00e1 a repararse tras {Tunable.S15P01.HookRespawnTime}\u00a0segundos.</li><li>Ver\u00e1s el aura del asesino durante {Tunable.S15P01.AuraRevealDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 14,
+        "tunables": {
+            "aurarevealduration": [
+                4,
+                5,
+                6
+            ],
+            "hookrespawntime": [
+                180
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kenya/iconPerks_breakdown"
+    },
+    "Breakout": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Fuga",
+        "description": "Cuando est\u00e9s en un radio de {Tunable.S20P03.RequiredDistance}\u00a0metros de un superviviente cargado:<ul><li>Obtendr\u00e1s un {Tunable.S20P03.Haste%}\u00a0% de {Keyword.Haste}.</li><li>El superviviente cargado forcejear\u00e1 un {Tunable.S20P03.ExtraWiggle%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": 19,
+        "tunables": {
+            "extrawiggle%": [
+                25
+            ],
+            "haste%": [
+                6,
+                8,
+                10
+            ],
+            "requireddistance": [
+                5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sweden/iconPerks_breakout"
+    },
+    "BuckleUp": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Suj\u00e9tate",
+        "description": "Al curar a un superviviente derribado, los dos ver\u00e9is el aura del asesino.<br><br>Tras curar a un superviviente derribado o hacer que se recupere por completo:<ul><li>El superviviente obtendr\u00e1 un {Tunable.S17P02.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S17P02.HasteDuration}\u00a0segundos.</li><li>El superviviente no dejar\u00e1 marcas de ara\u00f1azos durante {Tunable.S17P02.HasteDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 16,
+        "tunables": {
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ash/iconPerks_buckleUp"
+    },
+    "BuiltToLast": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Construcci\u00f3n duradera",
+        "description": "Al llevar un objeto agotado, tras esconderte en una taquilla durante {Tunable.S23P03.RequiredDuration}\u00a0segundos, se recargar\u00e1 un {Tunable.S23P03.InitialRefill%}\u00a0%.<br><br>Cada vez que recargues un objeto de este modo, recargar\u00e1 un {Tunable.S23P03.RefillDiminishing%}\u00a0% menos de cargas.",
+        "role": "survivor",
+        "character": 22,
+        "tunables": {
+            "initialrefill%": [
+                99
+            ],
+            "refilldiminishing%": [
+                33
+            ],
+            "requiredduration": [
+                14,
+                12,
+                10
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Yemen/iconPerks_builtToLast"
+    },
+    "Calm_Spirit": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Esp\u00edritu calmado",
+        "description": "No asustas a los cuervos ni gritas.<br><br>Desbloqueas cofres y bendices y purificas t\u00f3tems sin hacer ruido un {Tunable.S04P02.ActionSpeedReduction%}\u00a0% m\u00e1s despacio.",
+        "role": "survivor",
+        "character": 3,
+        "tunables": {
+            "actionspeedreduction%": [
+                40,
+                35,
+                30
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_calmSpirit"
+    },
+    "Camaraderie": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Camarader\u00eda",
+        "description": "Mientras forcejees en el gancho y otro superviviente est\u00e9 en un radio de {Tunable.S18P02.PauseDistance}\u00a0metros, el tiempo se detendr\u00e1 durante {Tunable.S18P02.PauseTimer}\u00a0segundos.",
+        "role": "survivor",
+        "character": 18,
+        "tunables": {
+            "pausedistance": [
+                16
+            ],
+            "pausetimer": [
+                26,
+                30,
+                34
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_camaraderie"
+    },
+    "Dance_with_me": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Baila conmigo",
+        "description": "Cuando salgas r\u00e1pidamente de una taquilla o realices un salto mediano o r\u00e1pido, no dejar\u00e1s marcas de ara\u00f1azos durante {Tunable.S13P01.Duration}\u00a0segundos. Tiempo de recarga: {Tunable.S13P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 10,
+        "tunables": {
+            "cooldown": [
+                25,
+                20,
+                15
+            ],
+            "duration": [
+                5
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kate/iconPerks_danceWithMe"
+    },
+    "Dark_Sense": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Percepci\u00f3n oscura",
+        "description": "Cada vez que se completa un generador, cuando el asesino est\u00e9 en un radio de {Tunable.SG_Dark_Sense.AuraRevealDistance}\u00a0metros de ti, ver\u00e1s su aura durante {Tunable.SG_Dark_Sense.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "aurarevealdistance": [
+                24
+            ],
+            "aurarevealduration": [
+                5,
+                7,
+                10
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_darkSense"
+    },
+    "DeadHard": {
+        "categories": [
+            "navigation",
+            "adaptation"
+        ],
+        "name": "Fajador",
+        "description": "Cuando te desenganchen, mientras est\u00e9s herido y corriendo, usa {Input.ActivatableButton1}:<ul><li>Obtendr\u00e1s {Keyword.Endurance} durante {Tunable.S10P02.EnduranceDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S10P02.ExhaustedDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 9,
+        "tunables": {
+            "enduranceduration": [
+                0.5
+            ],
+            "exhaustedduration": [
+                60,
+                50,
+                40
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC5/iconPerks_DeadHard"
+    },
+    "DecisiveStrike": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Golpe decisivo",
+        "description": "Hasta que se completen todos los generadores, cuando te desenganchen, durante los pr\u00f3ximos {Tunable.S06P02.EffectDuration}\u00a0segundos, cuando el asesino te recoja, una vez por partida, supera una prueba de habilidad especial para:<ul><li>Aturdir al asesino durante {Tunable.S06P02.StunDuration}\u00a0segundos.</li><li>Convertirte en la obsesi\u00f3n.</li></ul><br><br>Esto se desactiva con acciones llamativas. Cuando comienza la partida, es m\u00e1s probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 5,
+        "tunables": {
+            "effectduration": [
+                40,
+                50,
+                60
+            ],
+            "skillcheckbuffer%": [
+                5
+            ],
+            "skillcheckdelay%": [
+                70
+            ],
+            "stunduration": [
+                4
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC2/iconPerks_decisiveStrike"
+    },
+    "Deja_Vu": {
+        "categories": [
+            "perception"
+        ],
+        "name": "D\u00e9j\u00e0 vu",
+        "description": "Ves las auras de los {Tunable.SG_Deja_Vu.GeneratorsShown}\u00a0generadores m\u00e1s cercanos entre s\u00ed y los reparas un {Tunable.SG_Deja_Vu.RepairSpeed%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "generatorsshown": [
+                3
+            ],
+            "repairspeed%": [
+                4,
+                5,
+                6
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_dejaVu"
+    },
+    "Deliverance": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Liberaci\u00f3n",
+        "description": "Una vez por partida, cuando desenganches a otro superviviente de forma segura, podr\u00e1s desengancharte por tus propios medios. Cuando te desenganches de este modo, sufrir\u00e1s {Keyword.Broken} durante {Tunable.S14P02.BrokenDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 13,
+        "tunables": {
+            "brokenduration": [
+                160,
+                140,
+                120
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Haiti/iconPerks_deliverance"
+    },
+    "DesperateMeasures": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Medidas desesperadas",
+        "description": "Por cada superviviente herido, derribado o colgado:<ul><li>Curar\u00e1s un {Tunable.S23P02.ExtraActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1s un {Tunable.S23P02.ExtraActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": 22,
+        "tunables": {
+            "extraactionspeed%": [
+                16,
+                18,
+                20
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Yemen/iconPerks_desperateMeasures"
+    },
+    "DetectivesHunch": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Corazonada",
+        "description": "Cuando se complete un generador, durante {Tunable.S12P02.RevealDuration}\u00a0segundos, en un radio de {Tunable.S12P02.RevealDistance}\u00a0metros:<ul><li>Ver\u00e1s las auras de cofres.</li><li>Ver\u00e1s las auras de generadores.</li><li>Ver\u00e1s las auras de t\u00f3tems.</li></ul>",
+        "role": "survivor",
+        "character": 12,
+        "tunables": {
+            "revealdistance": [
+                32,
+                48,
+                64
+            ],
+            "revealduration": [
+                20
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Finland/iconPerks_detectivesHunch"
+    },
+    "Distortion": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Distorsi\u00f3n",
+        "description": "Cuando comienza la partida, y despu\u00e9s de que te persigan durante {Tunable.S15P03.RegainTokenDuration}\u00a0segundos, obtendr\u00e1s {Tunable.S15P03.TokensRegained}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S15P03.MaxTokens}.<br><br>Mientras no te derriben, cuando el asesino intente ver tu aura, gastas {Tunable.S15P03.StartingTokenAmount}\u00a0distintivo. A continuaci\u00f3n, durante los pr\u00f3ximos {Tunable.S15P03.HiddenDuration}\u00a0segundos:<ul><li>El asesino no ver\u00e1 tu aura.</li><li>No dejar\u00e1s marcas de ara\u00f1azos.</li></ul>",
+        "role": "survivor",
+        "character": 14,
+        "tunables": {
+            "hiddenduration": [
+                8,
+                10,
+                12
+            ],
+            "maxtokens": [
+                2
+            ],
+            "regaintokenduration": [
+                15
+            ],
+            "startingtokenamount": [
+                1
+            ],
+            "tokensregained": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kenya/iconPerks_distortion"
+    },
+    "Diversion": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Distracci\u00f3n",
+        "description": "Tras esconderte durante {Tunable.S14P01.RequiredChargeTime}\u00a0segundos dentro del radio de terror del asesino, estando de cuclillas e inactivo, usa {Input.ActivatableButton1} para lanzar una piedra a {Tunable.S14P01.ThrowDistance}\u00a0metros de distancia:<ul><li>El asesino recibir\u00e1 una alerta.</li><li>La piedra dejar\u00e1 marcas de ara\u00f1azos.</li></ul>",
+        "role": "survivor",
+        "character": 13,
+        "tunables": {
+            "requiredchargetime": [
+                30,
+                25,
+                20
+            ],
+            "throwdistance": [
+                20
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Haiti/iconPerks_diversion"
+    },
+    "Empathy": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Empat\u00eda",
+        "description": "En un radio de {Tunable.S03P01.AuraRevealDistance}\u00a0metros, ves las auras de los supervivientes heridos.",
+        "role": "survivor",
+        "character": 2,
+        "tunables": {
+            "aurarevealdistance": [
+                64,
+                96,
+                128
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_empathy"
+    },
+    "Fixated": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Fijaci\u00f3n",
+        "description": "Al caminar, tienes un {Tunable.S19P02.Haste%}\u00a0% de {Keyword.Haste}.<br><br>Ves tus propias marcas de ara\u00f1azos.",
+        "role": "survivor",
+        "character": 17,
+        "tunables": {
+            "haste%": [
+                10,
+                15,
+                20
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_fixated"
+    },
+    "FlipFlop": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Hasta otra",
+        "description": "Estando derribado, cuando el asesino te recoja, un {Tunable.S17P01.RecoveryRatio%}\u00a0% de tu progreso de recuperaci\u00f3n se a\u00f1adir\u00e1 a tu progreso de forcejeo, hasta un {Tunable.S17P01.MaxWiggle%}\u00a0%.",
+        "role": "survivor",
+        "character": 16,
+        "tunables": {
+            "maxwiggle%": [
+                40,
+                45,
+                50
+            ],
+            "recoveryratio%": [
+                50
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ash/iconPerks_flipFlop"
+    },
+    "ForThePeople": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Por los dem\u00e1s",
+        "description": "Mientras est\u00e9s ileso y curando a otro superviviente sin un botiqu\u00edn, usa {Input.ActivatableButton1} para curarlo al instante:<ul><li>Sufrir\u00e1s da\u00f1o.</li><li>Sufrir\u00e1s {Keyword.Broken} durante {Tunable.S21P03.BrokenDuration}\u00a0segundos.</li><li>Te conviertes en la obsesi\u00f3n.</li></ul><br><br>Cuando comienza la partida, es menos probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 20,
+        "tunables": {
+            "brokenduration": [
+                80,
+                70,
+                60
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ukraine/iconPerks_forThePeople"
+    },
+    "HeadOn": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "De frente",
+        "description": "Tras esconderte en una taquilla durante {Tunable.S16P03.HideRequiredDuration}\u00a0segundos, sal r\u00e1pidamente para aturdir al asesino durante {Tunable.S16P03.LockerStunDuration}\u00a0segundos si est\u00e1 en un radio de {Tunable.S16P03.LockerStunRange}\u00a0metros. A continuaci\u00f3n, sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S16P03.ExhaustedDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 15,
+        "tunables": {
+            "exhaustedduration": [
+                60,
+                50,
+                40
+            ],
+            "hiderequiredduration": [
+                3
+            ],
+            "lockerstunduration": [
+                3
+            ],
+            "lockerstunrange": [
+                2.5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Mali/iconPerks_headOn"
+    },
+    "Hope": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Esperanza",
+        "description": "Cuando se completen todos los generadores, obtendr\u00e1s un {Tunable.SG_Hope.Haste%}\u00a0% de {Keyword.Haste}.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "haste%": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_hope"
+    },
+    "InnerStrength": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Fuerza interior",
+        "description": "Cada vez que purifiques un t\u00f3tem, estando herido y sin sufrir {Keyword.Broken}, tras esconderte en una taquilla durante {Tunable.S19P03.HideDuration}\u00a0segundos, volver\u00e1s a estar ileso al instante.",
+        "role": "survivor",
+        "character": 17,
+        "tunables": {
+            "hideduration": [
+                10,
+                9,
+                8
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_innerStrength"
+    },
+    "Iron_Will": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Voluntad de hierro",
+        "description": "Estando herido y sin sufrir {Keyword.Exhausted}, tus gru\u00f1idos de dolor ser\u00e1n un {Tunable.S04P01.InjuredNoiseReduction%}\u00a0% m\u00e1s silenciosos.",
+        "role": "survivor",
+        "character": 3,
+        "tunables": {
+            "injurednoisereduction%": [
+                80,
+                90,
+                100
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_ironWill"
+    },
+    "Kindred": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Familia",
+        "description": "Mientras est\u00e9s colgado, todos los supervivientes ver\u00e1n las auras del resto. Mientras el asesino est\u00e9 en un radio de {Tunable.SG_Kindred.AuraRevealDistance}\u00a0metros, todos los supervivientes ver\u00e1n el aura del asesino.<br><br>Mientras otro superviviente est\u00e9 colgado, ver\u00e1s las auras de otros supervivientes. Mientras el asesino est\u00e9 en un radio de {Tunable.SG_Kindred.AuraRevealDistance}\u00a0metros del superviviente colgado, ver\u00e1s el aura del asesino.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "aurarevealdistance": [
+                8,
+                12,
+                16
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_kindred"
+    },
+    "Leader": {
+        "categories": [
+            "strategy",
+            "support"
+        ],
+        "name": "L\u00edder",
+        "description": "Otros supervivientes que est\u00e9n en un radio de {Tunable.S01P02.Range}\u00a0metros de ti:<ul><li>Purificar\u00e1n t\u00f3tems un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Curar\u00e1n un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Abrir\u00e1n puertas de salida un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Sabotear\u00e1n ganchos un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1n supervivientes un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desbloquear\u00e1n cofres un {Tunable.S01P02.ActionSpeedModifier%}\u00a0% m\u00e1s r\u00e1pido.</li></ul><br><br>Esto termina {Tunable.S01P02.LingerDuration}\u00a0segundos despu\u00e9s de que salgan de tu alcance.",
+        "role": "survivor",
+        "character": 0,
+        "tunables": {
+            "actionspeedmodifier%": [
+                20,
+                25,
+                30
+            ],
+            "lingerduration": [
+                20
+            ],
+            "range": [
+                10
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_leader"
+    },
+    "LeftBehind": {
+        "categories": [
+            "strategy",
+            "adaptation"
+        ],
+        "name": "Abandonado a tu suerte",
+        "description": "Cuando los dem\u00e1s supervivientes est\u00e9n muertos, en un radio de {Tunable.S08P01.HatchRevealDistance}\u00a0metros de la trampilla, ver\u00e1s su aura.",
+        "role": "survivor",
+        "character": 7,
+        "tunables": {
+            "hatchrevealdistance": [
+                24,
+                28,
+                32
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/L4D/iconPerks_leftBehind"
+    },
+    "Lightweight": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "De pies ligeros",
+        "description": "Tus marcas de ara\u00f1azos desaparecen {Tunable.SG_Lightweight.ScratchmarksTimeReduction}\u00a0segundos m\u00e1s r\u00e1pido y aparecen m\u00e1s dispersas.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "scratchmarkstimereduction": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_lightweight"
+    },
+    "Lithe": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Agilidad",
+        "description": "Cada vez que realices un salto mediano o r\u00e1pido:<ul><li>Obtendr\u00e1s un {Tunable.S09P02.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S09P02.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S09P02.ExhaustionDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 8,
+        "tunables": {
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                3
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC4/iconPerks_lithe"
+    },
+    "LuckyBreak": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Golpe de suerte",
+        "description": "Estando herido, durante un m\u00e1ximo de {Tunable.S20P01.MaxDuration}\u00a0segundos:<ul><li>No dejar\u00e1s charcos de sangre.</li><li>No dejar\u00e1s marcas de ara\u00f1azos.</li></ul><br><br>Por cada segundo que pases curando a otro superviviente, la duraci\u00f3n se recargar\u00e1 en {Tunable.S20P01.TimePerHealingSecond}\u00a0segundos.",
+        "role": "survivor",
+        "character": 19,
+        "tunables": {
+            "maxduration": [
+                40,
+                50,
+                60
+            ],
+            "minduration": [
+                1
+            ],
+            "timeperhealingsecond": [
+                1
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sweden/iconPerks_luckyBreak"
+    },
+    "No_One_Left_Behind": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Nadie se queda atr\u00e1s",
+        "description": "Cuando se completen todos los generadores:<ul><li>Te curar\u00e1s un {Tunable.SG_No_One_Left_Behind.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1s a otros supervivientes un {Tunable.SG_No_One_Left_Behind.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Cada vez que desenganches a un superviviente, este obtendr\u00e1 un {Tunable.SG_No_One_Left_Behind.IncreasedHaste%}\u00a0% m\u00e1s de {Keyword.Haste}.</li><li>Ver\u00e1s las auras de otros supervivientes.</li></ul>",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "actionspeed%": [
+                50,
+                75,
+                100
+            ],
+            "increasedhaste%": [
+                10
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_noOneLeftBehind"
+    },
+    "NoMither": {
+        "categories": [
+            "adaptation",
+            "concealment"
+        ],
+        "name": "Me la pela",
+        "description": "Cuando comienza la partida, est\u00e1s herido, y despu\u00e9s:<ul><li>Sufrir\u00e1s {Keyword.Broken}.</li><li>Tus gru\u00f1idos de dolor ser\u00e1n un {Tunable.S10P03.InjuredVoiceLevelReduction%}\u00a0% m\u00e1s silenciosos.</li><li>No dejar\u00e1s charcos de sangre.</li><li>Te recuperar\u00e1s un {Tunable.S10P03.ExtraRecover%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Podr\u00e1s recuperarte por completo.</li></ul>",
+        "role": "survivor",
+        "character": 9,
+        "tunables": {
+            "dyingvoicelevelreduction%": [
+                100
+            ],
+            "extrarecover%": [
+                15,
+                20,
+                25
+            ],
+            "injuredvoicelevelreduction%": [
+                100
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC5/iconPerks_NoMither"
+    },
+    "ObjectOfObsession": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Objeto de obsesi\u00f3n",
+        "description": "Mientras seas la obsesi\u00f3n, cada {Tunable.S06P03.RevealTimeIntervals}\u00a0segundos, el asesino ver\u00e1 tu aura durante {Tunable.S06P03.AuraRevealDuration}\u00a0segundos.<br><br>Mientras el asesino vea tu aura:<ul><li>Ver\u00e1s su aura.</li><li>Purificar\u00e1s t\u00f3tems un {Tunable.S06P03.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Te curar\u00e1s un {Tunable.S06P03.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Reparar\u00e1s un {Tunable.S06P03.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li></ul><br><br>Cuando comienza la partida, es m\u00e1s probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 5,
+        "tunables": {
+            "actionspeedbonus%": [
+                2,
+                4,
+                6
+            ],
+            "aurarevealduration": [
+                3
+            ],
+            "revealtimeintervals": [
+                30
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC2/iconPerks_objectOfObsession"
+    },
+    "OffTheRecord": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Extraoficial",
+        "description": "Hasta que todos los generadores est\u00e9n completados, cada vez que te desenganchen, durante los pr\u00f3ximos {Tunable.S21P01.Duration}\u00a0segundos:<ul><li>Obtendr\u00e1s {Keyword.Endurance}.</li><li>Tus gru\u00f1idos de dolor ser\u00e1n un {Tunable.S21P01.InjuredVoiceLevelReduction%}\u00a0% m\u00e1s silenciosos.</li><li>El asesino no ver\u00e1 tu aura.</li></ul>",
+        "role": "survivor",
+        "character": 20,
+        "tunables": {
+            "duration": [
+                30,
+                35,
+                40
+            ],
+            "injuredvoicelevelreduction%": [
+                100
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ukraine/iconPerks_offTheRecord"
+    },
+    "Open_Handed": {
+        "categories": [
+            "support",
+            "navigation"
+        ],
+        "name": "A mano descubierta",
+        "description": "Todos los supervivientes ven auras a una distancia mayor de {Tunable.S07P01.AuraIncreaseDistance}\u00a0metros.",
+        "role": "survivor",
+        "character": 6,
+        "tunables": {
+            "auraincreasedistance": [
+                8,
+                12,
+                16
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC3/iconPerks_openHanded"
+    },
+    "Pharmacy": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Farmacia",
+        "description": "Cuando desbloquees un cofre, contendr\u00e1 un botiqu\u00edn raro.<br><br>Desbloqueas cofres un {Tunable.S11P02.SearchSpeeds%}\u00a0% m\u00e1s r\u00e1pido.<br><br>La distancia a la que el asesino te oye desbloqueando cofres se reduce {Tunable.S11P02.NoiseReductionDistance}\u00a0metros.",
+        "role": "survivor",
+        "character": 11,
+        "tunables": {
+            "noisereductiondistance": [
+                12
+            ],
+            "searchspeeds%": [
+                75,
+                100,
+                125
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/England/iconPerks_pharmacy"
+    },
+    "Plunderers_Instinct": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Instinto de saqueador",
+        "description": "Mientras est\u00e9s en un radio de {Tunable.SG_Plunderers_Instinct.ChestAuraRevealDistance}\u00a0metros de cofres cerrados y objetos soltados, ver\u00e1s sus auras.<br><br><br>Cada vez que desbloquees un cofre, tendr\u00e1s un {Tunable.SG_Plunderers_Instinct.ModifyChestRarity}\u00a0% m\u00e1s de probabilidades de encontrar un objeto de mayor rareza.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "chestaurarevealdistance": [
+                32,
+                48,
+                64
+            ],
+            "itemaurarevealdistance": [
+                32,
+                48,
+                64
+            ],
+            "modifychestrarity": [
+                50
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_plunderersInstinct"
+    },
+    "Poised": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Serenidad",
+        "description": "La primera vez que empiezas a reparar cada generador, ver\u00e1s el aura del asesino durante {Tunable.S16P02.AuraRevealDuration}\u00a0segundos.<br><br><br>Cuando se complete un generador, no dejar\u00e1s marcas de ara\u00f1azos durante {Tunable.S16P02.StealthDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 15,
+        "tunables": {
+            "aurarevealduration": [
+                8
+            ],
+            "stealthduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Mali/iconPerks_poised"
+    },
+    "Premonition": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Premonici\u00f3n",
+        "description": "Mientras el asesino est\u00e9 en un radio de {Tunable.SG_Premonition.PerkEffectDistance}\u00a0metros de ti y en un \u00e1rea c\u00f3nica de {Tunable.SG_Premonition.ActivationAngle}\u00a0grados, cada vez que lo mires, oir\u00e1s un sonido. Tiempo de recarga: {Tunable.SG_Premonition.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "activationangle": [
+                45
+            ],
+            "cooldown": [
+                60,
+                45,
+                30
+            ],
+            "perkeffectdistance": [
+                36
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_premonition"
+    },
+    "Prove_Thyself": {
+        "categories": [
+            "strategy",
+            "support"
+        ],
+        "name": "Demuestra lo que vales",
+        "description": "Por cada superviviente en un radio de {Tunable.S01P03.Range}\u00a0metros de ti, todos los supervivientes reparar\u00e1n un {Tunable.S01P03.RepairBonusPerSurvivor%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 0,
+        "tunables": {
+            "range": [
+                4
+            ],
+            "repairbonuspersurvivor%": [
+                6,
+                8,
+                10
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_proveThyself"
+    },
+    "QuickQuiet": {
+        "categories": [
+            "navigation",
+            "concealment"
+        ],
+        "name": "Velocidad silenciosa",
+        "description": "Te escondes en taquillas y saltas sin hacer ruido. El asesino no recibir\u00e1 una alerta.\u00a0Tiempo de recarga:{Tunable.S02P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 1,
+        "tunables": {
+            "cooldown": [
+                25,
+                20,
+                15
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_quickAndQuiet"
+    },
+    "RedHerring": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Bulo",
+        "description": "Despu\u00e9s de reparar un generador durante al menos {Tunable.S21P02.TimeToActivate}\u00a0segundos, ver\u00e1s su aura.<br><br>Cuando te escondas en una taquilla, el asesino recibir\u00e1 una alerta de ese generador. Tiempo de recarga: {Tunable.S21P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 20,
+        "tunables": {
+            "cooldown": [
+                25,
+                20,
+                15
+            ],
+            "loudnoisetriggerednotifytime": [
+                3
+            ],
+            "timetoactivate": [
+                1
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ukraine/iconPerks_redHerring"
+    },
+    "RepressedAlliance": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Supresi\u00f3n de alianza\u00a0",
+        "description": "Tras reparar generadores durante {Tunable.S22P03.RepairTimeNeeded}\u00a0segundos, al reparar un generador a solas, usa {Input.ActivatableButton1} para bloquear ese generador durante {Tunable.S22P03.GeneratorBlockDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 21,
+        "tunables": {
+            "generatorblockduration": [
+                15
+            ],
+            "repairtimeneeded": [
+                40,
+                35,
+                30
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wales/iconPerks_repressedAlliance"
+    },
+    "Resilience": {
+        "categories": [
+            "navigation",
+            "safeguard",
+            "strategy"
+        ],
+        "name": "Resiliencia",
+        "description": "Estando herido:<ul><li>Bendecir\u00e1s y purificar\u00e1s t\u00f3tems un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Curar\u00e1s un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Abrir\u00e1s las puertas de salida un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Reparar\u00e1s un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Sabotear\u00e1s ganchos un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1s supervivientes un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desbloquear\u00e1s cofres un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Saltar\u00e1s un {Tunable.SG_Resilience.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "actionspeed%": [
+                3,
+                6,
+                9
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_resilience"
+    },
+    "S24P01": {
+        "categories": [
+            "support"
+        ],
+        "name": "Evaluaci\u00f3n",
+        "description": "Cuando comienza la partida, obtienes {Tunable.S24P01.StartingTokens}\u00a0distintivos.<br><br>Gasta {Tunable.S24P01.TokensPerRummage}\u00a0distintivo para rebuscar en un cofre vac\u00edo, hasta {Tunable.S24P01.MaxRummagesPerChest}\u00a0veces por cada cofre.<br><br>Rebuscas en los cofres un {Tunable.S24P01.ChestSearchSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 23,
+        "tunables": {
+            "chestsearchspeedbonus%": [
+                40,
+                60,
+                80
+            ],
+            "maxrummagesperchest": [
+                2
+            ],
+            "startingtokens": [
+                4
+            ],
+            "tokensperrummage": [
+                1
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Aurora/iconPerks_appraisal"
+    },
+    "S24P02": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Enga\u00f1o",
+        "description": "Cuando intentes entrar en una taquilla r\u00e1pidamente:<ul><li>No entrar\u00e1s en la taquilla.</li><li>El asesino recibir\u00e1 una alerta.</li><li>No dejar\u00e1s charcos de sangre durante {Tunable.S24P02.NoScratchMarksDuration}\u00a0segundos.</li><li>No dejar\u00e1s marcas de ara\u00f1azos durante {Tunable.S24P02.NoScratchMarksDuration}\u00a0segundos.</li></ul><br><br>Tiempo de recarga: {Tunable.S24P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 23,
+        "tunables": {
+            "cooldown": [
+                25,
+                20,
+                15
+            ],
+            "noscratchmarksduration": [
+                5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Aurora/iconPerks_deception"
+    },
+    "S24P03": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Lucha intensa",
+        "description": "Mientras te cargue el asesino, cuando tengas al menos un {Tunable.S24P03.WiggleRequired%}\u00a0% de forcejeo y est\u00e9s junto a un pal\u00e9 en vertical, puedes derribarlo y aturdir al asesino.<br><br>Estando derribado, ver\u00e1s las auras de los pal\u00e9s en vertical.",
+        "role": "survivor",
+        "character": 23,
+        "tunables": {
+            "wigglerequired%": [
+                25,
+                20,
+                15
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Aurora/iconPerks_powerStruggle"
+    },
+    "S25P01": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Primera l\u00ednea",
+        "description": "Cada vez que desenganches a otro superviviente, obtendr\u00e1s {Tunable.S25P01.TokensPerHook}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S25P01.MaxTokens}.<br><br>Mientras repares, cada vez que logres una prueba de habilidad b\u00e1sica excelente, gastar\u00e1s todos los distintivos. Por cada distintivo gastado, el generador obtendr\u00e1 un {Tunable.S25P01.BonusPerToken%}\u00a0% de progreso permanente.",
+        "role": "survivor",
+        "character": 24,
+        "tunables": {
+            "bonuspertoken%": [
+                5
+            ],
+            "tokensperhook": [
+                1
+            ],
+            "maxtokens": [
+                1,
+                2,
+                3
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Comet/iconPerks_FastTrack"
+    },
+    "S25P02": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "\u00c9xito aplastante",
+        "description": "Cada vez que aturdas con un pal\u00e9 al asesino:<ul><li>Obtendr\u00e1s un {Tunable.S25P02.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S25P02.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S25P02.ExhaustedDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 24,
+        "tunables": {
+            "exhaustedduration": [
+                30,
+                25,
+                20
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                4
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Comet/iconPerks_SmashHit"
+    },
+    "S25P03": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Autoconservaci\u00f3n",
+        "description": "Cada vez que otro superviviente sea colgado, obtendr\u00e1s {Keyword.Elusive} durante {Tunable.S25P03.Duration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 24,
+        "tunables": {
+            "duration": [
+                20,
+                25,
+                30
+            ],
+            "requireddistance": [
+                16
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Comet/iconPerks_Self-Preservation"
+    },
+    "S26P01": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Contrafuerza",
+        "description": "Cuando comienza la partida, obtienes {Tunable.S26P01.StartingTokens}\u00a0distintivo.<br><br>Cada vez que purifiques un t\u00f3tem, obtendr\u00e1s {Tunable.S26P01.TokensPerCleanse}\u00a0distintivo. Despu\u00e9s ver\u00e1s el aura del t\u00f3tem m\u00e1s lejano durante {Tunable.S26P01.AuraRevealDuration}\u00a0segundos.<br><br>Por cada distintivo, purificar\u00e1s t\u00f3tems un {Tunable.S26P01.StackableCleanseSpeed%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 25,
+        "tunables": {
+            "aurarevealduration": [
+                10,
+                12,
+                14
+            ],
+            "stackablecleansespeed%": [
+                25
+            ],
+            "startingextracleansespeed%": [
+                25
+            ],
+            "startingtokens": [
+                1
+            ],
+            "tokenspercleanse": [
+                1
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_Counterforce"
+    },
+    "S26P02": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Resurgimiento",
+        "description": "Cada vez que te desenganchen, obtendr\u00e1s un {Tunable.S26P02.HealRegain%}\u00a0% de progreso de curaci\u00f3n.",
+        "role": "survivor",
+        "character": 25,
+        "tunables": {
+            "healregain%": [
+                50,
+                60,
+                70
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_Resurgence"
+    },
+    "S26P03": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Mina explosiva",
+        "description": "Tras reparar un {Tunable.S26P03.RequiredProgress%}\u00a0% de los generadores, cuando est\u00e9s junto a un generador, usa {Input.ActivatableButton2} para colocar una trampa durante {Tunable.S26P03.TrapDuration}\u00a0segundos. Todos los supervivientes ven el aura de ese generador durante ese tiempo.<br><br>Cuando el asesino da\u00f1e ese generador, la trampa explotar\u00e1 y:<ul><li>El asesino quedar\u00e1 aturdido durante {Tunable.S26P03.StunBlindDuration}\u00a0segundos.</li><li>Quienes est\u00e9n cerca de la detonaci\u00f3n sufrir\u00e1n Ceguera.</li></ul>",
+        "role": "survivor",
+        "character": 25,
+        "tunables": {
+            "requiredprogress%": [
+                40
+            ],
+            "stunblindduration": [
+                4
+            ],
+            "trapduration": [
+                100,
+                110,
+                120
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_BlastMine"
+    },
+    "S27P01": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "De tripas coraz\u00f3n",
+        "description": "Mientras cures, el superviviente curado y t\u00fa no har\u00e9is ruido ni emitir\u00e9is gru\u00f1idos de dolor. Cada vez que falles una prueba de habilidad b\u00e1sica:<ul><li>Perder\u00e1s solo un {Tunable.S27P01.OverrideHealFailPenalty%}\u00a0% de progreso.</li><li>El asesino no recibir\u00e1 una alerta.</li></ul>",
+        "role": "survivor",
+        "character": 26,
+        "tunables": {
+            "overridehealfailpenalty%": [
+                3,
+                2,
+                1
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_BiteTheBullet"
+    },
+    "S27P02": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Granada aturdidora",
+        "description": "Tras reparar un {Tunable.S27P02.RequiredProgressToCraft%}\u00a0% de los generadores, mientras te escondas en una taquilla, usa {Input.ActivatableButton1} para fabricar una granada aturdidora.<br><br>Al utilizar la granada aturdidora:<ul><li>Quienes est\u00e9n cerca de la detonaci\u00f3n sufrir\u00e1n Ceguera.</li><li>El asesino recibir\u00e1 una alerta.</li></ul>",
+        "role": "survivor",
+        "character": 26,
+        "tunables": {
+            "requiredprogresstocraft%": [
+                50,
+                45,
+                40
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_Flashbang"
+    },
+    "S27P03": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Esp\u00edritu de novato",
+        "description": "Tras lograr {Tunable.S27P03.SkillchecksRequiredAmount}\u00a0pruebas de habilidad de reparaci\u00f3n b\u00e1sicas, mientras un generador se est\u00e9 revirtiendo, ver\u00e1s su aura.",
+        "role": "survivor",
+        "character": 26,
+        "tunables": {
+            "skillchecksrequiredamount": [
+                5,
+                4,
+                3
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclipse/iconPerks_RookieSpirit"
+    },
+    "S28P01": {
+        "categories": null,
+        "name": "Clarividencia",
+        "description": "Cuando bendices o purificas un t\u00f3tem, mientras no lleves un objeto, usa {Input.UseItem} durante un m\u00e1ximo de {Tunable.S28P01.AuraRevealDuration}\u00a0segundos, y en un radio de {Tunable.S28P01.AuraRevealDistance}\u00a0metros:<ul><li>Ver\u00e1s las auras de cofres.</li><li>Ver\u00e1s las auras de los interruptores de las puertas de salida.</li><li>Ver\u00e1s las auras de los generadores.</li><li>Ver\u00e1s el aura de la trampilla.</li><li>Ver\u00e1s las auras de los ganchos.</li></ul>",
+        "role": "survivor",
+        "character": 27,
+        "tunables": {
+            "aurarevealdistance": [
+                64
+            ],
+            "aurarevealduration": [
+                10,
+                11,
+                12
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Hubble/iconPerks_Clairvoyance"
+    },
+    "S28P02": {
+        "categories": null,
+        "name": "Bendici\u00f3n: C\u00edrculo de curaci\u00f3n",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones.<br><br>Los supervivientes dentro del alcance de la bendici\u00f3n:<ul><li>Al curar sin un botiqu\u00edn, curar\u00e1n a otros un {Tunable.S28P02.HealingSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Estando heridos, otros supervivientes ver\u00e1n sus auras.</li></ul>",
+        "role": "survivor",
+        "character": 27,
+        "tunables": {
+            "healingspeedbonus%": [
+                50,
+                75,
+                100
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Hubble/iconPerks_BoonCircleOfHealing"
+    },
+    "S28P03": {
+        "categories": null,
+        "name": "Bendici\u00f3n: Paso sombr\u00edo",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones. Los supervivientes dentro del alcance de la bendici\u00f3n:<ul><li>No dejar\u00e1n marcas de ara\u00f1azos.</li><li>El asesino no podr\u00e1 ver sus auras.</li></ul><br><br>Tras salir del alcance, esto terminar\u00e1 {Tunable.S28P03.LingerDuration}\u00a0segundos despu\u00e9s.",
+        "role": "survivor",
+        "character": 27,
+        "tunables": {
+            "lingerduration": [
+                2,
+                3,
+                4
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Hubble/iconPerks_BoonShadowStep"
+    },
+    "S29P01": {
+        "categories": null,
+        "name": "Sobreponerse",
+        "description": "Cuando sufras da\u00f1o:<ul><li>Mantendr\u00e1s tu aumento de velocidad durante {Tunable.S29P01.ExtraBoostTime}\u00a0segundos m\u00e1s.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S29P01.ExhaustionDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 28,
+        "tunables": {
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "extraboosttime": [
+                2
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ion/T_iconPerks_Overcome"
+    },
+    "S29P02": {
+        "categories": null,
+        "name": "Medida correctiva",
+        "description": "Cuando comienza la partida, obtienes {Tunable.S29P02.StartingTokens}\u00a0distintivos, hasta un m\u00e1ximo de {Tunable.S29P02.MaxTokens}.<br><br>Cada vez que logres una prueba de habilidad b\u00e1sica excelente, obtendr\u00e1s {Tunable.S29P02.TokensGainedPerGreat}\u00a0distintivo.<br><br>Cada vez que otro superviviente falle una prueba de habilidad b\u00e1sica, gastas {Tunable.S29P02.TokensSpentPerMiss}\u00a0distintivo:<ul><li>La prueba de habilidad no superada se convertir\u00e1 en una prueba de habilidad superada.</li><li>Ver\u00e1s el aura de ese superviviente durante {Tunable.S29P02.AuraRevealDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 28,
+        "tunables": {
+            "aurarevealduration": [
+                6
+            ],
+            "maxtokens": [
+                5
+            ],
+            "startingtokens": [
+                1,
+                2,
+                3
+            ],
+            "tokensgainedpergreat": [
+                1
+            ],
+            "tokensspentpermiss": [
+                1
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ion/T_iconPerks_CorrectiveAction"
+    },
+    "S29P03": {
+        "categories": null,
+        "name": "Bendici\u00f3n: Exponencial",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones.<br><br>Los supervivientes derribados dentro del alcance de la bendici\u00f3n:<ul><li>Se recuperar\u00e1n un {Tunable.S29P03.RecoverSpeedBoost%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Podr\u00e1n recuperarse por completo.</li></ul>",
+        "role": "survivor",
+        "character": 28,
+        "tunables": {
+            "recoverspeedboost%": [
+                90,
+                95,
+                100
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ion/T_iconPerks_BoonExponential"
+    },
+    "S30P01": {
+        "categories": null,
+        "name": "Consejo paterno",
+        "description": "Cuando aturdas al asesino, durante {Tunable.S30P01.StealthDuration}\u00a0segundos:<ul><li>No emitir\u00e1s gru\u00f1idos de dolor.</li><li>No dejar\u00e1s charcos de sangre.</li><li>No dejar\u00e1s marcas de ara\u00f1azos.</li></ul>",
+        "role": "survivor",
+        "character": 29,
+        "tunables": {
+            "stealthduration": [
+                5,
+                6,
+                7
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kepler/iconPerks_parentalGuidance"
+    },
+    "S30P02": {
+        "categories": null,
+        "name": "Conexi\u00f3n emp\u00e1tica",
+        "description": "Curas a otros supervivientes un {Tunable.S30P02.HealingBonus%}\u00a0% m\u00e1s r\u00e1pido.<br><br>Los supervivientes heridos ven tu aura.",
+        "role": "survivor",
+        "character": 29,
+        "tunables": {
+            "healingbonus%": [
+                25,
+                30,
+                35
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kepler/iconPerks_empathicConnection"
+    },
+    "S30P03": {
+        "categories": null,
+        "name": "Bendici\u00f3n: Teor\u00eda oscura",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones.<br><br>Los supervivientes dentro del alcance de la bendici\u00f3n obtendr\u00e1n un {Tunable.S30P03.Haste%}\u00a0% de {Keyword.Haste}. Tras salir del alcance, esto terminar\u00e1 {Tunable.S30P03.LingerDuration}\u00a0segundos despu\u00e9s.",
+        "role": "survivor",
+        "character": 29,
+        "tunables": {
+            "haste%": [
+                3
+            ],
+            "lingerduration": [
+                2,
+                3,
+                4
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kepler/iconPerks_darkTheory"
+    },
+    "S31P01": {
+        "categories": null,
+        "name": "Concentraci\u00f3n interna",
+        "description": "Cuando el asesino da\u00f1e a otro superviviente, ver\u00e1s el aura del asesino durante {Tunable.S31P01.AuraRevealDuration}\u00a0segundos.<br><br>Ves las marcas de ara\u00f1azos de otros supervivientes.",
+        "role": "survivor",
+        "character": 30,
+        "tunables": {
+            "aurarevealduration": [
+                6,
+                8,
+                10
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Meteor/iconPerks_InnerFocus"
+    },
+    "S31P02": {
+        "categories": null,
+        "name": "Manifestaci\u00f3n residual",
+        "description": "Cuando ciegues al asesino, este sufrir\u00e1 {Keyword.Blindness} durante {Tunable.S31P02.BlindnessDuration}\u00a0segundos.<br><br>Puedes rebuscar en los cofres {Tunable.S31P02.MaxRummagePerChest}\u00a0vez. La primera vez que rebusques en un cofre, este contendr\u00e1 una linterna poco com\u00fan.",
+        "role": "survivor",
+        "character": 30,
+        "tunables": {
+            "blindnessduration": [
+                20,
+                25,
+                30
+            ],
+            "maxrummageperchest": [
+                1
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Meteor/iconPerks_ResidualManifest"
+    },
+    "S31P03": {
+        "categories": null,
+        "name": "Pasi\u00f3n",
+        "description": "Cada vez que bendigas o purifiques un t\u00f3tem, hasta que sufras da\u00f1o, reparar\u00e1s un {Tunable.S31P03.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido. Si ese t\u00f3tem era un t\u00f3tem de maleficio, el efecto se duplicar\u00e1.",
+        "role": "survivor",
+        "character": 30,
+        "tunables": {
+            "actionspeedbonus%": [
+                8,
+                9,
+                10
+            ],
+            "doubledactionspeedbonus%": [
+                16,
+                18,
+                20
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Meteor/iconPerks_Overzealous"
+    },
+    "S32P01": {
+        "categories": null,
+        "name": "Interceptor",
+        "description": "Tras reparar un {Tunable.S32P01.RequiredProgress%}\u00a0% de los generadores, cuando est\u00e9s junto a un generador, usa {Input.ActivatableButton2} para colocar una trampa durante {Tunable.S32P01.TrapDuration}\u00a0segundos o hasta que el asesino da\u00f1e ese generador. Todos los supervivientes ven el aura de ese generador durante ese tiempo.<br><br>Mientras el asesino est\u00e9 en un radio de {Tunable.S32P01.AuraRevealRange}\u00a0metros de ese generador, todos los supervivientes ver\u00e1n el aura del asesino.",
+        "role": "survivor",
+        "character": 31,
+        "tunables": {
+            "aurarevealrange": [
+                14
+            ],
+            "requiredprogress%": [
+                40
+            ],
+            "trapduration": [
+                100,
+                110,
+                120
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_Wiretap"
+    },
+    "S32P02": {
+        "categories": null,
+        "name": "Curaci\u00f3n reactiva",
+        "description": "Estando herido, cada vez que otro superviviente est\u00e9 en un radio de {Tunable.S32P02.MaximumDistance}\u00a0metros de ti y sufra da\u00f1o, obtendr\u00e1s un {Tunable.S32P02.HealingProgressionIncrease%}\u00a0% del progreso de curaci\u00f3n que te falte.",
+        "role": "survivor",
+        "character": 31,
+        "tunables": {
+            "healingprogressionincrease%": [
+                40,
+                45,
+                50
+            ],
+            "maximumdistance": [
+                32
+            ],
+            "thresholdtohealcompletely%": [
+                0.4000000059604645
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_ReactiveHealing"
+    },
+    "S32P03": {
+        "categories": null,
+        "name": "Perfil bajo",
+        "description": "Cuando los dem\u00e1s supervivientes est\u00e9n derribados o colgados, durante {Tunable.S32P03.EffectDuration}\u00a0segundos:<ul><li>No emitir\u00e1s gru\u00f1idos de dolor.</li><li>No dejar\u00e1s charcos de sangre.</li><li>No dejar\u00e1s marcas de ara\u00f1azos.</li></ul>",
+        "role": "survivor",
+        "character": 31,
+        "tunables": {
+            "effectduration": [
+                70,
+                80,
+                90
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_LowProfile"
+    },
+    "S33P01": {
+        "categories": null,
+        "name": "Mejor que nuevo",
+        "description": "Cada vez que termines de curar a otro superviviente, hasta que sufra da\u00f1o:<ul><li>Bendecir\u00e1 y purificar\u00e1 t\u00f3tems un {Tunable.S33P01.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Curar\u00e1 un {Tunable.S33P01.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desbloquear\u00e1 cofres un {Tunable.S33P01.ActionSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": 32,
+        "tunables": {
+            "actionspeedbonus%": [
+                12,
+                14,
+                16
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_BetterThanNew"
+    },
+    "S33P02": {
+        "categories": null,
+        "name": "Reafirmaci\u00f3n",
+        "description": "Una vez por cada estado de gancho, mientras est\u00e9s en un radio de {Tunable.S33P02.RadiusDistance}\u00a0metros de un superviviente colgado, usa {Input.ActivatableButton2} para detener el progreso de sacrificio durante {Tunable.S33P02.StrugglePauseDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 32,
+        "tunables": {
+            "radiusdistance": [
+                6
+            ],
+            "strugglepauseduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_Reassurance"
+    },
+    "S33P03": {
+        "categories": null,
+        "name": "Hiperconcentraci\u00f3n",
+        "description": "Cada vez que logres una prueba de habilidad b\u00e1sica excelente, obtienes {Tunable.S33P03.TokensPerGreat}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S33P03.MaxTokens}.<br><br>Por cada distintivo, las pruebas de habilidad b\u00e1sicas:<ul><li>Aparecer\u00e1n un {Tunable.S33P03.SkillCheckBonusChance%}\u00a0% m\u00e1s a menudo.</li><li>Se mover\u00e1n un {Tunable.S33P03.SkillCheckSpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Cada vez que logres una prueba de habilidad excelente, obtendr\u00e1s un {Tunable.S33P03.SkillCheckBonusPerToken%}\u00a0% m\u00e1s de progreso.</li></ul><br><br>Cada vez que falles una prueba de habilidad b\u00e1sica, logres una prueba de habilidad superada o dejes de curar o reparar, perder\u00e1s todos los distintivos.",
+        "role": "survivor",
+        "character": 32,
+        "tunables": {
+            "maxtokens": [
+                6
+            ],
+            "skillcheckbonuschance%": [
+                4
+            ],
+            "skillcheckbonuspertoken%": [
+                10,
+                20,
+                30
+            ],
+            "skillcheckspeedincrease%": [
+                4
+            ],
+            "tokenspergreat": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Orion/iconPerks_Hyperfocus"
+    },
+    "S34P01": {
+        "categories": null,
+        "name": "Energ\u00eda potencial",
+        "description": "Al reparar, usa {Input.ActivatableButton2} para obtener distintivos en lugar de progreso, hasta un m\u00e1ximo de {Tunable.S34P01.MaxTokens}\u00a0distintivos.<br><br>Mientras tengas al menos {Tunable.S34P01.TokensToActivate}\u00a0distintivo, {Input.ActivatableButton2} para gastarlos todos y obtener un {Tunable.S34P01.ProgressPerToken%}\u00a0% de progreso por cada distintivo gastado.<br><br>Cada vez que sufras da\u00f1o, perder\u00e1s todos los distintivos.",
+        "role": "survivor",
+        "character": 33,
+        "tunables": {
+            "accumulatedpercentmultiplier%": [
+                66
+            ],
+            "maxtokens": [
+                10,
+                15,
+                20
+            ],
+            "tokenstoactivate": [
+                1
+            ],
+            "progresspertoken%": [
+                1
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quantum/iconPerks_PotentialEnergy"
+    },
+    "S34P02": {
+        "categories": null,
+        "name": "Neblinoso",
+        "description": "Al reparar, cada vez que logres una prueba de habilidad b\u00e1sica excelente, ver\u00e1s el aura del asesino durante {Tunable.S34P02.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 33,
+        "tunables": {
+            "aurarevealduration": [
+                4,
+                5,
+                6
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quantum/iconPerks_Fogwise"
+    },
+    "S34P03": {
+        "categories": null,
+        "name": "T\u00e1ctica veloz",
+        "description": "Mientras el asesino te persiga:<ul><li>Ver\u00e1s las auras de otros supervivientes.</li><li>Otros supervivientes reparar\u00e1n un {Tunable.S34P03.RepairBoost%}\u00a0% m\u00e1s r\u00e1pido.</li></ul><br><br>Cuando sufras da\u00f1o, el tiempo de recarga ser\u00e1 de {Tunable.S34P03.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 33,
+        "tunables": {
+            "cooldown": [
+                40
+            ],
+            "repairboost%": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quantum/iconPerks_VittoriosGambit"
+    },
+    "S35P01": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Des\u00e1tame",
+        "description": "Mientras el asesino te persiga, cada vez que realices un salto mediano o r\u00e1pido:<ul><li>Tus saltos medianos y r\u00e1pidos se volver\u00e1n silenciosos durante un m\u00e1ximo de {Tunable.S35P01.StealthDuration}\u00a0segundos.</li><li>Durante ese tiempo, cada vez que realizas un salto mediano o r\u00e1pido, se reiniciar\u00e1 el temporizador.</li></ul><br><br>Tiempo de recarga: {Tunable.S35P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 34,
+        "tunables": {
+            "cooldown": [
+                45
+            ],
+            "stealthduration": [
+                4,
+                5,
+                6
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_CutLoose"
+    },
+    "S35P02": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Rivalidad amistosa",
+        "description": "Cuando termines de reparar un generador con al menos 1\u00a0superviviente m\u00e1s, los supervivientes que termin\u00e9is de repararlo reparar\u00e9is un {Tunable.S35P02.ExtraRepairSpeed%}\u00a0% m\u00e1s r\u00e1pido durante {Tunable.S35P02.BoostDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 34,
+        "tunables": {
+            "boostduration": [
+                100,
+                110,
+                120
+            ],
+            "extrarepairspeed%": [
+                5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_FriendlyCompetition"
+    },
+    "S35P03": {
+        "categories": [
+            "support"
+        ],
+        "name": "Trabajo en equipo: Poder dual",
+        "description": "Cuando termines de curar a otro superviviente, mientras est\u00e9is en un radio de {Tunable.S35P03.RequiredDistance}\u00a0metros el uno del otro, obtendr\u00e9is un {Tunable.S35P03.Haste%}\u00a0% de {Keyword.Haste}. Cuando uno de los dos salg\u00e1is del alcance, esto terminar\u00e1 {Tunable.S35P03.LingerDuration}\u00a0segundos despu\u00e9s.",
+        "role": "survivor",
+        "character": 34,
+        "tunables": {
+            "haste%": [
+                5
+            ],
+            "lingerduration": [
+                4
+            ],
+            "requireddistance": [
+                8,
+                12,
+                16
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_TeamworkPowerOfTwo"
+    },
+    "S36P01": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Jugador secundario",
+        "description": "Cuando el asesino recoja a otro superviviente, durante los pr\u00f3ximos {Tunable.S36P01.EffectDuration}\u00a0segundos, al empezar a correr:<ul><li>Obtendr\u00e1s un {Tunable.S36P01.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S36P01.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S36P01.ExhaustedDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 35,
+        "tunables": {
+            "effectduration": [
+                10
+            ],
+            "exhaustedduration": [
+                30,
+                25,
+                20
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                5
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_BackgroundPlayer"
+    },
+    "S36P02": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Torrente de sangre",
+        "description": "Hasta que todos los generadores est\u00e9n completados, cada vez que te desenganchen, durante los pr\u00f3ximos {Tunable.S36P02.EffectDuration}\u00a0segundos, mientras sufras {Keyword.Exhausted}, usa {Input.ActivatableButton1} para perder {Keyword.Exhausted} al instante.<br><br>Esto se desactiva con acciones llamativas.",
+        "role": "survivor",
+        "character": 35,
+        "tunables": {
+            "effectduration": [
+                40,
+                50,
+                60
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_BloodRush"
+    },
+    "S36P03": {
+        "categories": [
+            "support"
+        ],
+        "name": "Trabajo en equipo: Sigilo colectivo",
+        "description": "Cuando otro superviviente termine de curarte, mientras est\u00e9is en un radio de {Tunable.S36P03.RequiredDistance}\u00a0metros el uno del otro, ninguno dejar\u00e9is marcas de ara\u00f1azos. Cuando uno de los dos salg\u00e1is del alcance, esto terminar\u00e1 {Tunable.S36P03.LingerDuration}\u00a0segundos despu\u00e9s.",
+        "role": "survivor",
+        "character": 35,
+        "tunables": {
+            "lingerduration": [
+                4
+            ],
+            "requireddistance": [
+                8,
+                12,
+                16
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Saturn/iconPerks_TeamworkCollectiveStealth"
+    },
+    "S37P01": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Solucionador de problemas",
+        "description": "Mientras el asesino te persiga:<ul><li>Ver\u00e1s el aura del generador con m\u00e1s progreso.</li><li>Cuando derribes un pal\u00e9, ver\u00e1s el aura del asesino durante {Tunable.S37P01.AuraRevealDuration}\u00a0segundos.</li></ul><br><br>Cuando el asesino deje de perseguirte, esto terminar\u00e1 {Tunable.S37P01.LingeringDuration}\u00a0segundos despu\u00e9s.",
+        "role": "survivor",
+        "character": 36,
+        "tunables": {
+            "aurarevealduration": [
+                4,
+                5,
+                6
+            ],
+            "lingeringduration": [
+                6,
+                8,
+                10
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Umbra/IconPerks_troubleshooter"
+    },
+    "S37P02": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Hecho para esto",
+        "description": "Estando herido, cada vez que termines de curar a otro superviviente, obtendr\u00e1s {Keyword.Endurance} durante {Tunable.S37P02.EnduranceDuration}\u00a0segundos.<br><br>Mientras est\u00e9s corriendo y tengas {Keyword.DeepWound}, obtendr\u00e1s un {Tunable.S37P02.Haste%}\u00a0% de {Keyword.Haste}.",
+        "role": "survivor",
+        "character": 36,
+        "tunables": {
+            "enduranceduration": [
+                6,
+                8,
+                10
+            ],
+            "haste%": [
+                3
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Umbra/IconPerks_madeForThis"
+    },
+    "S37P03": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Buscador",
+        "description": "Al reparar y mientras tu caja de herramientas est\u00e9 vac\u00eda, cada vez que logres una prueba de habilidad b\u00e1sica excelente, obtendr\u00e1s {Tunable.S37P03.TokensPerGreat}\u00a0distintivo.<br><br>Cuando tengas {Tunable.S37P03.MaxTokens}\u00a0distintivos, los gastas todos:<ul><li>Tu caja de herramientas se recargar\u00e1 al instante.</li><li>Reparar\u00e1s un {Tunable.S37P03.RepairDebuff%}\u00a0% m\u00e1s despacio durante {Tunable.S37P03.RepairDebuffDuration}\u00a0segundos.</li></ul><br><br>Podr\u00e1s rebuscar en cofres {Tunable.S37P03.Rummages}\u00a0vez. La primera vez que rebusques en un cofre, este contendr\u00e1 una caja de herramientas poco com\u00fan.",
+        "role": "survivor",
+        "character": 36,
+        "tunables": {
+            "maxtokens": [
+                5
+            ],
+            "repairdebuff%": [
+                50
+            ],
+            "repairdebuffduration": [
+                40,
+                35,
+                30
+            ],
+            "rummages": [
+                1
+            ],
+            "tokenspergreat": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Umbra/IconPerks_scavenger"
+    },
+    "S38P01": {
+        "categories": null,
+        "name": "Dramaturgia",
+        "description": "Mientras est\u00e9s ileso y corriendo, usa {Input.ActivatableButton1}:<ul><li>Obtendr\u00e1s un {Tunable.S38P01.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S38P01.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S38P01.ExhaustionDuration}\u00a0segundos.</li></ul><br><br>A continuaci\u00f3n, una de estas cosas ocurrir\u00e1 de forma aleatoria:<ul><li>Obtendr\u00e1s un {Tunable.S38P01.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S38P01.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exposed} durante {Tunable.S38P01.ExposedDuration}\u00a0segundos.</li><li>Obtendr\u00e1s un objeto raro aleatorio con complementos aleatorios.</li><li>Gritar\u00e1s, pero no suceder\u00e1 nada.</li></ul><br><br>El mismo efecto no puede tener lugar dos veces seguidas.",
+        "role": "survivor",
+        "character": 37,
+        "tunables": {
+            "animationduration": [
+                0.5
+            ],
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "exposedduration": [
+                12
+            ],
+            "haste%": [
+                25
+            ],
+            "hasteduration": [
+                2
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Venus/iconPerks_Dramaturgy"
+    },
+    "S38P02": {
+        "categories": null,
+        "name": "Compa\u00f1ero de escena",
+        "description": "Mientras est\u00e9s dentro del radio de terror del asesino, cada vez que lo mires:<ul><li>Gritar\u00e1s, y despu\u00e9s ver\u00e1s el aura del asesino durante {Tunable.S38P02.AuraRevealDuration}\u00a0segundos.</li><li>Hay un {Tunable.S38P02.ChanceOfExtraScream%}\u00a0% de probabilidades de que vuelvas a gritar. Si lo haces, ver\u00e1s el aura del asesino durante {Tunable.S38P02.ExtraAuraRevealDuration}\u00a0segundos m\u00e1s.</li></ul><br><br>Tiempo de recarga: {Tunable.S38P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 37,
+        "tunables": {
+            "aurarevealduration": [
+                4,
+                5,
+                6
+            ],
+            "chanceofextrascream%": [
+                50
+            ],
+            "cooldown": [
+                40
+            ],
+            "extraaurarevealduration": [
+                2
+            ],
+            "maxrandomscreamdelay": [
+                1
+            ],
+            "maxscreamcount": [
+                8
+            ],
+            "minrandomscreamdelay%": [
+                0
+            ],
+            "preventinteractionduration": [
+                0.25
+            ],
+            "screamduration": [
+                1.25
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Venus/iconPerks_ScenePartner"
+    },
+    "S38P03": {
+        "categories": null,
+        "name": "Giro argumental",
+        "description": "Estando herido, de cuclillas e inactivo, usa {Input.ActivatableButton2} para caer derribado en silencio.<br><br>Estando derribado de esta forma, una vez por partida:<ul><li>No emitir\u00e1s gru\u00f1idos de dolor.</li><li>Te recuperas un {Tunable.S38P03.RecoverySpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Podr\u00e1s recuperarte por completo.</li></ul><br><br>No dejar\u00e1s charcos de sangre.<li>Cuando te recuperes de este modo:<ul><li>Obtendr\u00e1s un {Tunable.S38P03.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S38P03.HasteDuration}\u00a0segundos.</li><li>Te curar\u00e1s al instante.</li></ul></li><br><br>Cuando se completen todos los generadores, podr\u00e1s volver a usar esta habilidad.",
+        "role": "survivor",
+        "character": 37,
+        "tunables": {
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                2,
+                3,
+                4
+            ],
+            "recoveryspeedincrease%": [
+                25
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Venus/iconPerks_PlotTwist"
+    },
+    "S39P01": {
+        "categories": null,
+        "name": "Estrella de la suerte",
+        "description": "Mientras te escondas en una taquilla, no emitir\u00e1s gru\u00f1idos de dolor.<br><br>Cuando salgas de una taquilla, durante {Tunable.S39P01.EffectDuration}\u00a0segundos:<ul><li>Ver\u00e1s el aura del generador m\u00e1s cercano.</li><li>Ver\u00e1s las auras de otros supervivientes.</li><li>No emitir\u00e1s gru\u00f1idos de dolor.</li><li>No dejar\u00e1s charcos de sangre.</li></ul><br><br>Tiempo de recarga: {Tunable.S39P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 38,
+        "tunables": {
+            "cooldown": [
+                35,
+                30,
+                25
+            ],
+            "effectduration": [
+                30
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wormhole/iconPerks_LuckyStar"
+    },
+    "S39P02": {
+        "categories": null,
+        "name": "Trampa qu\u00edmica",
+        "description": "Tras reparar un {Tunable.S39P02.RequiredProgress%}\u00a0% de los generadores, cuando est\u00e9s cerca de un pal\u00e9 derribado, usa {Input.ActivatableButton2} para colocar una trampa durante {Tunable.S39P02.TrapDuration}\u00a0segundos. Todos los supervivientes ver\u00e1n el aura de ese pal\u00e9 durante ese tiempo.<br><br>Cuando el asesino rompa el pal\u00e9, la trampa explotar\u00e1 y sufrir\u00e1 un {Tunable.S39P02.Hinder%}\u00a0% de {Keyword.Hindered} durante {Tunable.S39P02.HinderDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 38,
+        "tunables": {
+            "hinder%": [
+                50
+            ],
+            "hinderduration": [
+                4
+            ],
+            "requiredprogress%": [
+                20
+            ],
+            "trapduration": [
+                40,
+                50,
+                60
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wormhole/iconPerks_ChemicalTrap"
+    },
+    "S39P03": {
+        "categories": null,
+        "name": "Ligera de pies",
+        "description": "Cuando est\u00e9s ileso y corriendo, el asesino no oir\u00e1 tus pisadas al correr.<br><br>Cada vez que realices una acci\u00f3n r\u00e1pida, el tiempo de recarga ser\u00e1 de {Tunable.S39P03.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 38,
+        "tunables": {
+            "cooldown": [
+                14,
+                12,
+                10
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wormhole/iconPerks_LightFooted"
+    },
+    "S40P01": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Campe\u00f3n de la luz",
+        "description": "Mientras uses una linterna, obtendr\u00e1s un {Tunable.S40P01.Haste%}\u00a0% de {Keyword.Haste}.<br><br>Cuando ciegues al asesino, este sufrir\u00e1 un {Tunable.S40P01.Hindered%}\u00a0% de {Keyword.Hindered} durante {Tunable.S40P01.HinderedDuration}\u00a0segundos. Tiempo de recarga: {Tunable.S40P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 39,
+        "tunables": {
+            "cooldown": [
+                60,
+                50,
+                40
+            ],
+            "haste%": [
+                50
+            ],
+            "hindered%": [
+                20
+            ],
+            "hinderedduration": [
+                6
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Zodiac/iconsPerks_ChampionOfLight"
+    },
+    "S40P02": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Bendici\u00f3n: Iluminaci\u00f3n",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones.<br><br>Los supervivientes dentro del alcance de la bendici\u00f3n:<ul><li>Ver\u00e1n las auras de los cofres.</li><li>Ver\u00e1n las auras de los generadores.</li></ul><br><br>Mientras tengas un t\u00f3tem benefactor, bendecir\u00e1s y purificar\u00e1s un {Tunable.S40P02.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 39,
+        "tunables": {
+            "actionspeed%": [
+                6,
+                8,
+                10
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Zodiac/iconsPerks_Illumination"
+    },
+    "S40P03": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Fecha l\u00edmite",
+        "description": "Estando herido, las pruebas de habilidad b\u00e1sicas:<ul><li>Tendr\u00e1n un {Tunable.S40P03.ExtraSkillCheckChance%}\u00a0% m\u00e1s de probabilidades de aparecer.</li><li>Aparecer\u00e1n en lugares aleatorios.</li></ul><br><br>Cuando falles una prueba de habilidad b\u00e1sica, perder\u00e1s un {Tunable.S40P03.FailureMitigation%}\u00a0% de progreso.",
+        "role": "survivor",
+        "character": 39,
+        "tunables": {
+            "extraskillcheckchance%": [
+                6,
+                8,
+                10
+            ],
+            "failuremitigation%": [
+                50
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Zodiac/iconsPerks_Deadline"
+    },
+    "S41P01": {
+        "categories": null,
+        "name": "Invocaci\u00f3n: Ara\u00f1as tejedoras",
+        "description": "Estando en el s\u00f3tano junto al c\u00edrculo, usa {Input.ActivatableButton1} para invocar. Al hacerlo, otros supervivientes ver\u00e1n tu aura y podr\u00e1n unirse a tu invocaci\u00f3n.<br><br>Cuando la invocaci\u00f3n se complete:<ul><li>Todos los generadores obtendr\u00e1n {Tunable.S41P01.GeneratorChargeReduction}\u00a0cargas permanentes.</li><li>Quedar\u00e1s herido.</li><li>Sufrir\u00e1s {Keyword.Broken}.</li></ul><br><br>Cada invocaci\u00f3n solo se puede completar una vez por partida.",
+        "role": "survivor",
+        "character": 40,
+        "tunables": {
+            "generatorchargereduction": [
+                8,
+                9,
+                10
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Applepie/iconsPerks_InvocationWeavingSpiders"
+    },
+    "S41P02": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Fuerza en las sombras",
+        "description": "Estando en el s\u00f3tano:<ul><li>Podr\u00e1s curarte, pero un {Tunable.S41P02.SelfHealSpeed%}\u00a0% m\u00e1s despacio.</li><li>Cada vez que termines de curarte, ver\u00e1s el aura del asesino durante {Tunable.S41P02.AuraRevealDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 40,
+        "tunables": {
+            "aurarevealduration": [
+                6,
+                8,
+                10
+            ],
+            "selfhealspeed%": [
+                30
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Applepie/iconsPerks_StrengthInShadows"
+    },
+    "S41P03": {
+        "categories": null,
+        "name": "Embrujada",
+        "description": "Estando en el s\u00f3tano, puedes desengancharte por tus propios medios.<br><br>Cuando te desenganches o te desenganchen, ver\u00e1s el aura del asesino durante {Tunable.S41P03.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 40,
+        "tunables": {
+            "aurarevealduration": [
+                16,
+                18,
+                20
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Applepie/iconsPerks_Wicked"
+    },
+    "S42P01": {
+        "categories": null,
+        "name": "Espejismo",
+        "description": "Tras reparar un {Tunable.S42P01.RequiredProgress%}\u00a0% de los generadores, cuando est\u00e9s junto a un cofre, interruptor de puerta de salida, generador o t\u00f3tem, usa {Input.ActivatableButton2} para crear un espejismo est\u00e1tico durante {Tunable.S42P01.HuskDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 41,
+        "tunables": {
+            "huskduration": [
+                40,
+                50,
+                60
+            ],
+            "requiredprogress%": [
+                20
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Churros/iconPerks_MirroredIllusion"
+    },
+    "S42P02": {
+        "categories": null,
+        "name": "Inspiraci\u00f3n b\u00e1rdica",
+        "description": "Mientras est\u00e9s inactivo, usa {Input.ActivatableButton1} para actuar, lo que potenciar\u00e1 a todos los supervivientes en un radio de {Tunable.S42P02.PerformanceDistance}\u00a0metros durante un m\u00e1ximo de {Tunable.S42P02.PerformanceDuration}\u00a0segundos. Mientras est\u00e9s actuando, otros supervivientes ver\u00e1n tu aura. Tira un dado de\u00a020:<ul><li><b>1</b> | Gritar\u00e1s, pero no suceder\u00e1 nada.</li><li><b>2-10</b> | Las pruebas de habilidad b\u00e1sicas otorgar\u00e1n un {Tunable.S42P02.LowRollBonus%}\u00a0% m\u00e1s de progreso.</li><li><b>11-19</b> | Las pruebas de habilidad b\u00e1sicas otorgar\u00e1n un {Tunable.S42P02.MidRollBonus%}\u00a0% m\u00e1s de progreso.</li><li><b>20</b> | Las pruebas de habilidad b\u00e1sicas otorgar\u00e1n un {Tunable.S42P02.HighRollBonus%}\u00a0% m\u00e1s de progreso.</li></ul><br><br>Si completas la actuaci\u00f3n, este efecto terminar\u00e1 {Tunable.S42P02.EffectDuration}\u00a0segundos despu\u00e9s. Tiempo de recarga: {Tunable.S42P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 41,
+        "tunables": {
+            "cooldown": [
+                110,
+                100,
+                90
+            ],
+            "performancedistance": [
+                16
+            ],
+            "performanceduration": [
+                15
+            ],
+            "lowrollbonus%": [
+                1
+            ],
+            "midrollbonus%": [
+                2
+            ],
+            "highrollbonus%": [
+                3
+            ],
+            "effectduration": [
+                90
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Churros/iconPerks_BardicInspiration"
+    },
+    "S42P03": {
+        "categories": null,
+        "name": "Visi\u00f3n est\u00e1tica",
+        "description": "Tras estar inactivo durante {Tunable.S42P03.RequiredActivationTime}\u00a0segundos, en un radio de {Tunable.S42P03.RevealDistance}\u00a0metros, hasta que empieces a moverte:<ul><li>Ver\u00e1s el aura del asesino.</li><li>Ver\u00e1s las auras de los cofres.</li><li>Ver\u00e1s las auras de los generadores.</li></ul>",
+        "role": "survivor",
+        "character": 41,
+        "tunables": {
+            "requiredactivationtime": [
+                4,
+                3,
+                2
+            ],
+            "revealdistance": [
+                24
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Churros/iconPerks_StillSight"
+    },
+    "S43P01": {
+        "categories": null,
+        "name": "Sutileza",
+        "description": "Cuando est\u00e9s ileso, realizar\u00e1s saltos r\u00e1pidos un {Tunable.S43P01.VaultSpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido.<br><br>Tras hacerlo, el tiempo de recarga ser\u00e1 de {Tunable.S43P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 42,
+        "tunables": {
+            "vaultspeedincrease%": [
+                20
+            ],
+            "cooldown": [
+                40,
+                35,
+                30
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Donut/iconPerks_Finesse"
+    },
+    "S43P02": {
+        "categories": null,
+        "name": "Curtida",
+        "description": "Cuando hayas bendecido o purificado un t\u00f3tem y tras desbloquear un cofre, cada vez que tendr\u00edas que gritar, en lugar de hacerlo, ver\u00e1s el aura del asesino durante {Tunable.S43P02.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 42,
+        "tunables": {
+            "aurarevealduration": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Donut/iconPerks_Hardened"
+    },
+    "S43P03": {
+        "categories": null,
+        "name": "Especialista",
+        "description": "Cuando rebusques en un cofre o lo desbloquees, obtendr\u00e1s {Tunable.S43P03.TokensPerChest}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S43P03.MaxTokens}.<br><br>Mientras repares un generador, cada vez que logres una prueba de habilidad b\u00e1sica excelente, gastas todos los distintivos y, por cada distintivo gastado, el generador obtendr\u00e1 un {Tunable.S43P03.GenChargesRemoved%}\u00a0% de progreso permanente.",
+        "role": "survivor",
+        "character": 42,
+        "tunables": {
+            "tokensperchest": [
+                1
+            ],
+            "maxtokens": [
+                6
+            ],
+            "genchargesremoved%": [
+                2,
+                3,
+                4
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Donut/iconPerks_Specialist"
+    },
+    "S44P01": {
+        "categories": null,
+        "name": "Ojos de Belmont",
+        "description": "Cuando se complete un generador, ver\u00e1s el aura del asesino durante {Tunable.S44P01.AuraRevealDuration}\u00a0segundos.<br><br>Cada vez que veas el aura del asesino, la ver\u00e1s durante {Tunable.S44P01.AuraRevealBonusDuration}\u00a0segundos m\u00e1s.",
+        "role": "survivor",
+        "character": 43,
+        "tunables": {
+            "aurarevealbonusduration": [
+                2
+            ],
+            "aurarevealduration": [
+                1,
+                2,
+                3
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclair/iconPerks_EyesOfBelmont"
+    },
+    "S44P02": {
+        "categories": null,
+        "name": "Exultaci\u00f3n",
+        "description": "Cada vez que aturdas con un pal\u00e9 al asesino:<ul><li>La rareza de tu objeto aumentar\u00e1 al pr\u00f3ximo nivel si es posible.</li><li>Si el objeto mejora, se recargar\u00e1 un {Tunable.S44P02.ItemRecharge%}\u00a0% de cargas.</li></ul><br><br>Tiempo de recarga: {Tunable.S44P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 43,
+        "tunables": {
+            "cooldown": [
+                30,
+                25,
+                20
+            ],
+            "itemrecharge%": [
+                75
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclair/iconPerks_Exultation"
+    },
+    "S44P03": {
+        "categories": null,
+        "name": "Momento de gloria",
+        "description": "Tras rebuscar en {Tunable.S44P03.ChestSearchRequired}\u00a0cofres o desbloquearlos, si no sufres {Keyword.Broken}, cuando te hieran, sufrir\u00e1s {Keyword.Broken}.<br><br>Despu\u00e9s de {Tunable.S44P03.TimeToHeal}\u00a0segundos, si no te han derribado, te curar\u00e1s al instante.",
+        "role": "survivor",
+        "character": 43,
+        "tunables": {
+            "chestsearchrequired": [
+                1
+            ],
+            "timetoheal": [
+                80,
+                70,
+                60
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Eclair/iconPerks_MomentOfGlory"
+    },
+    "S45P01": {
+        "categories": null,
+        "name": "Invocaci\u00f3n: Cuervos traicioneros",
+        "description": "Estando en el s\u00f3tano junto al c\u00edrculo, usa {Input.ActivatableButton2} para invocar. Al hacerlo, otros supervivientes ver\u00e1n tu aura y podr\u00e1n unirse a tu invocaci\u00f3n.<br><br>Cuando se complete la invocaci\u00f3n:<ul><li>Cuando el asesino asuste a un cuervo mientras un superviviente est\u00e9 dentro del radio de terror, todos los supervivientes ver\u00e1n el aura del asesino durante {Tunable.S45P01.AuraRevealDuration}\u00a0segundos.</li><li>Quedar\u00e1s herido.</li><li>Sufrir\u00e1s {Keyword.Broken}.</li></ul><br><br>Cada invocaci\u00f3n solo se puede completar una vez por partida.",
+        "role": "survivor",
+        "character": 44,
+        "tunables": {
+            "aurarevealduration": [
+                1,
+                1.5,
+                2
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Gelato/T_UI_iconsPerks_InvocationTreacherousCrows"
+    },
+    "S45P02": {
+        "categories": null,
+        "name": "Separaci\u00f3n limpia",
+        "description": "Cada vez que termines de curar a otro superviviente, mientras te cure otro superviviente, usa {Input.ActivatableButton1} para sufrir {Keyword.Broken}.<br><br>Despu\u00e9s de {Tunable.S45P02.TimeOfHeal}\u00a0segundos, si no te derriban, te curar\u00e1s al instante.",
+        "role": "survivor",
+        "character": 44,
+        "tunables": {
+            "timeofheal": [
+                75,
+                60,
+                45
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Gelato/T_UI_iconsPerks_CleanBreak"
+    },
+    "S45P03": {
+        "categories": null,
+        "name": "Carga sobre los hombros",
+        "description": "Una vez por partida, mientras no tengas {Tunable.S45P03.MaxHooksToDeactivate}\u00a0estados de gancho y est\u00e9s junto a un superviviente colgado, usa {Input.ActivatableButton2} para desengancharlo:<ul><li>Perder\u00e1 1\u00a0estado de gancho.</li><li>Obtendr\u00e1s 1\u00a0estado de gancho.</li><li>Gritar\u00e1s.</li><li>Sufrir\u00e1s {Keyword.Exposed} durante {Tunable.S45P03.ExposedDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 44,
+        "tunables": {
+            "exposedduration": [
+                60,
+                50,
+                40
+            ],
+            "maxhookstodeactivate": [
+                2
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Gelato/T_UI_iconsPerks_ShoulderTheBurden"
+    },
+    "S46P01": {
+        "categories": null,
+        "name": "No hacer da\u00f1o",
+        "description": "Al curar a otro superviviente:<ul><li>Por cada estado de gancho que tenga, curar\u00e1s un {Tunable.S46P01.HealSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Cuando logres una prueba de habilidad b\u00e1sica excelente, obtendr\u00e1s un {Tunable.S46P01.GreatSkillCheckBonus%}\u00a0% m\u00e1s de progreso.</li></ul>",
+        "role": "survivor",
+        "character": 45,
+        "tunables": {
+            "greatskillcheckbonus%": [
+                3
+            ],
+            "healspeedbonus%": [
+                30,
+                40,
+                50
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Jerky/T_UI_iconsPerks_DoNoHarm"
+    },
+    "S46P02": {
+        "categories": null,
+        "name": "Deber de socorro",
+        "description": "Cuando est\u00e9s ileso, cada vez que recibas un golpe por protecci\u00f3n, otros supervivientes en un radio de {Tunable.S46P02.MaxDistance}\u00a0metros obtendr\u00e1n un {Tunable.S46P02.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S46P02.HasteDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 45,
+        "tunables": {
+            "haste%": [
+                25
+            ],
+            "hasteduration": [
+                4,
+                5,
+                6
+            ],
+            "maxdistance": [
+                12
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Jerky/T_UI_iconsPerks_DutyOfCare"
+    },
+    "S46P03": {
+        "categories": null,
+        "name": "Respuesta r\u00e1pida",
+        "description": "Cada vez que salgas r\u00e1pidamente de una taquilla, sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S46P03.ExhaustionDuration}\u00a0segundos.<br><br>Cada vez que sufras {Keyword.Exhausted}, ver\u00e1s el aura del asesino durante {Tunable.S46P03.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 45,
+        "tunables": {
+            "aurarevealduration": [
+                2
+            ],
+            "exhaustionduration": [
+                30,
+                25,
+                20
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Jerky/T_UI_iconsPerks_RapidResponse"
+    },
+    "S47P01": {
+        "categories": null,
+        "name": "Ingenio apocal\u00edptico",
+        "description": "Despu\u00e9s de rebuscar o desbloquear {Tunable.S47P01.ChestsRequired}\u00a0cofres, cuando est\u00e9s junto a un pal\u00e9 roto, usa {Input.ActivatableButton1} durante {Tunable.S47P01.InteractionDuration}\u00a0segundos para crear un pal\u00e9 fr\u00e1gil.<br><br>Ves las auras de pal\u00e9s rotos en un radio de {Tunable.S47P01.BrokenPalletsRevealDistance}\u00a0metros.",
+        "role": "survivor",
+        "character": 46,
+        "tunables": {
+            "chestsrequired": [
+                1
+            ],
+            "constructiontime": [
+                3
+            ],
+            "brokenpalletsrevealdistance": [
+                24,
+                28,
+                32
+            ],
+            "interactionduration": [
+                3
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_ApocalypticIngenuity"
+    },
+    "S47P02": {
+        "categories": null,
+        "name": "\u00a1Ven a por m\u00ed!",
+        "description": "Cada vez que desenganches a un superviviente, estando de cuclillas e inactivo, usa {Input.ActivatableButton1} para que los supervivientes derribados y heridos en un radio de {Tunable.S47P02.EffectDistance}\u00a0metros:<li>No emitan gru\u00f1idos de dolor durante {Tunable.S47P02.EffectDuration}\u00a0segundos.<ul><li>No dejen marcas de ara\u00f1azos durante {Tunable.S47P02.EffectDuration}\u00a0segundos.</li><li>No dejen charcos de sangre durante {Tunable.S47P02.EffectDuration}\u00a0segundos.</li></ul></li><br><br>Gritar\u00e1s, y despu\u00e9s el asesino ver\u00e1 tu aura durante {Tunable.S47P02.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 46,
+        "tunables": {
+            "aurarevealduration": [
+                5
+            ],
+            "effectdistance": [
+                24
+            ],
+            "effectduration": [
+                10,
+                12.5,
+                15
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_ComeAndGetMe"
+    },
+    "S47P03": {
+        "categories": null,
+        "name": "Trabajo en equipo: Curtirse",
+        "description": "Estando herido, cuando otro superviviente en un radio de {Tunable.S47P03.RequiredDistance}\u00a0metros de ti ciegue o aturda con un pal\u00e9 al asesino, durante {Tunable.S47P03.Duration}\u00a0segundos:<ul><li>No emitir\u00e1s gru\u00f1idos de dolor.</li><li>No dejar\u00e1s charcos de sangre.</li><li>No dejar\u00e1s marcas de ara\u00f1azos.</li></ul>",
+        "role": "survivor",
+        "character": 46,
+        "tunables": {
+            "duration": [
+                20,
+                25,
+                30
+            ],
+            "injuredvoicelevelreduction%": [
+                100
+            ],
+            "requireddistance": [
+                24
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_TeamworkThrowDown"
+    },
+    "S48P01": {
+        "categories": null,
+        "name": "Convicci\u00f3n",
+        "description": "Tras terminar de curar a {Tunable.S48P01.RequiredHealthStates}\u00a0superviviente m\u00e1s, estando derribado con un {Tunable.S48P01.RecoverProgressNeeded%}\u00a0% de recuperaci\u00f3n como m\u00ednimo, usa {Input.ActivatableButton1} para recuperarte al instante.<br><br>Sufrir\u00e1s {Keyword.Broken}, y tras {Tunable.S48P01.EffectDuration}\u00a0segundos, ser\u00e1s derribado al instante.",
+        "role": "survivor",
+        "character": 47,
+        "tunables": {
+            "recoverprogressneeded%": [
+                25
+            ],
+            "requiredhealthstates": [
+                1
+            ],
+            "effectduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_Conviction"
+    },
+    "S48P02": {
+        "categories": null,
+        "name": "\u00daltima defensa",
+        "description": "Tras esconderte durante {Tunable.S48P02.ActivationTime}\u00a0segundos dentro del radio de terror del asesino, cuando realices un salto r\u00e1pido, una vez por partida, aturdir\u00e1s al asesino durante {Tunable.S48P02.StunDuration}\u00a0segundos si est\u00e1 en un radio de {Tunable.S48P02.StunRange}\u00a0metros de ti.",
+        "role": "survivor",
+        "character": 47,
+        "tunables": {
+            "activationtime": [
+                120,
+                105,
+                90
+            ],
+            "stunduration": [
+                3
+            ],
+            "stunrange": [
+                2.5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_LastStand"
+    },
+    "S48P03": {
+        "categories": null,
+        "name": "Trabajo en equipo: Al derribo",
+        "description": "Cada vez que ciegues o aturdas con un pal\u00e9 al asesino, durante {Tunable.S48P03.EffectDuration}\u00a0segundos, otros supervivientes heridos en un radio de {Tunable.S48P03.EffectDistance}\u00a0metros:<ul><li>Obtendr\u00e1n {Keyword.Endurance}.</li><li>Ver\u00e1n el aura del asesino.</li></ul>",
+        "role": "survivor",
+        "character": 47,
+        "tunables": {
+            "effectdistance": [
+                24
+            ],
+            "effectduration": [
+                6,
+                8,
+                10
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Lasagna/T_UI_iconPerks_TeamworkToughenUp"
+    },
+    "S49P01": {
+        "categories": null,
+        "name": "Vida en la carretera",
+        "description": "Estando herido, sin sufrir {Keyword.Broken} y reparando un generador:<ul><li>Cuando recibas una prueba de habilidad excelente b\u00e1sica, recibir\u00e1s {Tunable.S49P01.TokenPerSkillCheck}\u00a0distintivo.</li><li>Cuando falles una prueba de habilidad b\u00e1sica, perder\u00e1s {Tunable.S49P01.TokensLostOnSkillCheckFail}\u00a0distintivo.</li></ul><br><br>Cuando tengas {Tunable.S49P01.MaxTokens}\u00a0distintivos, gasta todos los distintivos para curarte un {Tunable.S49P01.HealingSpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido hasta que termines de curarte.",
+        "role": "survivor",
+        "character": 48,
+        "tunables": {
+            "maxtokens": [
+                6,
+                5,
+                4
+            ],
+            "tokenperskillcheck": [
+                1
+            ],
+            "tokenslostonskillcheckfail": [
+                1
+            ],
+            "healingspeedincrease%": [
+                100
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Maple/T_UI_iconPerks_RoadLife"
+    },
+    "S49P02": {
+        "categories": null,
+        "name": "\u00a1UNO, DOS, TRES, CUATRO!",
+        "description": "Mientras est\u00e9s inactivo, usa {Input.ActivatableButton2} para actuar, lo que potenciar\u00e1 a todos los supervivientes en un radio de {Tunable.S49P02.PerformanceDistance}\u00a0metros durante un m\u00e1ximo de {Tunable.S49P02.PerformanceDuration}\u00a0segundos. Mientras est\u00e9s actuando, otros supervivientes ver\u00e1n tu aura. Durante ese tiempo, obtendr\u00e1s pruebas de habilidad especiales: mientras cures o repares, habr\u00e1 un {Tunable.S49P02.SkillCheckIncrease%}\u00a0% m\u00e1s de probabilidad de que aparezcan pruebas de habilidad b\u00e1sicas.<br><br>Si completas la actuaci\u00f3n, el efecto terminar\u00e1 {Tunable.S49P02.EffectDuration}\u00a0segundos despu\u00e9s. Tiempo de recarga: {Tunable.S49P02.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 48,
+        "tunables": {
+            "cooldown": [
+                110,
+                100,
+                90
+            ],
+            "performancedistance": [
+                16
+            ],
+            "performanceduration": [
+                15
+            ],
+            "skillcheckincrease%": [
+                20
+            ],
+            "effectduration": [
+                90
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Maple/T_UI_iconPerks_OneTwoThreeFour"
+    },
+    "S49P03": {
+        "categories": null,
+        "name": "Notas fantasmales",
+        "description": "Mientras sufras {Keyword.Exhausted}, tus marcas de ara\u00f1azos desaparecer\u00e1n un {Tunable.S49P03.ScratchmarksTimeReduction%}\u00a0% m\u00e1s r\u00e1pido.<br><br>Perder\u00e1s {Keyword.Exhausted} un {Tunable.S49P03.CooldownReduction%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 48,
+        "tunables": {
+            "cooldownreduction%": [
+                5,
+                7.5,
+                10
+            ],
+            "scratchmarkstimereduction%": [
+                50
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Maple/T_UI_iconPerks_GhostNotes"
+    },
+    "S50P01": {
+        "categories": null,
+        "name": "Bada bada bum",
+        "description": "Tras reparar un {Tunable.S50P01.RequiredGeneratorProgress%}\u00a0% de los generadores, cuando est\u00e9s cerca de una ventana, usa {Input.ActivatableButton2} para colocar una trampa durante {Tunable.S50P01.TrapDuration}\u00a0segundos. Todos los supervivientes ver\u00e1n el aura de esa ventana durante ese tiempo.<br><br>Cuando el asesino salte por esa ventana, la trampa explotar\u00e1 y sufrir\u00e1 un {Tunable.S50P01.TrapHinder%}\u00a0% de {Keyword.Hindered} durante {Tunable.S50P01.HinderDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 49,
+        "tunables": {
+            "hinderduration": [
+                6
+            ],
+            "requiredgeneratorprogress%": [
+                20
+            ],
+            "trapduration": [
+                40,
+                50,
+                60
+            ],
+            "traphinder%": [
+                50
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_BadaBadaBoom"
+    },
+    "S50P02": {
+        "categories": null,
+        "name": "Cambio de planes",
+        "description": "Cuando comienza la partida, obtienes {Tunable.S50P02.StartingTokens}\u00a0distintivos.<br><br>Al esconderte en una taquilla y llevar una caja de herramientas que no sea de evento, usa {Input.ActivatableButton2} y gasta 1\u00a0distintivo para transformar tu caja de herramientas y sus accesorios en un botiqu\u00edn de la misma rareza con un {Tunable.S50P02.RecoveredCharges%}\u00a0% de cargas y accesorios aleatorios de la misma rareza.",
+        "role": "survivor",
+        "character": 49,
+        "tunables": {
+            "recoveredcharges%": [
+                80,
+                90,
+                100
+            ],
+            "startingtokens": [
+                2
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_ChangeOfPlan"
+    },
+    "S50P03": {
+        "categories": null,
+        "name": "Trabajo en equipo: Circuito completo",
+        "description": "Por cada superviviente que repare un generador junto a ti, las zonas de pruebas de habilidad b\u00e1sicas superadas aumentan un {Tunable.S50P03.SuccessZoneIncreasePerSurvivor%}\u00a0%.<br><br>Mientras reparas con al menos otro superviviente, reparas un {Tunable.S50P03.RepairBonus%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 49,
+        "tunables": {
+            "repairbonus%": [
+                5
+            ],
+            "successzoneincreasepersurvivor%": [
+                15,
+                20,
+                25
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_TeamworkFullCircuit"
+    },
+    "S51P01": {
+        "categories": null,
+        "name": "Percepci\u00f3n extrasensorial",
+        "description": "Tras agacharte durante {Tunable.S51P01.CrouchActivationTime}\u00a0segundos:<ul><li>Ver\u00e1s auras en un radio creciente, hasta un m\u00e1ximo de {Tunable.S51P01.MaxDistance}\u00a0metros.</li><li>Obtendr\u00e1s {Keyword.Elusive}.</li><li>Obtendr\u00e1s {Keyword.Oblivious}.</li></ul><br><br>Cuando dejes de agacharte o tras {Tunable.S51P01.MaxActiveListeningUptime}\u00a0segundos, tiempo de recarga: {Tunable.S51P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 50,
+        "tunables": {
+            "cooldown": [
+                60,
+                50,
+                40
+            ],
+            "crouchactivationtime": [
+                4
+            ],
+            "maxactivelisteninguptime": [
+                11
+            ],
+            "maxdistance": [
+                44
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_ExtrasensoryPerception"
+    },
+    "S51P02": {
+        "categories": null,
+        "name": "Te vemos",
+        "description": "Cada vez que el asesino ve tu aura, obtienes {Tunable.S51P02.TokensPerReveal}\u00a0distintivo. Tiempo de recarga: {Tunable.S51P02.CooldownBetweenTokens}\u00a0segundos.<br><br>Cuando tengas {Tunable.S51P02.MaxTokens}\u00a0distintivos, los gastas todos. A continuaci\u00f3n, otros supervivientes y t\u00fa ver\u00e9is el aura del asesino durante {Tunable.S51P02.AuraRevealDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 50,
+        "tunables": {
+            "aurarevealduration": [
+                10,
+                12.5,
+                15
+            ],
+            "cooldownbetweentokens": [
+                10
+            ],
+            "maxtokens": [
+                4
+            ],
+            "tokensperreveal": [
+                1
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_WeSeeYou"
+    },
+    "S51P03": {
+        "categories": null,
+        "name": "Trabajo en equipo: Tono suave",
+        "description": "Por cada superviviente que repare un generador junto a ti, el alcance de los ruidos por reparar ser\u00e1 un {Tunable.S51P03.NoiseReductionPerSurvivor%}\u00a0% m\u00e1s peque\u00f1o.<br><br>Mientras repares con al menos otro superviviente, reparar\u00e1s un {Tunable.S51P03.RepairBonus%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 50,
+        "tunables": {
+            "noisereductionpersurvivor%": [
+                15,
+                20,
+                25
+            ],
+            "repairbonus%": [
+                5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Poutine/T_UI_iconsPerks_TeamworkSoftSpoken"
+    },
+    "S52P01": {
+        "categories": null,
+        "name": "Estado fluido",
+        "description": "Cuando se completa un generador, obtienes {Tunable.S52P01.TokensPerGenerator}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S52P01.MaxTokens}.<br><br>Por cada distintivo:<ul><li>Bendecir\u00e1s y purificar\u00e1s t\u00f3tems un {Tunable.S52P01.ActionSpeedBuff%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Curar\u00e1s un {Tunable.S52P01.ActionSpeedBuff%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1s a los supervivientes un {Tunable.S52P01.ActionSpeedBuff%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": 51,
+        "tunables": {
+            "tokenspergenerator": [
+                1
+            ],
+            "maxtokens": [
+                5
+            ],
+            "actionspeedbuff%": [
+                8,
+                9,
+                10
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quiche/T_UI_iconsPerks_FlowState"
+    },
+    "S52P02": {
+        "categories": null,
+        "name": "Un lugar para nosotros",
+        "description": "Mientras curas a otro superviviente, ambos obten\u00e9is {Keyword.Elusive}.<br><br>Cuando termines de curar a la obsesi\u00f3n, los dos obten\u00e9is {Keyword.Elusive} durante {Tunable.S52P02.EffectDuration}\u00a0segundos.<br><br>Cuando comienza la partida, es menos probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 51,
+        "tunables": {
+            "effectduration": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quiche/T_UI_iconsPerks_aPlaceForUs"
+    },
+    "S52P03": {
+        "categories": null,
+        "name": "Cinco pasos por delante",
+        "description": "Cuando est\u00e9s en el radio de terror del asesino o te est\u00e9 persiguiendo:<ul><li>Ver\u00e1s las auras de {Tunable.S52P03.PalletWindowAuraCount}\u00a0pal\u00e9s y ventanas m\u00e1s cercanas.</li><li>Despu\u00e9s de derribar un pal\u00e9, empezar\u00e1s a moverte un {Tunable.S52P03.ActionSpeedBuff%}\u00a0% antes.</li><li>Cada vez que derribas un pal\u00e9, el tiempo de recarga es de {Tunable.S52P03.Cooldown}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 51,
+        "tunables": {
+            "palletwindowauracount": [
+                5
+            ],
+            "actionspeedbuff%": [
+                50
+            ],
+            "cooldown": [
+                40,
+                35,
+                30
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Quiche/T_UI_iconsPerks_FiveMovesAhead"
+    },
+    "S53P01": {
+        "categories": null,
+        "name": "Acelerador a fondo",
+        "description": "Cada vez que saltes r\u00e1pidamente un pal\u00e9:<ul><li>Obtienes un {Tunable.S53P01.HasteValue}\u00a0% de {Keyword.Haste} durante {Tunable.S53P01.HasteDuration}\u00a0segundos.</li><li>El pal\u00e9 se restablece, queda bloqueado durante {Tunable.S53P01.PalletBlockDuration}\u00a0segundos y todos los supervivientes ven su aura durante ese tiempo.</li></ul><br><br>Tiempo de recarga: {Tunable.S53P01.PalletBlockDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 52,
+        "tunables": {
+            "hastevalue": [
+                10,
+                12.5,
+                15
+            ],
+            "hasteduration": [
+                3
+            ],
+            "palletblockduration": [
+                60
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sushi/T_UI_iconsPerks_WideOpenThrottle"
+    },
+    "S53P02": {
+        "categories": null,
+        "name": "Echar una mano",
+        "description": "Cada vez que bendigas o purifiques {Tunable.S53P02.TotemBlessCleanseRequirement}\u00a0t\u00f3tem, mientras est\u00e9s curando a otro superviviente y solo una vez por superviviente, usa {Input.ActivatableButton2} para darle {Tunable.S53P02.PermanentHealingValue}\u00a0cargas de curaci\u00f3n permanentes.",
+        "role": "survivor",
+        "character": 52,
+        "tunables": {
+            "totemblesscleanserequirement": [
+                1
+            ],
+            "permanenthealingvalue": [
+                2,
+                3,
+                4
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sushi/T_UI_iconsPerks_LendaHand"
+    },
+    "S53P03": {
+        "categories": null,
+        "name": "Contrainterrogatorio",
+        "description": "Mientras est\u00e9s en el radio de terror del asesino y no te est\u00e9 persiguiendo, este deja marcas de luz que podr\u00e1s ver durante\u00a0{Tunable.S53P03.TrailLifetime}\u00a0segundos. Mientras est\u00e9s sobre las marcas de luz del asesino, obtienes {Keyword.Elusive}. Esto dura {Tunable.S53P03.StatusLinger}\u00a0segundos.",
+        "role": "survivor",
+        "character": 52,
+        "tunables": {
+            "traillifetime": [
+                10
+            ],
+            "statuslinger": [
+                3,
+                4,
+                5
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Sushi/T_UI_iconsPerks_CrossExamination"
+    },
+    "S54P01": {
+        "categories": null,
+        "name": "Frutos de tu esfuerzo",
+        "description": "Cuando se complete un generador, obtienes {Tunable.S054P01.TokensGained}\u00a0distintivo.<br><br>Cada vez que termines de reparar un generador, por cada distintivo:<ul><li>Obtienes un {Tunable.S054P01.HasteValue}\u00a0% de {Keyword.Haste} durante {Tunable.S054P01.HasteDuration}\u00a0segundo(s).</li><li>Obtienes un {Tunable.S054P01.HealProgress%}\u00a0% de progreso de curaci\u00f3n.</li></ul>",
+        "role": "survivor",
+        "character": 53,
+        "tunables": {
+            "tokensgained": [
+                1
+            ],
+            "hastevalue": [
+                5
+            ],
+            "hasteduration": [
+                2
+            ],
+            "healprogress%": [
+                10,
+                15,
+                20
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Udon/T_UI_iconsPerks_FruitsOfYourLabor"
+    },
+    "S54P02": {
+        "categories": null,
+        "name": "Grito de salvaci\u00f3n",
+        "description": "Cada vez que el asesino empieza a perseguirte:<ul><li>Ves las auras de otros supervivientes durante {Tunable.S054P02.SurvivorAuraDuration}\u00a0segundo(s).</li><li>Los supervivientes a los que no persiga ven tu aura durante {Tunable.S054P02.OtherSurvivorAuraDuration}\u00a0segundo(s).</li><li>Los supervivientes a los que no persiga ven el aura del asesino durante {Tunable.S054P02.OtherSurvivorAuraDuration}\u00a0segundo(s).</li></ul>",
+        "role": "survivor",
+        "character": 53,
+        "tunables": {
+            "survivorauraduration": [
+                1,
+                2,
+                3
+            ],
+            "killerauraduration": [
+                5
+            ],
+            "cooldown": [
+                40,
+                35,
+                30
+            ],
+            "othersurvivorauraduration": [
+                5
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Udon/T_UI_iconsPerks_SalvationsCry"
+    },
+    "S54P03": {
+        "categories": null,
+        "name": "Bendici\u00f3n: Decisi\u00f3n",
+        "description": "Cuando est\u00e9s junto a un t\u00f3tem, usa {Input.ActivatableButton1} para bendecirlo y crear un t\u00f3tem benefactor \u00fanico que combina todas tus bendiciones.<br><br>Los generadores dentro del alcance de la bendici\u00f3n:<ul><li>Se revierten un {Tunable.S054P03.RegressionModifier}\u00a0% m\u00e1s despacio.</li><li>Los supervivientes los reparan un\u00a0{Tunable.S054P03.RepairSpeedModifier}\u00a0% m\u00e1s r\u00e1pido.</li></ul><br><br>Los supervivientes dentro del alcance de la bendici\u00f3n ver\u00e1n las auras de los generadores afectados.",
+        "role": "survivor",
+        "character": 53,
+        "tunables": {
+            "permanentprogressamount": [
+                1,
+                1.5,
+                2
+            ],
+            "regressionmodifier": [
+                50
+            ],
+            "repairspeedmodifier": [
+                8,
+                9,
+                10
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Udon/T_UI_iconsPerks_BoonSteadfast"
+    },
+    "Saboteur": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Sabotear",
+        "description": "En un radio de {Tunable.S04P03.RevealHookDistance}\u00a0metros de donde el asesino haya recogido a otro superviviente y est\u00e9 cargando con \u00e9l, ver\u00e1s las auras de los ganchos y los ganchos flagelantes.<br><br>Podr\u00e1s sabotear ganchos. Tiempo de recarga: {Tunable.S04P03.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 3,
+        "tunables": {
+            "cooldown": [
+                70,
+                65,
+                60
+            ],
+            "revealhookdistance": [
+                56
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_saboteur"
+    },
+    "SecondWind": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Segundo aliento",
+        "description": "Tras curar a {Tunable.S18P03.RequiredHealthState}\u00a0superviviente(s), si no sufres {Keyword.Broken}, cuando te desenganches, sufrir\u00e1s {Keyword.Broken}.<br><br>Despu\u00e9s de {Tunable.S18P03.DurationOfHeal}\u00a0segundos, si no te han derribado, te curar\u00e1s al instante.",
+        "role": "survivor",
+        "character": 18,
+        "tunables": {
+            "durationofheal": [
+                28,
+                24,
+                20
+            ],
+            "requiredhealthstate": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Qatar/iconPerks_secondWind"
+    },
+    "Self_Care": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Autocuraci\u00f3n",
+        "description": "Podr\u00e1s curarte, pero un {Tunable.S03P03.SelfHealSpeed%}\u00a0% m\u00e1s despacio.",
+        "role": "survivor",
+        "character": 2,
+        "tunables": {
+            "selfhealspeed%": [
+                75,
+                70,
+                65
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_selfCare"
+    },
+    "SelfSufficient": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Inquebrantable",
+        "description": "Una vez por partida, cuando te derribe el asesino, te podr\u00e1s recuperar del todo.<br><br>Estando derribado, te recuperar\u00e1s un {Tunable.S08P03.RecoverExtraSpeed%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": 7,
+        "tunables": {
+            "recoverextraspeed%": [
+                25,
+                30,
+                35
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/L4D/iconPerks_unbreakable"
+    },
+    "Slippery_Meat": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Carne resbaladiza",
+        "description": "Puedes intentar desengancharte por tus propios medios hasta {Tunable.SG_Slippery_Meat.ExtraAttempts}\u00a0veces y tienes un {Tunable.SG_Slippery_Meat.HookEscapeChance%}\u00a0% m\u00e1s de probabilidad de lograrlo.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "hookescapechance%": [
+                2,
+                3,
+                4
+            ],
+            "extraattempts": [
+                6
+            ],
+            "hookescapefailurepenaltyreduction%": [
+                60
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_slipperyMeat"
+    },
+    "Small_Game": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Caza menor",
+        "description": "En un radio de {Tunable.SG_Small_Game.PerkEffectDistance}\u00a0metros de ti, cada vez que mires a un t\u00f3tem en un \u00e1rea c\u00f3nica de {Tunable.SG_Small_Game.DetectionConeAngle}, oir\u00e1s un sonido. Tiempo de recarga: {Tunable.SG_Small_Game.Cooldown}\u00a0segundos.<br><br>Cada vez que un superviviente purifique un t\u00f3tem, obtienes {Tunable.SG_Small_Game.TokensPerTotem}\u00a0distintivo, hasta un m\u00e1ximo de\u00a0{Tunable.SG_Small_Game.MaxTokens}.<br><br>Por cada distintivo, el \u00e1rea c\u00f3nica ser\u00e1 {Tunable.SG_Small_Game.ConeAngleReduction}\u00a0grados menor.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "tokenspertotem": [
+                1
+            ],
+            "maxtokens": [
+                5
+            ],
+            "coneanglereduction": [
+                5
+            ],
+            "cooldown": [
+                14,
+                12,
+                10
+            ],
+            "detectionconeangle": [
+                45
+            ],
+            "perkeffectdistance": [
+                8,
+                10,
+                12
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_smallGame"
+    },
+    "SoleSurvivor": {
+        "categories": [
+            "concealment"
+        ],
+        "name": "Solo quedo yo",
+        "description": "Cuando muere un superviviente, obtienes {Tunable.S06P01.TokensPerDeadSurvivor}\u00a0distintivo.<br><br>Por cada distintivo, en un radio de {Tunable.S06P01.StealthPerMissingSurvivorDistance}\u00a0metros, el asesino no ver\u00e1 tu aura.<br><br>Cuando los dem\u00e1s supervivientes est\u00e9n muertos:<ul><li>Reparar\u00e1s un {Tunable.S06P01.RepairSpeedBonus%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Abrir\u00e1s las puertas de salida y la trampilla un {Tunable.S06P01.EscapeActionSpeeds%}\u00a0% m\u00e1s r\u00e1pido.</li></ul><br><br>Cuando comienza la partida, es m\u00e1s probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 5,
+        "tunables": {
+            "escapeactionspeeds%": [
+                50
+            ],
+            "repairspeedbonus%": [
+                75
+            ],
+            "stealthpermissingsurvivordistance": [
+                20,
+                22,
+                24
+            ],
+            "tokensperdeadsurvivor": [
+                1
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC2/iconPerks_soleSurvivor"
+    },
+    "Solidarity": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Solidaridad",
+        "description": "Estando herido y curando a otro superviviente sin un botiqu\u00edn, tambi\u00e9n obtendr\u00e1s un progreso de curaci\u00f3n con un {Tunable.S16P01.HealRatio}\u00a0% de velocidad.",
+        "role": "survivor",
+        "character": 15,
+        "tunables": {
+            "healratio": [
+                50,
+                60,
+                70
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Mali/iconPerks_solidarity"
+    },
+    "SoulGuard": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "Salvaguarda de alma",
+        "description": "Mientras est\u00e9s maldito, podr\u00e1s recuperarte por completo.<br><br>Cuando te recuperes del todo, obtendr\u00e1s {Keyword.Endurance} durante {Tunable.S22P01.Cooldown}\u00a0segundos. Tiempo de recarga: {Tunable.S22P01.EnduranceDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 21,
+        "tunables": {
+            "cooldown": [
+                30
+            ],
+            "enduranceduration": [
+                4,
+                6,
+                8
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Wales/iconPerks_soulGuard"
+    },
+    "Spine_Chill": {
+        "categories": [
+            "navigation",
+            "strategy"
+        ],
+        "name": "Escalofr\u00edos",
+        "description": "En un radio de {Tunable.SG_Spine_Chill.Range}\u00a0metros, cada vez que el asesino te mire, oir\u00e1s un sonido.<br><br>En un radio de {Tunable.SG_Spine_Chill.Range}\u00a0metros, cada vez que el asesino te mire:<ul><li>Bendecir\u00e1s y purificar\u00e1s t\u00f3tems un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Curar\u00e1s un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Abrir\u00e1s las puertas de salida un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Reparar\u00e1s generadores un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Sabotear\u00e1s ganchos un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desenganchar\u00e1s supervivientes un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li><li>Desbloquear\u00e1s cofres un {Tunable.SG_Spine_Chill.ActionSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "actionspeed%": [
+                2,
+                4,
+                6
+            ],
+            "lingerduration": [
+                0.5
+            ],
+            "range": [
+                36
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_spineChill"
+    },
+    "Sprint_Burst": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Esprint",
+        "description": "Cada vez que empieces a correr:<ul><li>Obtendr\u00e1s un {Tunable.S02P02.Haste%}\u00a0% de {Keyword.Haste} durante {Tunable.S02P02.HasteDuration}\u00a0segundos.</li><li>Sufrir\u00e1s {Keyword.Exhausted} durante {Tunable.S02P02.ExhaustionDuration}\u00a0segundos.</li></ul>",
+        "role": "survivor",
+        "character": 1,
+        "tunables": {
+            "exhaustionduration": [
+                60,
+                50,
+                40
+            ],
+            "haste%": [
+                50
+            ],
+            "hasteduration": [
+                2
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_sprintBurst"
+    },
+    "StakeOut": {
+        "categories": [
+            "strategy"
+        ],
+        "name": "Bajo vigilancia",
+        "description": "Tras esconderte {Tunable.S12P03.TokenChargeTime}\u00a0segundos dentro del radio de terror del asesino, obtendr\u00e1s {Tunable.S12P03.TokensGained}\u00a0distintivo, hasta un m\u00e1ximo de {Tunable.S12P03.MaxTokens}.<br><br>Cada vez que logres una prueba de habilidad b\u00e1sica superada, gastas {Tunable.S12P03.TokensSpent}\u00a0distintivo:<ul><li>La prueba de habilidad superada se convertir\u00e1 en excelente.</li><li>Obtendr\u00e1s un {Tunable.S12P03.BonusProgress%}\u00a0% m\u00e1s de progreso.</li></ul>",
+        "role": "survivor",
+        "character": 12,
+        "tunables": {
+            "bonusprogress%": [
+                1
+            ],
+            "maxtokens": [
+                2,
+                3,
+                4
+            ],
+            "tokenchargetime": [
+                15
+            ],
+            "tokensgained": [
+                1
+            ],
+            "tokensspent": [
+                1
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Finland/iconPerks_stakeOut"
+    },
+    "Streetwise": {
+        "categories": [
+            "support"
+        ],
+        "name": "Con calle",
+        "description": "La primera vez que agotes las cargas de un objeto, ver\u00e1s el aura del asesino durante {Tunable.S05P03.AuraRevealDuration}\u00a0segundos.<br><br>Cuando saquees un objeto de un cofre, este tendr\u00e1 un {Tunable.S05P03.BonusMaxChargePercentages%}\u00a0% m\u00e1s de cargas.",
+        "role": "survivor",
+        "character": 4,
+        "tunables": {
+            "aurarevealduration": [
+                8
+            ],
+            "bonusmaxchargepercentages%": [
+                60,
+                70,
+                80
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_streetwise"
+    },
+    "Technician": {
+        "categories": [
+            "concealment",
+            "strategy"
+        ],
+        "name": "Pericia t\u00e9cnica",
+        "description": "Mientras repares un generador:<ul><li>El alcance de los ruidos por reparar se oir\u00e1 a {Tunable.S09P01.RepairNoiseDistanceReduction}\u00a0metros de distancia menos.</li><li>Cuando falles una prueba de habilidad b\u00e1sica, el generador no explotar\u00e1, pero perder\u00e1 un {Tunable.S09P01.ExtraProgressLost%}\u00a0% m\u00e1s de progreso.</li></ul>",
+        "role": "survivor",
+        "character": 8,
+        "tunables": {
+            "extraprogresslost%": [
+                4,
+                3,
+                2
+            ],
+            "repairnoisedistancereduction": [
+                16
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC4/iconPerks_technician"
+    },
+    "Tenacity": {
+        "categories": [
+            "adaptation",
+            "navigation"
+        ],
+        "name": "Tenacidad",
+        "description": "Estando derribado:<ul><li>Obtendr\u00e1s un {Tunable.S12P01.Haste%}\u00a0% de {Keyword.Haste}.</li><li>Podr\u00e1s arrastrarte y recuperarte a la vez.</li><li>Tus gru\u00f1idos de dolor ser\u00e1n un {Tunable.S12P01.DyingVoiceLevelReduction%}\u00a0% m\u00e1s silenciosos.</li></ul>",
+        "role": "survivor",
+        "character": 12,
+        "tunables": {
+            "haste%": [
+                30,
+                40,
+                50
+            ],
+            "dyingvoicelevelreduction%": [
+                75
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Finland/iconPerks_tenacity"
+    },
+    "TheMettleOfMan": {
+        "categories": [
+            "adaptation"
+        ],
+        "name": "El temple del hombre",
+        "description": "Tras recibir {Tunable.S17P03.TokensNeeded}\u00a0golpes por protecci\u00f3n, estando herido y hasta que te derriben, la pr\u00f3xima vez que el asesino deber\u00eda derribarte, no sufrir\u00e1s da\u00f1o.<br><br>Cuando quedes ileso, mientras est\u00e9s al menos a {Tunable.S17P03.AuraRevealDistance}\u00a0metros de distancia del asesino, este ver\u00e1 tu aura.<br><br>Cuando comienza la partida, es m\u00e1s probable que seas la obsesi\u00f3n.",
+        "role": "survivor",
+        "character": 16,
+        "tunables": {
+            "aurarevealdistance": [
+                12,
+                14,
+                16
+            ],
+            "tokensneeded": [
+                3
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Ash/iconPerks_mettleOfMan"
+    },
+    "This_Is_Not_Happening": {
+        "categories": [
+            "safeguard",
+            "strategy"
+        ],
+        "name": "Esto no puede estar pasando",
+        "description": "Estando herido, las zonas de pruebas de habilidad b\u00e1sicas excelentes ser\u00e1n un {Tunable.SG_This_Is_Not_Happening.GreatZoneSizeBonus%}\u00a0% m\u00e1s grandes.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "greatzonesizebonus%": [
+                10,
+                20,
+                30
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_thisIsNotHappening"
+    },
+    "Up_The_Ante": {
+        "categories": [
+            "support"
+        ],
+        "name": "Subir las apuestas",
+        "description": "Por cada superviviente con vida, todos los supervivientes obtendr\u00e1n un {Tunable.S07P02.LuckIncrease%}\u00a0% m\u00e1s de suerte.<br><br>Todos los supervivientes podr\u00e1n intentar desengancharse por sus propios medios.",
+        "role": "survivor",
+        "character": 6,
+        "tunables": {
+            "luckincrease%": [
+                1,
+                2,
+                3
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC3/iconPerks_upTheAnte"
+    },
+    "Urban_Evasion": {
+        "categories": [
+            "navigation"
+        ],
+        "name": "Evasi\u00f3n urbana",
+        "description": "Mientras est\u00e9s en cuclillas, obtendr\u00e1s un {Tunable.S05P02.Haste%}\u00a0% de {Keyword.Haste}.",
+        "role": "survivor",
+        "character": 4,
+        "tunables": {
+            "haste%": [
+                90,
+                95,
+                100
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_urbanEvasion"
+    },
+    "Vigil": {
+        "categories": [
+            "support"
+        ],
+        "name": "Vigilia",
+        "description": "Todos los supervivientes en un radio de {Tunable.S11P03.EffectRange}\u00a0metros de ti pierden {Keyword.Exhausted} un {Tunable.S11P03.RecoveryIncrease%}\u00a0% m\u00e1s r\u00e1pido.<br><br>Este efecto termina {Tunable.S11P03.LingerDuration}\u00a0segundos despu\u00e9s de que salgan de tu alcance.",
+        "role": "survivor",
+        "character": 11,
+        "tunables": {
+            "effectrange": [
+                16
+            ],
+            "lingerduration": [
+                15
+            ],
+            "recoveryincrease%": [
+                20,
+                25,
+                30
+            ]
+        },
+        "teachable": 40,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/England/iconPerks_vigil"
+    },
+    "Visionary": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Visi\u00f3n de futuro",
+        "description": "En un radio de {Tunable.S23P01.AuraRevealDistance}\u00a0metros de ti, ves las auras de los generadores.<br><br>Cuando se complete un generador, el tiempo de recarga ser\u00e1 de {Tunable.S23P01.Cooldown}\u00a0segundos.",
+        "role": "survivor",
+        "character": 22,
+        "tunables": {
+            "aurarevealdistance": [
+                32
+            ],
+            "cooldown": [
+                20,
+                18,
+                16
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Yemen/iconPerks_visionary"
+    },
+    "WakeUp": {
+        "categories": [
+            "perception",
+            "strategy"
+        ],
+        "name": "\u00a1Despierta!",
+        "description": "Cuando se completen todos los generadores:<ul><li>Ver\u00e1s las auras de los interruptores de las puertas de salida.</li><li>Al abrir una puerta de salida, otros supervivientes ver\u00e1n tu aura.</li><li>Por cada superviviente con vida, abrir\u00e1s las puertas de salida un {Tunable.S11P01.GateOpenSpeed%}\u00a0% m\u00e1s r\u00e1pido.</li></ul>",
+        "role": "survivor",
+        "character": 11,
+        "tunables": {
+            "gateopenspeed%": [
+                8,
+                10,
+                12.5
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/England/iconPerks_wakeUp"
+    },
+    "WellMakeIt": {
+        "categories": [
+            "safeguard"
+        ],
+        "name": "Lo conseguiremos",
+        "description": "Cada vez que desenganches a un superviviente, durante {Tunable.SG_Well_Make_It.Duration}\u00a0segundos, curar\u00e1s a otros supervivientes un {Tunable.SG_Well_Make_It.HealingSpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido.",
+        "role": "survivor",
+        "character": null,
+        "tunables": {
+            "duration": [
+                30,
+                60,
+                90
+            ],
+            "healingspeedincrease%": [
+                100
+            ]
+        },
+        "teachable": 0,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/iconPerks_wellMakeIt"
+    },
+    "WereGonnaLiveForever": {
+        "categories": [
+            "support"
+        ],
+        "name": "Vamos a vivir para siempre",
+        "description": "Curas a los supervivientes derribados un {Tunable.S10P01.HealSpeedIncrease%}\u00a0% m\u00e1s r\u00e1pido.<br><br>Cuando termines de curar a un superviviente derribado, este obtendr\u00e1 {Keyword.Endurance} durante {Tunable.S10P01.EnduranceDuration}\u00a0segundos. Tiempo de recarga: {Tunable.S10P01.EnduranceCooldownDuration}\u00a0segundos.",
+        "role": "survivor",
+        "character": 9,
+        "tunables": {
+            "endurancecooldownduration": [
+                30
+            ],
+            "enduranceduration": [
+                6,
+                8,
+                10
+            ],
+            "healspeedincrease%": [
+                100
+            ]
+        },
+        "teachable": 30,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/DLC5/iconPerks_WereGonnaLiveForever"
+    },
+    "WindowsOfOpportunity": {
+        "categories": [
+            "perception"
+        ],
+        "name": "Oportunidades",
+        "description": "En un radio de {Tunable.S13P02.VaultablesRevealDistance}\u00a0metros de ti:<ul><li>Ves las auras de pal\u00e9s.</li><li>Ves las auras de muros destruibles.</li><li>Ves las auras de ventanas.</li></ul>",
+        "role": "survivor",
+        "character": 10,
+        "tunables": {
+            "vaultablesrevealdistance": [
+                24,
+                28,
+                32
+            ],
+            "wallsrevealdistance": [
+                24,
+                28,
+                32
+            ]
+        },
+        "teachable": 35,
+        "image": "/Game/UI/UMGAssets/Icons/Perks/Kate/iconPerks_windowsOfOpportunity"
+    }
+}
