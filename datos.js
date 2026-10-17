@@ -1,12 +1,12 @@
 // Datos de la guía de Sobreviviente — Dead by Daylight
-// Validado el 10-oct-2026 contra el parche 10.2.0 (Mid-Chapter, en vivo desde el 6-oct-2026). No hay parche posterior.
+// Validado el 16-oct-2026 contra el parche en vivo 10.2.1 (arreglos, 14-oct-2026), que no cambia ventajas de sobreviviente; los valores son los de 10.2.0 Mid-Chapter (6-oct-2026).
 // Nombres y términos: cliente en español de México (es-MX): localización del juego es-MX, tienda de Steam latam y wiki oficial en español.
 // Valores: notas oficiales de Behaviour (Steam / foro) + archivos del juego; los de 10.2.0 vienen de las notas en vivo.
 
 window.DBD_META = {
-  parche: "10.2.0 Mid-Chapter",
-  fechaParche: "6-oct-2026",
-  validado: "10-oct-2026",
+  parche: "10.2.1",
+  fechaParche: "14-oct-2026",
+  validado: "16-oct-2026",
 };
 
 // estado: "ok" = verificado; "duda" = verificado en parte (ver nota). info = aclaración, no es una duda
@@ -67,10 +67,15 @@ window.PERKS = {
     efecto: "<b>+6/8/10 %</b> de reparación por cada sobreviviente a 4 m (máx. 18/24/30 %). También les afecta a ellos.",
     coste: "—", cambio: "7.1.0", estado: "ok",
   },
-  hope: {
-    es: "Esperanza", en: "Hope", icon: "iconPerks_hope.png", dueno: "General",
-    efecto: "Con las puertas energizadas: <b>+3/4/5 % de Celeridad</b> hasta el final de la partida.",
-    coste: "—", cambio: "9.2.0 (antes 5/6/7 %)", estado: "ok",
+  nolb: {
+    es: "Nadie se queda atrás", en: "No One Left Behind", icon: "iconPerks_noOneLeftBehind.png", dueno: "General",
+    efecto: "Con todos los generadores completados: curas a otros y descuelgas un <b>80/90/100 %</b> más rápido. El sobreviviente que descuelgas gana un <b>10 % más de Celeridad</b> (aumenta la que ya recibe al ser descolgado). Ves el aura de los demás sobrevivientes.",
+    coste: "—", cambio: "10.2.0 (antes 50/75/100 %)", estado: "ok",
+  },
+  darksense: {
+    es: "Percepción oscura", en: "Dark Sense", icon: "iconPerks_darkSense.png", dueno: "General",
+    efecto: "Cada vez que se completa un generador, la próxima vez que el asesino se acerque a menos de 20 m, durante <b>13/14/15 s</b> ves su aura, la de los demás sobrevivientes y la de las tarimas y ventanas a menos de 32 m.",
+    coste: "Una vez por generador completado", cambio: "10.2.0 (antes 24 m, 5/7/10 s y solo el aura del asesino)", estado: "ok",
   },
   reassurance: {
     es: "Consuelo", en: "Reassurance", icon: "iconPerks_Reassurance.png", dueno: "Rebecca Chambers",
@@ -317,43 +322,30 @@ window.BUILDS = [
   {
     nombre: "Solitario sin DLC", tag: "Gratis", modo: "solo", color: "#14b8a6",
     contra: ["Tuneleo"],
-    perks: ["wtl", "resilience", "dejavu", "kindred"],
+    perks: ["wtl", "resilience", "darksense", "kindred"],
     para: "Las 4 son ventajas generales: cualquier personaje las saca en la Red Sanguínea sin comprar nada. Mezcla información (para el equipo) con antitúnel (para ti).",
-    sinergia: "Información (<b>Déjà vu</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). Ninguna deja Agotado: cuando tengas Agilidad o Fajador, añade una en lugar de Familia. Herido, Resiliencia y Déjà vu se combinan al reparar: la mayor cuenta entera y la otra a la mitad.",
+    sinergia: "Información (<b>Percepción oscura</b>, <b>Familia</b>), rendimiento herido (<b>Resiliencia</b>) y antitúnel (<b>Ganas de vivir</b>). Tras cada generador, <b>Percepción oscura</b> te avisa cuando el asesino se acerca y te enseña tarimas y ventanas para huir. Ninguna deja Agotado: cuando tengas Agilidad o Fajador, añade una en lugar de Familia.",
     como: [
-      "Repara los generadores que marca <b>Déjà vu</b>.",
-      "<b>Familia</b> te dice si conviene ir al gancho.",
-      "Herido, <b>Resiliencia</b> te acelera: sigue reparando.",
+      "Repara: cada generador que se completa carga <b>Percepción oscura</b>.",
+      "Cuando se acerque el asesino, verás su aura y las tarimas y ventanas cercanas: elige por dónde huir.",
+      "<b>Familia</b> te dice si conviene ir al gancho. Herido, <b>Resiliencia</b> te acelera: sigue reparando.",
       "<b>Ganas de vivir</b> es la mejor defensa contra el tuneleo, y es gratis.",
     ],
   },
   {
     nombre: "Solitario: anti-slug", tag: "Anti-slug", modo: "solo", color: "#64748b",
     contra: ["Slug (te deja en el suelo)"],
-    perks: ["boonexpo", "tenacity", "lithe", "resilience"],
+    perks: ["boonexpo", "tenacity", "lithe", "soulguard"],
     para: "Contra el asesino que derriba a todos y no los cuelga. En solitario nadie garantiza que vengan a levantarte: esta build te levanta sola, las veces que haga falta, y de paso levanta a los compañeros que caigan en tu zona.",
-    sinergia: "<b>Exponencial</b> convierte la zona del tótem en un sitio donde cualquiera se levanta solo, sin límite de usos. Si te tumban lejos, <b>Tenacidad</b> te deja arrastrarte rápido y sin aura mientras te recuperas, hasta llegar a la zona. <b>Agilidad</b> (única que deja Agotado) es para que no te tumben tan pronto, y al levantarte sigues herido: <b>Resiliencia</b> te deja reparar y saltar más rápido sin pararte a curar. No lleva Inquebrantable: levantarte en la zona de Exponencial también gasta su único uso. Ojo con Shattered Hope (asesino): destruye el tótem bendecido.",
+    sinergia: "<b>Exponencial</b> convierte la zona del tótem en un sitio donde cualquiera se levanta solo, sin límite de usos. Si te tumban lejos, <b>Tenacidad</b> te deja arrastrarte rápido y sin aura mientras te recuperas, hasta llegar a la zona. Al levantarte sigues herido, pero <b>Defensa del alma</b> te da Resistencia unos segundos: si el asesino vuelve, aguantas el golpe que te tumbaría. Y si sufres un maleficio, te levantas solo aunque estés fuera de la zona. <b>Agilidad</b> (única que deja Agotado) es para que no te tumben tan pronto. No lleva Inquebrantable: levantarte en la zona de Exponencial también gasta su único uso. Ojo con Shattered Hope (asesino): destruye el tótem bendecido.",
     como: [
       "Bendice un tótem cerca de los generadores donde vas a estar y persigue cerca de su zona.",
       "En persecución, salta rápido para activar <b>Agilidad</b> y gana distancia.",
       "Si te deja en el suelo lejos, arrástrate hacia la zona con <b>Tenacidad</b>: el asesino no ve tu aura.",
-      "En la zona te levantas solo con <b>Exponencial</b> y sigues herido con <b>Resiliencia</b>; si apagan el tótem, bendice otro.",
+      "En la zona te levantas solo con <b>Exponencial</b> y <b>Defensa del alma</b> te protege del siguiente golpe; si apagan el tótem, bendice otro.",
     ],
   },
   // ---------------------------------------------------------------- COOP
-  {
-    nombre: "Coop: perseguidor", tag: "Persecución", modo: "coop", color: "#f43f5e",
-    contra: ["Tuneleo"],
-    perks: ["lithe", "resilience", "wtl", "fma"],
-    para: "Para quien se lleva al asesino mientras el grupo repara. Todo es para alargar tu persecución y sobrevivir al gancho.",
-    sinergia: "<b>Cinco movimientos adelante</b> te marca las tarimas y <b>Agilidad</b> (única que deja Agotado) te da distancia tras saltar: juntas cubren tarimas y ventanas. Herido, <b>Resiliencia</b> acelera los saltos. <b>Ganas de vivir</b> cubre el tuneleo.",
-    como: [
-      "Avisa por voz cuando vaya por ti y llévalo lejos de los generadores del grupo.",
-      "Usa las tarimas que te marca <b>Cinco movimientos adelante</b> y salta rápido para activar <b>Agilidad</b>.",
-      "Herido, <b>Resiliencia</b> acelera tus saltos: no hace falta curarse.",
-      "Si te tunelean tras descolgarte, <b>Ganas de vivir</b> lo aturde.",
-    ],
-  },
   {
     nombre: "Coop: generadores en equipo", tag: "Reparar", modo: "coop", color: "#f59e0b",
     contra: ["3-gen (encerrar 3 generadores)"],
@@ -411,14 +403,14 @@ window.BUILDS = [
   {
     nombre: "Coop: final de partida", tag: "Final", modo: "coop", color: "#eab308",
     contra: ["Presión en las puertas"],
-    perks: ["adrenaline", "hope", "wakeup", "borrowed"],
+    perks: ["adrenaline", "nolb", "wakeup", "borrowed"],
     para: "Para cuando el grupo llega vivo al último generador: curarse, abrir las puertas rápido y sacar a quien esté colgado.",
-    sinergia: "<b>¡Despierta!</b> abre un 20 % más rápido por cada compañero vivo. <b>Adrenalina</b> (única que deja Agotado) te cura y <b>Esperanza</b> te da Celeridad (no se suman completas). <b>Tiempo prestado</b> asegura el último rescate.",
+    sinergia: "<b>¡Despierta!</b> abre un 20 % más rápido por cada compañero vivo. <b>Adrenalina</b> (única que deja Agotado) te cura y te da velocidad. Contra el campeo en las puertas, <b>Nadie se queda atrás</b> descuelga y cura hasta el doble de rápido y le da más Celeridad al rescatado, y <b>Tiempo prestado</b> lo protege del golpe.",
     como: [
       "Al hacerse el último generador, <b>Adrenalina</b> te cura y te da velocidad.",
       "<b>¡Despierta!</b> te enseña los interruptores: abre la puerta mientras los demás rescatan.",
-      "<b>Esperanza</b> te da Celeridad hasta salir.",
-      "Si hay alguien colgado, rescátalo con <b>Tiempo prestado</b>.",
+      "Si hay alguien colgado, ve tú: <b>Nadie se queda atrás</b> te deja descolgar hasta el doble de rápido.",
+      "<b>Tiempo prestado</b> protege al rescatado mientras corre a la puerta.",
     ],
   },
 ];

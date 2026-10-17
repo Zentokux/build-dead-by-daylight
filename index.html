@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DBD Builds Sobreviviente</title>
-<meta name="description" content="Builds de 4 ventajas para Sobreviviente en Dead by Daylight, parche 10.2.0, en español.">
+<meta name="description" content="Builds de 4 ventajas para Sobreviviente en Dead by Daylight, parche 10.2.1, en español.">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -128,6 +128,19 @@ td img { width: 40px; height: 40px; vertical-align: middle; }
 td .sub { color: #8f8285; font-size: .78rem; }
 .tbl-wrap { overflow-x: auto; }
 .st-ok { color: #22c55e; } .st-duda { color: #f59e0b; }
+details.plegable { margin-bottom: .4rem; }
+details.plegable > summary {
+  cursor: pointer; color: var(--c, #fca5a5); font-weight: 700; font-size: .92rem; padding: .3rem 0; list-style: none;
+}
+details.plegable > summary::-webkit-details-marker { display: none; }
+details.plegable > summary::before { content: "▸ "; }
+details.plegable[open] > summary::before { content: "▾ "; }
+details.plegable[open] > summary { margin-bottom: .6rem; }
+#elige td img { width: 34px; height: 34px; }
+#elige tr.fila { cursor: pointer; }
+#elige tr.fila:hover td { background: #1d1517; }
+#elige .bn { font-weight: 700; color: #fff; }
+#elige .ct { color: #fca5a5; }
 footer { max-width: 1100px; margin: 3rem auto 0; color: #8f8285; font-size: .82rem; line-height: 1.6; }
 footer a { color: #fca5a5; }
 
@@ -144,7 +157,7 @@ footer a { color: #fca5a5; }
   <p class="subtitle">Dead by Daylight · builds de 4 ventajas para jugar en solitario o en coop, con sus sinergias y cómo usarlas</p>
   <div class="badges" id="badges"></div>
   <nav>
-    <a href="#como-leer">Cómo leer</a>
+    <a href="#elige-t">Elige tu build</a>
     <a href="#builds">Builds</a>
     <a href="#ventajas">Todas las ventajas</a>
     <a href="#fuentes">Fuentes</a>
@@ -152,12 +165,19 @@ footer a { color: #fca5a5; }
 </header>
 
 <main>
+  <h2 id="elige-t">Elige tu build</h2>
+  <div class="filtros" id="filtros">
+    <button data-m="todas" class="on">Todas</button>
+    <button data-m="solo">Solitario</button>
+    <button data-m="coop">Coop</button>
+  </div>
+  <div class="tbl-wrap"><table id="elige"></table></div>
+
   <h2 id="como-leer">Cómo leer esta guía</h2>
   <div class="intro">
-    Cada sobreviviente equipa <b>4 ventajas</b>. Una buena build combina ventajas que se apoyan entre sí:
-    unas para <b>persecución</b> (alargarla y que el asesino pierda tiempo), otras de <b>información</b> (auras),
-    de <b>antitúnel</b> (protegerte tras el gancho) o de <b>objetivos</b> (generadores, curar, puertas).
-    Haz clic en cualquier icono para ver su efecto exacto. Los valores van en formato <b>I/II/III</b>; usa el nivel III cuando lo tengas.
+    Toca un icono para ver qué hace la ventaja. <b>Enfocada</b> = las 4 para su rol; <b>Híbrida</b> = cambia una para salvarte tú.
+    Valores en formato <b>I/II/III</b>.
+    <details class="plegable" style="margin-top:.6rem"><summary>Términos</summary>
     <div class="glosario">
       <div><b>Celeridad:</b> corres más rápido.</div>
       <div><b>Agotado:</b> mientras dura, no se activan otras ventajas que dejan Agotado.</div>
@@ -173,14 +193,10 @@ footer a { color: #fca5a5; }
       <div><b>Regla:</b> lleva solo <b>una</b> ventaja que deje Agotado; dos no se activan a la vez.</div>
       <div><b>Bonus iguales:</b> desde 9.6.0 no se suman completos: el mayor cuenta entero, el segundo a la mitad y el tercero a un cuarto.</div>
     </div>
+    </details>
   </div>
 
   <h2 id="builds">Builds</h2>
-  <div class="filtros" id="filtros">
-    <button data-m="todas" class="on">Todas</button>
-    <button data-m="solo">Solitario</button>
-    <button data-m="coop">Coop</button>
-  </div>
   <div id="builds-list"></div>
 
   <h2 id="ventajas">Todas las ventajas de la guía</h2>
@@ -188,8 +204,8 @@ footer a { color: #fca5a5; }
 </main>
 
 <footer id="fuentes">
-  <b>Fuentes y validación (10-oct-2026):</b><br>
-  · Parche actual: notas oficiales 10.2.0 Mid-Chapter (6-oct-2026) en <a href="https://store.steampowered.com/news/app/381210" target="_blank">Steam</a> y en el <a href="https://forums.bhvr.com/dead-by-daylight/discussion/472827" target="_blank">foro de Behaviour</a>. No hay parche posterior a 10-oct-2026. También las notas 10.1.0, 9.5.0, 9.4.0, 9.2.2, 9.2.0, 9.1.0 y 9.0.0.<br>
+  <b>Fuentes y validación (16-oct-2026):</b><br>
+  · Parche actual: 10.2.1 (14-oct-2026), solo arreglos, sin cambios en ventajas de sobreviviente (<a href="https://forums.bhvr.com/dead-by-daylight/kb/articles/561-10-2-1-bugfix-patch" target="_blank">notas</a>). Valores del 10.2.0 Mid-Chapter (6-oct-2026): notas oficiales en <a href="https://store.steampowered.com/news/app/381210" target="_blank">Steam</a> y en el <a href="https://forums.bhvr.com/dead-by-daylight/discussion/472827" target="_blank">foro de Behaviour</a>. También las notas 10.1.0, 9.5.0, 9.4.0, 9.2.2, 9.2.0, 9.1.0 y 9.0.0.<br>
   · Golpe decisivo → Ganas de vivir (Will to Live): <a href="https://store.steampowered.com/news/app/381210/view/1822556746169341" target="_blank">notas 9.4.0</a> y <a href="https://deadbydaylight.wiki.gg/wiki/Will_to_Live" target="_blank">wiki oficial</a>.<br>
   · Nombres en <b>español de México</b>: localización es-MX del juego, tienda de Steam latam y <a href="https://deadbydaylight.wiki.gg/es/" target="_blank">wiki oficial en español</a>.<br>
   · Valores: texto del cliente vía <a href="https://dbd.tricky.lol/" target="_blank">dbd.tricky.lol</a> (10.1.2) y, para lo que cambió en 10.2.0, las notas oficiales. Solo datos del juego en vivo.<br>
@@ -209,7 +225,7 @@ document.getElementById('badges').innerHTML = `
 
 const GRUPOS = [
   { modo: 'solo', titulo: 'Solitario', txt: 'Partidas sin voz. Cada build tiene <b>un rol</b>. La versión <b>Enfocada</b> pone las 4 ventajas al servicio de ese rol; la <b>Híbrida</b> cambia una por otra propia para salvarte si la partida se complica contigo.' },
-  { modo: 'coop', titulo: 'Coop', txt: 'Con amigos en llamada. La voz da la información, así que cada uno lleva el rol que le toca en el grupo (perseguir, reparar, rescatar, bendecir o cerrar la partida). Repártanse las builds.' },
+  { modo: 'coop', titulo: 'Coop', txt: 'Con amigos en llamada. La voz da la información, así que cada uno lleva el rol que le toca en el grupo (perseguir, reparar, rescatar, bendecir o cerrar la partida). Repártanse las builds. Quien persigue lleva <b>meta antitúnel</b> o <b>bucle de tarimas</b> de Solitario.' },
 ];
 const version = {};  // índice de build → 'enf' | 'hib'
 const perksDe = (b, v) => v === 'hib' && b.hibrida ? b.perks.map(k => k === b.hibrida.sale ? b.hibrida.entra : k) : b.perks;
@@ -217,7 +233,7 @@ const filaPerks = (b, i) => {
   const v = version[i] || 'enf';
   return perksDe(b, v).map(k => { const p = P[k], nueva = v === 'hib' && k === b.hibrida.entra; return `
     <div class="perk${nueva ? ' nueva' : ''}" data-b="${i}" data-k="${k}">
-      <div class="ico"><img src="${ico(p)}" alt="${p.es}" loading="lazy"></div>
+      <div class="ico"><img src="${ico(p)}" alt="${p.es}" width="92" height="92" loading="lazy" decoding="async"></div>
       <div class="nm">${p.es}</div>
       <div class="en">${p.en}</div>
       <div class="own">${nueva ? 'Híbrida: para ti' : p.dueno.split(' (')[0]}</div>
@@ -225,7 +241,7 @@ const filaPerks = (b, i) => {
     </div>`; }).join('');
 };
 const tarjeta = (b, i) => `
-  <section class="build" style="--c:${b.color}" data-modo="${b.modo}">
+  <section class="build" id="b-${i}" style="--c:${b.color}" data-modo="${b.modo}">
     <div class="build-head"><h3>${b.nombre}</h3><span class="tag">${b.tag}</span>
       ${b.hibrida ? `<span class="ver" data-b="${i}"><button data-v="enf" class="on">Enfocada</button><button data-v="hib">Híbrida</button></span>` : '<span class="modo">Sin híbrida: ya lleva algo para ti</span>'}</div>
     ${b.contra ? `<div class="contra"><span>Contra:</span>${b.contra.map(c => `<b>${c}</b>`).join('')}</div>` : ''}
@@ -233,8 +249,10 @@ const tarjeta = (b, i) => `
     <div class="perk-row" id="row-${i}">${filaPerks(b, i)}</div>
     ${b.hibrida ? `<div class="hib" id="hib-${i}"><span class="t">Híbrida:</span>sale <b>${P[b.hibrida.sale].es}</b>, entra <b>${P[b.hibrida.entra].es}</b>. ${b.hibrida.porque}</div>` : ''}
     <div class="detail" id="det-${i}"></div>
-    <div class="sinergia"><span class="t">Sinergia:</span>${b.sinergia}</div>
-    <ol class="como">${b.como.map(c => `<li>${c}</li>`).join('')}</ol>
+    <details class="plegable"><summary>Cómo jugarla</summary>
+      <ol class="como">${b.como.map(c => `<li>${c}</li>`).join('')}</ol>
+      <div class="sinergia" style="margin:.8rem 0 0"><span class="t">Por qué funciona:</span>${b.sinergia}</div>
+    </details>
   </section>`;
 document.getElementById('builds-list').innerHTML = GRUPOS.map(g => `
   <div class="grupo" data-modo="${g.modo}">
@@ -243,10 +261,23 @@ document.getElementById('builds-list').innerHTML = GRUPOS.map(g => `
     ${window.BUILDS.map((b, i) => b.modo === g.modo ? tarjeta(b, i) : '').join('')}
   </div>`).join('');
 
+const MODO = { solo: 'Solitario', coop: 'Coop' };
+document.getElementById('elige').innerHTML = `
+  <tr><th>Si el asesino…</th><th>Lleva</th><th>Ventajas</th></tr>` +
+  window.BUILDS.map((b, i) => `
+  <tr class="fila" data-modo="${b.modo}" data-b="${i}">
+    <td class="ct">${(b.contra || [b.tag]).join(', ')}</td>
+    <td><span class="bn">${b.nombre.replace(/^(Solitario|Coop): (.)/, (_, m, c) => c.toUpperCase())}</span><br><span class="sub">${MODO[b.modo]} · ${b.tag}</span></td>
+    <td>${b.perks.map(k => `<img src="${ico(P[k])}" alt="${P[k].es}" title="${P[k].es}" width="34" height="34" loading="lazy">`).join('')}</td>
+  </tr>`).join('');
+document.getElementById('elige').addEventListener('click', e => {
+  const tr = e.target.closest('tr.fila'); if (tr) document.getElementById('b-' + tr.dataset.b).scrollIntoView();
+});
+
 document.querySelectorAll('#filtros button').forEach(btn => btn.addEventListener('click', () => {
   document.querySelectorAll('#filtros button').forEach(x => x.classList.toggle('on', x === btn));
   const m = btn.dataset.m;
-  document.querySelectorAll('.grupo').forEach(s => {
+  document.querySelectorAll('.grupo, #elige tr.fila').forEach(s => {
     s.style.display = (m === 'todas' || s.dataset.modo === m) ? '' : 'none';
   });
 }));
@@ -278,7 +309,7 @@ document.getElementById('perk-table').innerHTML = `
   <tr><th></th><th>Ventaja</th><th>Efecto (I/II/III)</th><th class="hide-m">Coste</th><th class="hide-m">Último cambio</th></tr>` +
   Object.values(P).map(p => `
   <tr>
-    <td><img src="${ico(p)}" alt=""></td>
+    <td><img src="${ico(p)}" alt="" width="40" height="40" loading="lazy" decoding="async"></td>
     <td><b>${p.es}</b> <span class="st-${p.estado}">${p.estado === 'duda' ? '⚠' : '✓'}</span><br><span class="sub">${p.en} · ${p.dueno.split(' (')[0]}</span></td>
     <td>${p.efecto}${p.info ? `<br><span class="sub info">ℹ ${p.info}</span>` : ''}${p.nota ? `<br><span class="sub st-duda">${p.nota}</span>` : ''}</td>
     <td class="hide-m">${p.coste}</td>

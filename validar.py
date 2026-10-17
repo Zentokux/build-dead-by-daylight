@@ -62,11 +62,11 @@ def reglas(nombre, ks):
 # Si una versión de build junta 2+ ventajas del mismo TIPO, su texto debe decir que «se combinan».
 TIPO = {
     'reparar': {'dejavu', 'resilience', 'prove', 'boonsteadfast', 'overzealous'},
-    'curar a otros': {'wellmake', 'botany', 'boonhealing', 'flowstate', 'resilience'},
+    'curar a otros': {'wellmake', 'botany', 'boonhealing', 'flowstate', 'resilience', 'nolb'},
     'curarte': {'botany', 'flowstate', 'resilience'},
     'purificar': {'counterforce', 'flowstate', 'resilience'},
     'bendecir': {'flowstate', 'resilience'},
-    'descolgar': {'flowstate', 'resilience'},
+    'descolgar': {'flowstate', 'resilience', 'nolb'},
     'Celeridad': {'adrenaline', 'hope', 'lithe', 'sprint', 'wideopen'},
     'perder Agotado': {'vigil', 'ghostnotes'},
     'abrir puertas': {'wakeup', 'resilience'},
