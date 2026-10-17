@@ -41,8 +41,8 @@ th { background: #1d1517; color: #fca5a5; font-weight: 600; }
 .ct { color: #fca5a5; }
 .bn { font-weight: 700; color: #fff; }
 .sub { color: #8f8285; font-size: .78rem; }
-.ventajas { white-space: nowrap; }
-.ventajas img { width: 38px; height: 38px; vertical-align: middle; cursor: help; border-radius: 6px; }
+.ventajas { display: grid; grid-template-columns: repeat(4, 96px); gap: .3rem; }
+.ventajas img { width: 96px; height: 96px; cursor: help; border-radius: 10px; }
 .ventajas img:hover, .ventajas img.on { background: #3a2a2e; }
 #tip {
   position: fixed; z-index: 10; max-width: 300px; pointer-events: none; display: none;
@@ -58,8 +58,8 @@ th { background: #1d1517; color: #fca5a5; font-weight: 600; }
 
 @media (max-width: 760px) {
   th, td { padding: .5rem .4rem; }
-  .ventajas { white-space: normal; }
-  .ventajas img { width: 34px; height: 34px; }
+  .ventajas { grid-template-columns: repeat(2, 80px); gap: .2rem; }
+  .ventajas img { width: 80px; height: 80px; }
 }
 </style>
 </head>
@@ -96,7 +96,7 @@ tabla.innerHTML = `
   <tr class="fila" data-modo="${b.modo}">
     <td class="ct">${(b.contra || [b.tag]).join(', ')}</td>
     <td><span class="bn">${b.nombre.replace(/^(Solitario|Coop): (.)/, (_, m, c) => c.toUpperCase())}</span><br><span class="sub">${MODO[b.modo]} · ${b.tag}</span></td>
-    <td class="ventajas">${b.perks.map(k => `<img src="${ico(P[k])}" alt="${P[k].es}" data-k="${k}" width="38" height="38" decoding="async">`).join('')}</td>
+    <td><div class="ventajas">${b.perks.map(k => `<img src="${ico(P[k])}" alt="${P[k].es}" data-k="${k}" width="96" height="96" decoding="async">`).join('')}</div></td>
   </tr>`).join('');
 
 document.querySelectorAll('#filtros button').forEach(btn => btn.addEventListener('click', () => {

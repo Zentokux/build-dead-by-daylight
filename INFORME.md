@@ -3,32 +3,31 @@
 ## Estado
 
 - **Parche:** 10.2.1 (14-oct-2026, solo arreglos, sin cambios en ventajas de sobreviviente). Valores del 10.2.0 Mid-Chapter (6-oct-2026).
-- **Contenido:** 15 builds (10 de solitario y 5 de coop) y 36 ventajas.
+- **Contenido:** 14 builds (8 de solitario y 6 de coop) y 35 ventajas.
 - **Idioma:** nombres y términos del cliente en español de México.
 - **Validación:** independiente, hecha por un agente contra el texto del cliente 10.1.2, las notas oficiales 10.2.0 en vivo (Steam) y la localización es-MX. Se corrigieron todos los errores que encontró.
 - **Validador automático:** `python validar.py` da 0 errores.
 
-## Builds (versión 4, 16-oct-2026: 10 de solitario y 5 de coop)
+## Builds (versión 5, 16-oct-2026: 8 de solitario y 6 de coop)
 
-Cada build tiene **un rol** y una etiqueta **Contra** (qué juego del asesino frena). `perks` es la versión **Enfocada**; `hibrida` cambia UNA ventaja por otra propia (lista `PROPIA` en `validar.py`). Pensadas para jugar contra un asesino competente que juega el meta. Sin estadísticas de uso ni escape (decisión del usuario).
+Rearmadas con lo que recomiendan jugadores de alto nivel, no con estadísticas de uso (decisión del usuario): builds de Otzdarva (otzdarva-builds.com, 15-oct-2026) y sus opiniones del 10.2.0, reglamentos de torneos (DBD World Cup, Mr Moustachio's Hub; prohíben ventajas por fuertes), compdbd.com y el foro oficial. La página solo muestra la tabla; `para`, `sinergia`, `como` y `fuente` quedan en datos.js.
 
-| Build | Contra | Enfocada | Híbrida |
-|---|---|---|---|
-| Solo: meta antitúnel | Tuneleo | Resiliencia, Ganas de vivir, Fajador, Cinco movimientos adelante | — |
-| Solo: generadores | Regresión | Déjà vu, Hiperconcentración, Resiliencia, Determinación | Determinación → Fajador |
-| Solo: rescate y curación | Campeo | Familia, Consuelo, Tiempo prestado, Sobreviviremos | Consuelo → Agilidad |
-| Solo: tótems con Estado de flujo | Maleficios | Fuerza interior, Contramedida, Estado de flujo, Demasiado entusiasta | Demasiado entusiasta → Agilidad |
-| Solo: Bendición con Estado de flujo | Regresión, slug | Paso de las sombras, Exponencial, Determinación, Estado de flujo | Determinación → Agilidad |
-| Solo: Esprint con recarga rápida (build del usuario) | Rastreo por arañazos | Esprint, Vigilia, Notas fantasma, Fijación | Fijación → Ganas de vivir |
-| Solo: bucle de tarimas (build del usuario, Fortaleza en las sombras → Resiliencia) | Persecución | Cinco movimientos adelante, Agilidad, Máxima velocidad, Resiliencia | Resiliencia → Ganas de vivir |
-| Solo: autocuración | Desgaste | Resurgimiento, Autocuración, Botánica, Giro argumental | — |
-| Solo sin DLC | Tuneleo | Ganas de vivir, Resiliencia, Percepción oscura, Familia | — |
-| Solo: anti-slug | Slug | Exponencial, Tenacidad, Agilidad, Defensa del alma | — |
-| Coop: generadores en equipo | 3-gen | Demuestra lo que vales, Déjà vu, Hiperconcentración, Resiliencia | Demuestra → Fajador |
-| Coop: rescate y curación | Campeo | Tiempo prestado, Sobreviviremos, Botánica, Consuelo | Consuelo → Agilidad |
-| Coop: Bendiciones con Estado de flujo | Regresión, desgaste | Círculo de curación, Paso de las sombras, Determinación, Estado de flujo | Determinación → Agilidad |
-| Coop: anti-slug con Bendición (build del usuario) | Slug | Exponencial, Defensa del alma, Vamos a vivir para siempre, Paso de las sombras | — |
-| Coop: final de partida | Presión en las puertas | Adrenalina, Nadie se queda atrás, ¡Despierta!, Tiempo prestado | — |
+| Build | Contra | Ventajas | Híbrida | Fuente |
+|---|---|---|---|---|
+| Solitario: antitúnel | Tuneleo | Ganas de vivir, Agilidad, Cinco movimientos adelante, Resurgimiento | — | Otzdarva, «Advanced Solo Build» (otzdarva-builds.com, 15-oct-2026) |
+| Solitario: información sin DLC | Te sorprende reparando | Familia, Premonición, Percepción oscura, Ganas de vivir | — | Otzdarva, «Beginner Starter Build» y sus opiniones sobre el 10.2.0 (Premonición y Percepción oscura) |
+| Solitario: persecución | Asesino que te persigue sin soltarte | Oportunidades, Cinco movimientos adelante, Elegancia, Agilidad | — | Otzdarva, «Chase Oriented Build»; Otzdarva sobre el 10.2.0: Oportunidades se llevará junto a Cinco movimientos adelante |
+| Solitario: generadores | 3-gen (encerrar 3 generadores) | Déjà vu, Serenidad, Resurgimiento, Diseñado para durar | — | Otzdarva, «Gen Rush Solo Build»; foro oficial de Behaviour (hilo 472967: Déjà vu, la mejor de generadores en solitario) |
+| Solitario: rescate y curación | Campeo del gancho | Familia, Consuelo, Tiempo prestado, Sobreviviremos | Consuelo → Agilidad | build anterior (10-oct-2026) |
+| Solitario: anti-slug | Slug (te deja en el suelo) | Inquebrantable, Defensa del alma, Tenacidad, Agilidad | — | Otzdarva, «Slug-prevention Build» (Inquebrantable + Defensa del alma); Tenacidad y Agilidad añadidas por mecánica |
+| Solitario: escapista | Te quedas último | Déjà vu, Resurgimiento, Hasta terminar con el último, Adrenalina | — | Otzdarva, «Solo Escapist Build»; Otzdarva sobre el 10.2.0: el último sobreviviente puede abrir la trampilla |
+| Solitario: autocuración | Desgaste (te hiere y se va) | Resurgimiento, Vida itinerante, Giro argumental, Conocimientos de botánica | — | Otzdarva recomienda Vida itinerante, Giro argumental y Resurgimiento; la combinación con Conocimientos de botánica es por mecánica |
+| Coop: corredor | Asesino que te persigue sin soltarte | Agilidad, Oportunidades, Cinco movimientos adelante, Resiliencia | Resiliencia → Ganas de vivir | Otzdarva sobre el 10.2.0 (Oportunidades con Cinco movimientos adelante; los bonus de salto se combinan); reglamento del DBD World Cup |
+| Coop: generadores en equipo | 3-gen (encerrar 3 generadores) | Demuestra lo que vales, Déjà vu, Hiperconcentración, Resiliencia | Demuestra lo que vales → Fajador | build anterior (10-oct-2026) |
+| Coop: rescate | Campeo del gancho, Tuneleo | Tiempo prestado, Sobreviviremos, Consuelo, Cargar a cuestas | Cargar a cuestas → Agilidad | Reglamento del DBD World Cup (prohíbe Tiempo prestado, Consuelo y Cargar a cuestas por fuertes); Otzdarva y notas oficiales: Cargar a cuestas es fuerte en grupos coordinados |
+| Coop: antitúnel | Tuneleo | Extraoficialmente, Ganas de vivir, Agilidad, Resiliencia | — | Reglamento del DBD World Cup (prohíbe Extraoficialmente por fuerte); notas oficiales del 10.1.0 y 10.2.0 |
+| Coop: anti-slug con Bendición | Slug (deja a todos en el suelo) | Bendición: Exponencial, Defensa del alma, Vamos a vivir para siempre, Bendición: Paso de las sombras | — | build anterior (10-oct-2026) |
+| Coop: Bendiciones con Estado de flujo | Regresión de generadores, Desgaste | Bendición: Círculo de curación, Bendición: Paso de las sombras, Bendición: Determinación, Estado de flujo | Bendición: Determinación → Agilidad | build anterior (10-oct-2026) |
 
 **Inquebrantable + Exponencial:** no se combinan; levantarte en la zona de Exponencial gasta el uso de Inquebrantable (comprobado por el usuario en su juego, 10-oct-2026; regla en `ANULAN`). Nombres es-MX de Cinco movimientos adelante y Demasiado entusiasta: solo de la wiki ES (en España: Cinco pasos por delante, Pasión).
 

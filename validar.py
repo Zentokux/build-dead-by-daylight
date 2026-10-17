@@ -44,7 +44,8 @@ ANULAN = [
 ]
 
 # Ventajas que te salvan a TI (persecución, antitúnel o autocuración): la híbrida debe meter una
-PROPIA = {'wideopen', 'soulguard', 'sprint', 'unbreakable', 'tenacity', 'lithe', 'deadhard', 'wtl', 'fma', 'resurgence', 'selfcare', 'plottwist', 'innerstrength', 'adrenaline', 'boonshadow'}
+PROPIA = {'wideopen', 'soulguard', 'sprint', 'unbreakable', 'tenacity', 'lithe', 'deadhard', 'wtl', 'fma', 'resurgence', 'selfcare', 'plottwist', 'innerstrength', 'adrenaline', 'boonshadow',
+          'roadlife', 'finesse', 'woo', 'offrecord'}
 def reglas(nombre, ks):
     ag = [k for k in ks if deja_agotado(k)]
     if len(ag) > 1: err(f'«{nombre}»: {len(ag)} ventajas que dejan Agotado {ag} (máx. 1)')
@@ -63,13 +64,14 @@ def reglas(nombre, ks):
 TIPO = {
     'reparar': {'dejavu', 'resilience', 'prove', 'boonsteadfast', 'overzealous'},
     'curar a otros': {'wellmake', 'botany', 'boonhealing', 'flowstate', 'resilience', 'nolb'},
-    'curarte': {'botany', 'flowstate', 'resilience'},
+    'curarte': {'botany', 'flowstate', 'resilience', 'roadlife'},
     'purificar': {'counterforce', 'flowstate', 'resilience'},
     'bendecir': {'flowstate', 'resilience'},
     'descolgar': {'flowstate', 'resilience', 'nolb'},
     'Celeridad': {'adrenaline', 'hope', 'lithe', 'sprint', 'wideopen'},
     'perder Agotado': {'vigil', 'ghostnotes'},
     'abrir puertas': {'wakeup', 'resilience'},
+    'saltar': {'woo', 'finesse', 'resilience', 'spinechill'},
 }
 def decrecientes(nombre, ks, texto):
     for tipo, s in TIPO.items():
